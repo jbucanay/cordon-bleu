@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { loggedOutHome } from "./components/loggedOutHome/loggedOutHome";
-import Login from "./components/Login";
+import Login from "./components/login/login";
 
 // hey
 export default (
