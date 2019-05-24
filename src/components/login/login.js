@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './login.scss'
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
@@ -31,22 +32,26 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="App">
-        Welcome to Cordon Bleu. Please log in.
-        {this.state.isSignedIn ? (
-          <span>
-            <div>Signed In!</div>
-            <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-            <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
-            />
+      <div className="login">
+        <div className="login-card">
+
+          <h1>Sign in</h1>
+          <h2>New to DoorDash? Sign up below.</h2>
+          {this.state.isSignedIn ? (
+            <span>
+              <div>Signed In!</div>
+              <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+              <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
+              />
             <img alt="profile" src={firebase.auth().currentUser.photoURL} />
-          </span>
-        ) : (
-            <StyledFirebaseAuth
-              uiConfig={this.uiConfig}
-              firebaseAuth={firebase.auth()}
-            />
-          )}
+            </span>
+          ) : (
+              <StyledFirebaseAuth
+                uiConfig={this.uiConfig}
+                firebaseAuth={firebase.auth()}
+              />
+            )}
+        </div>
       </div>
     );
   }
