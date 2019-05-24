@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 
 const SEARCH = "SEARCH";
 
@@ -9,9 +9,7 @@ const initialAddress = {
 export function getAddress(search) {
   return {
     type: SEARCH,
-    payload: Axios.get(
-      `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${search}&types=address&key=AIzaSyAdBDNAgusDJuoZaYwHN19SKgyZWr_lXqs`
-    )
+    payload: axios.get("/api/usersearch", { search })
   };
 }
 
