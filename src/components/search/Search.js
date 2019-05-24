@@ -33,7 +33,7 @@ const Search = props => {
           }}
         />
         <InputGroupAddon addonType="append">
-          <Button color="primary">Find Restuarants</Button>
+          <Button color="primary">Find Restaurants</Button>
         </InputGroupAddon>
       </InputGroup>
     </div>
