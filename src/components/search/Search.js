@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "./search.scss";
+import getAddress from "../../consumers/search";
+import axios from "axios";
 
-const Search = () => {
+const Search = props => {
   const [search, setSearch] = useState("");
+  const [local, setLocal] = useState([]);
 
-  console.log(search);
+  useEffect(() => {
+    async function fetchAddress() {
+      console.log(search);
+      const address = await axios.get(
+        `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${search}&types=address&key=AIzaSyAdBDNAgusDJuoZaYwHN19SKgyZWr_lXqs`
+      );
+
+      setLocal(address);
+    }
+    fetchAddress();
+  }, [search]);
+
+  console.log(local);
   return (
     <div>
       <InputGroup>
@@ -27,4 +43,9 @@ const Search = () => {
   );
 };
 
-export default Search;
+const mapStateToProps = reduxState => reduxState;
+
+export default connect(
+  mapStateToProps,
+  { getAddress }
+)(Search);
