@@ -1,51 +1,82 @@
+
 .navbar-div {
+  border-bottom: 1px solid gray;
+
   background-color: white;
   height: 6%;
+  font-family: "Montserrat", sans-serif;
 }
-
-.nav-right {
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1%;
+  font-size: 10px;
+  height: 100%;
+}
+.nav-outer {
   display: flex;
   justify-content: flex-end;
   padding-right: 1%;
   font-size: 10px;
-  //   border: 1px solid red;
   height: 100%;
 }
-
 .nav-sign-up {
-  border: 1px solid orange;
-  color: red;
+  // border: 1px solid aqua;
+  color: blue;
   width: 15%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-
 .nav-logo-div {
   width: 100%;
-  border: 1px solid red;
   justify-content: center;
   display: flex;
   align-items: center;
 }
-
 .nav-logo-image {
   width: 11vw;
-  height: 5%;
+  height: 4.5%;
   position: absolute;
   left: 45%;
   right: 55%;
 }
-
-.nav-sign-in-words:link {
-  color: red;
+.nav-sign-in-words {
+  color: blue;
   text-decoration: none;
 }
+.nav-signup-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: blue;
+  font-weight: 700;
+  color: white;
+  width: 6vw;
+  height: 5vh;
+  border-radius: 20px;
+  font-size: 14px;
+}
 
-// .nav-right {
-//   outline: green solid 1px;
-//   display: grid;
-//   grid-template-columns: 2fr 1fr 1fr;
-//   grid-area: "logo signin signup";
-// }
+.Hamburger-Image {
+  height: 50px;
+  width: 50px;
+  }
+
+.side-menu-closed {
+  display: none;
+  }
+
+.side-menu-open {
+  background: black;
+  animation: openMenu 1s;
+
+  }
+
+  @keyframes openMenu {
+    from {
+    transform: translateX(0vw);
+    }
+    to {
+    transform: translateX(20vw);
+    }
+    }

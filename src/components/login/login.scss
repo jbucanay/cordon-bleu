@@ -1,11 +1,25 @@
 .login {
-//   background: red;
+  background: #FAFAFA;
   height: 100%;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 48px);
 }
 
 .login-card {
     text-align: center;
-    padding-top: 25vh;
-    // background: gray;
-    height: 30vh;
+    background: #FFFFFF;
+    margin: auto;
+    height: 40vh;
+}
+
+.login-h2 {
+font-size: .8em;
+color: #808080;
+font-weight: 300;
+}
+
+.login-button{
+    border: none;
+    color: red;
 }

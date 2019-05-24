@@ -13,8 +13,8 @@ class Login extends Component {
   uiConfig = {
     signInFlow: "redirect",
     signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.TwitterAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
@@ -36,7 +36,7 @@ class Login extends Component {
         <div className="login-card">
 
           <h1>Sign in</h1>
-          <h2>New to DoorDash? Sign up below.</h2>
+          <h2 className='login-h2'>New to DoorDash? <button className="login-button">Sign up</button></h2>
           {this.state.isSignedIn ? (
             <span>
               <div>Signed In!</div>
