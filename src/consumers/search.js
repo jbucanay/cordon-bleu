@@ -1,7 +1,6 @@
 import Axios from "axios";
 
 const SEARCH = "SEARCH";
-const MYADDRESS = "MYADDRESS";
 
 const initialAddress = {
   address: []
@@ -17,10 +16,13 @@ export function getAddress(search) {
 }
 
 export default function reducer(state = initialAddress, action) {
-  const { type, payload } = action;
-  switch (type) {
-    case SEARCH:
-      console.log(payload);
+  switch (action.type) {
+    case `${SEARCH}_FULFILLED`:
+      console.log(action.payload);
+      return {
+        ...state,
+        address: action.payload
+      };
 
     default:
       return state;
