@@ -6,7 +6,6 @@ export class loggedOutHome extends Component {
   render() {
     return (
       <div className="grid">
-        <Navbar />
         <Search />
       </div>
     );

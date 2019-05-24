@@ -36,7 +36,7 @@ const Search = props => {
           onChange={e => setSearch(e.target.value)}
         />
         <InputGroupAddon addonType="append">
-          <Button color="primary">Find Restuarants</Button>
+          <Button color="primary">Find Restaurants</Button>
         </InputGroupAddon>
       </InputGroup>
     </div>
