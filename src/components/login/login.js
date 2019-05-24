@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+require("dotenv").config();
 
 firebase.initializeApp({
-  apiKey: "AIzaSyAyZ-1MYLvZzGfIocB9hyISQgMa-hD-ijI",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "cordon-bleu-dev.firebaseapp.com"
 });
 
@@ -39,16 +40,16 @@ class Login extends Component {
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
             <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
             <img
-              alt="profile picture"
+              alt="profile"
               src={firebase.auth().currentUser.photoURL}
             />
           </span>
         ) : (
-          <StyledFirebaseAuth
-            uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
-        )}
+            <StyledFirebaseAuth
+              uiConfig={this.uiConfig}
+              firebaseAuth={firebase.auth()}
+            />
+          )}
       </div>
     );
   }

@@ -16,6 +16,7 @@ export class Navbar extends Component {
         <div className="nav-right">
           <div className="nav-logo-div">
             <img
+              alt="logo"
               className="nav-logo-image"
               src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png"
             />
