@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-require("dotenv").config();
 
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -39,10 +38,8 @@ class Login extends Component {
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
             <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
-            <img
-              alt="profile"
-              src={firebase.auth().currentUser.photoURL}
             />
+            <img alt="profile" src={firebase.auth().currentUser.photoURL} />
           </span>
         ) : (
             <StyledFirebaseAuth

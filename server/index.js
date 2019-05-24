@@ -6,7 +6,6 @@ const massive = require('massive');
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env
 
 
-
 app.use((req, res, next) => {
     console.log('request');
     next();
