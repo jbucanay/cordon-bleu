@@ -1,6 +1,7 @@
-input {
-  width: 50%;
-  position: relative;
-  top: 20rem;
-  left: 10rem;
+.google-places-autocomplete__input {
+  width: calc(50% - 20px);
+}
+
+.google-places-autocomplete__suggestions-container {
+  width: calc(25% - 20px);
 }

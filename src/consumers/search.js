@@ -1,25 +1,24 @@
-import axios from "axios";
-
-const SEARCH = "SEARCH";
+import { default as a } from "../actions";
 
 const initialAddress = {
-  address: []
+  address: ""
 };
 
 export function getAddress(search) {
   return {
-    type: SEARCH,
-    payload: axios.get("/api/usersearch", { search })
+    type: a.SEARCH,
+    payload: search
   };
 }
 
 export default function reducer(state = initialAddress, action) {
-  switch (action.type) {
-    case `${SEARCH}_FULFILLED`:
-      console.log(action.payload);
+  const { type, payload } = action;
+  switch (type) {
+    case a.SEARCH:
+      console.log(payload);
       return {
         ...state,
-        address: action.payload
+        address: payload
       };
 
     default:
