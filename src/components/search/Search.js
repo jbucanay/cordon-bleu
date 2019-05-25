@@ -7,7 +7,6 @@ import { getAddress } from "../../consumers/search";
 
 const Search = props => {
   const [search, setSearch] = useState("");
-  console.log(props);
 
   useEffect(() => {
     props.getAddress(search);
