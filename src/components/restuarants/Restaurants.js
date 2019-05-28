@@ -1,6 +1,26 @@
 import React, { useState } from "react";
 
 function Restuarants() {
+  const [type, settype] = useState([
+    "American",
+    "Mexican",
+    "Breakfast",
+    "Chinese",
+    "Burgers",
+    "Italian",
+    "Sushi",
+    "Asian",
+    "Thai",
+    "Indian",
+    "Barbercue",
+    "Sandwiches",
+    "Fast Food",
+    "Deserts",
+    "Vietnamese",
+    "Seafood",
+    "Japanese"
+  ]);
+
   return (
     <div>
       <h1>Categories</h1>
