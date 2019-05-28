@@ -1,26 +1,25 @@
-import Axios from "axios";
-
-const SEARCH = "SEARCH";
-const MYADDRESS = "MYADDRESS";
+import { default as a } from "../actions";
 
 const initialAddress = {
-  address: []
+  address: ""
 };
 
 export function getAddress(search) {
   return {
-    type: SEARCH,
-    payload: Axios.get(
-      `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${search}&types=address&key=AIzaSyAdBDNAgusDJuoZaYwHN19SKgyZWr_lXqs`
-    )
+    type: a.SEARCH,
+    payload: search
   };
 }
 
 export default function reducer(state = initialAddress, action) {
   const { type, payload } = action;
   switch (type) {
-    case SEARCH:
+    case a.SEARCH:
       console.log(payload);
+      return {
+        ...state,
+        address: payload
+      };
 
     default:
       return state;
