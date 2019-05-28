@@ -1,13 +1,12 @@
-li {
-  list-style: none;
-  &:hover {
-    color: red;
-  }
-}
-
 .restcont {
   display: flex;
   overflow-x: scroll;
+  li {
+    list-style: none;
+    &:hover {
+      color: red;
+    }
+  }
 }
 
 article {
@@ -20,11 +19,12 @@ article {
 .filter {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 60%;
   border: gray;
   li {
     border: gray solid 1px;
     padding: 10px;
     border-radius: 50%;
+    list-style: none;
   }
 }
