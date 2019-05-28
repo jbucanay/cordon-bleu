@@ -1,29 +1,27 @@
 import React, { useState } from "react";
-import "./Rest.scss";
-<<<<<<< HEAD
 import promo from "../../images/promo.png";
-=======
-import American from "./food_icons/American";
-import Mexican from "./food_icons/Mexican";
-import Breakfast from "./food_icons/Breakfast";
-import Chinese from "./food_icons/Chinese";
-import Burgers from "./food_icons/Burgers";
-import Italian from "./food_icons/Italian";
-import Sushi from "./food_icons/Sushi";
-import Asian from "./food_icons/Asian";
-import Thai from "./food_icons/Thai";
-import Indian from "./food_icons/Indian";
-import Barbecue from "./food_icons/Barbecue";
-import Sandwiches from "./food_icons/Sandwiches";
-import Fast_Food from "./food_icons/Fast_Food";
-import Dessert from "./food_icons/Dessert";
-import Vietnamese from "./food_icons/Vietnamese";
-import Seafood from "./food_icons/Seafood";
-import Japanese from "./food_icons/Japanese";
->>>>>>> master
+import "./Rest.scss";
+
+import American from "./food_icons/American.jpg";
+import Mexican from "./food_icons/Mexican.png";
+import Breakfast from "./food_icons/Breakfast.png";
+import Chinese from "./food_icons/Chinese.png";
+import Burgers from "./food_icons/Burgers.png";
+import Italian from "./food_icons/Italian.png";
+import Sushi from "./food_icons/Sushi.png";
+import Asian from "./food_icons/Asian.png";
+import Thai from "./food_icons/Thai.png";
+import Indian from "./food_icons/Indian.png";
+import Barbecue from "./food_icons/Barbecue.jpg";
+import Sandwiches from "./food_icons/Sandwiches.png";
+import Fast_Food from "./food_icons/Fast_Food.png";
+import Dessert from "./food_icons/Dessert.png";
+import Vietnamese from "./food_icons/Vietnamese.png";
+import Seafood from "./food_icons/Seafood.jpg";
+import Japanese from "./food_icons/Japanese.png";
 
 function Restuarants() {
-  const [icon, setIcon] = useState([<i class="fas fa-hamburger" />]);
+  const [icon, setIcon] = useState([American]);
   const [type, setType] = useState([
     "American",
     "Mexican",
@@ -44,6 +42,8 @@ function Restuarants() {
     "Japanese"
   ]);
 
+  console.log(American);
+
   return (
     <article>
       <section className="restcont">
@@ -58,7 +58,7 @@ function Restuarants() {
       <section>
         <ul className="filter">
           <li>
-            Over 4.5 <i class="fas fa-star" /> &#65372; &gt;
+            Over 4.5 <i className="fas fa-star" /> &#65372; &gt;
           </li>
           <li>Pickup</li>
           <li>Vegetarian</li>
