@@ -1,20 +1,16 @@
 import React from "react";
-// , { useEffect, useState }
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 
-const Navbar = () => {
-  // const [width, setWidth] = useState(window.innerWidth);
-
-  // useEffect(() => {
-  //   setWidth(window.innerWidth);
-  //   console.log(width);
-  // });
+const Navbar = props => {
+  console.log(props.address);
 
   return (
     <div className="navbar-div">
       <div className="nav-right">
         <div className="nav-logo-div">
+          <h1>{props.address && `ASAP to ${props.address.substr(0, 22)}`}</h1>
           <img
             className="nav-logo-image"
             src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png"
@@ -32,4 +28,10 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = reduxState => {
+  return {
+    address: reduxState.search.address
+  };
+};
+
+export default connect(mapStateToProps)(Navbar);
