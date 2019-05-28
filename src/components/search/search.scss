@@ -1,3 +1,38 @@
 .input-group {
   width: 50% !important;
 }
+
+.search-div {
+  height: 100%;
+  width: 25%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.search-find-button {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  height: 5vh;
+  width: 12vw;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: blue;
+}
+
+.search-globe-button {
+  background-color: blue;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.fas fa-map-marker-alt {
+  display: none;
+}
