@@ -1,17 +1,24 @@
+
 .navbar-div {
+  border-bottom: 1px solid gray;
   background-color: white;
   height: 6%;
   font-family: "Montserrat", sans-serif;
 }
-
-.nav-right {
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1%;
+  font-size: 10px;
+  height: 100%;
+}
+.nav-outer {
   display: flex;
   justify-content: flex-end;
   padding-right: 1%;
   font-size: 10px;
   height: 100%;
 }
-
 .nav-sign-up {
   // border: 1px solid orange;
   color: blue;
@@ -21,7 +28,6 @@
   justify-content: space-around;
   align-items: center;
 }
-
 .nav-logo-div {
   width: 100%;
   // border: 1px solid red;
@@ -29,7 +35,6 @@
   display: flex;
   align-items: center;
 }
-
 .nav-logo-image {
   width: 11vw;
   height: 4.5%;
@@ -37,12 +42,28 @@
   left: 45%;
   right: 55%;
 }
-
 .nav-sign-in-words {
   color: blue;
   text-decoration: none;
 }
+.nav-signup-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: blue;
+  font-weight: 700;
+  color: white;
+  width: 6vw;
+  height: 5vh;
+  border-radius: 20px;
+  font-size: 14px;
+}
 
+.shopping-cart-image {
+background: red;
+border-radius: 4px;
+width: 90px;
+height: 80%;
+justify-content: center;
+}
 .nav-signup-button {
   font-family: "Montserrat", sans-serif;
 
