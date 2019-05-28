@@ -15,7 +15,6 @@ export default function reducer(state = initialAddress, action) {
   const { type, payload } = action;
   switch (type) {
     case a.SEARCH:
-      console.log(payload);
       return {
         ...state,
         address: payload
