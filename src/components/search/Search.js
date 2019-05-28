@@ -3,13 +3,7 @@ import { connect } from "react-redux";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 import "./search.scss";
-<<<<<<< HEAD
-// import "bootstrap/dist/css/bootstrap.min.css";
-import getAddress from "../../consumers/search";
-import axios from "axios";
-=======
 import { getAddress } from "../../consumers/search";
->>>>>>> master
 
 const Search = props => {
   const [search, setSearch] = useState("");
