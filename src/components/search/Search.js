@@ -12,12 +12,12 @@ const Search = props => {
     props.getAddress(search);
   }, [search]);
   return (
-    <div>
+    <div className="places-search-bar">
       <GooglePlacesAutocomplete
         onSelect={({ description }) => {
           setSearch(description);
         }}
-        placehoder={"Enter your delivery address"}
+        placeholder={"Enter your delivery address"}
       />
     </div>
   );
