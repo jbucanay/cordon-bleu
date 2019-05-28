@@ -25,8 +25,15 @@
   }
 
 .bm-item:hover,
-.bm-item-lower:hover {
-  color: red;
+.bm-item-lower:hover{
+filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) contrast(118%);
+}
+
+
+.menu-item-button:hover {
+    color: white;
+    filter: none;
+    background: #DA250E;
 }
 
 .bm-burger-button {
@@ -56,17 +63,17 @@
   font-size: 1.15em;
 }
 
-.bm-morph-shape {
-  fill: #373a47;
-}
+// .bm-morph-shape {
+//   fill: #373a47;
+// }
 
-.bm-item-list {
-  color: #b8b7ad;
-}
+// .bm-item-list {
+//   color: #b8b7ad;
+// }
 
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+// .bm-overlay {
+//   background: rgba(0, 0, 0, 0.3);
+// }
 
 .menu-item-button {
     background: red;
