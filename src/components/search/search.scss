@@ -1,42 +1,36 @@
 .google-places-autocomplete__input {
   width: calc(50% - 20px);
+  margin-left: 7%;
+  width: 25vw;
+  height: 3vh;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
 }
 
 .google-places-autocomplete__suggestions-container {
   width: calc(25% - 20px);
+  width: 20vw;
+  margin-left: 10%;
 }
 
-.search-div {
+.places-search-bar {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 25%;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.search-input {
-  width: 100%;
-}
-
-.search-find-button {
-  color: white;
+.delivering-good-vibes {
+  font-size: 55px;
+  margin-left: 7%;
+  font-weight: bold;
   font-family: "Montserrat", sans-serif;
-  height: 5vh;
-  width: 12vw;
-  font-size: 16px;
-  border-radius: 5px;
-  background-color: blue;
-}
-
-.search-globe-button {
-  background-color: blue;
-}
-
-.search-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-.fas fa-map-marker-alt {
-  display: none;
+  color: white;
 }

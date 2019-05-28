@@ -15,13 +15,14 @@ const Search = props => {
 
   console.log(search);
   return (
-    <div>
+    <div className="places-search-bar">
+      <h1 className="delivering-good-vibes">Delivering good vibes</h1>
       {search && <Redirect to="/restaurants" />}
       <GooglePlacesAutocomplete
         onSelect={({ description }) => {
           setSearch(description);
         }}
-        placehoder={"Enter your delivery address"}
+        placeholder={"📍 Enter your delivery address"}
       />
     </div>
   );
