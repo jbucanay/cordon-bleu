@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = props => {
-  console.log(props.address);
-
   return (
     <div className="navbar-div">
       <div className="nav-right">

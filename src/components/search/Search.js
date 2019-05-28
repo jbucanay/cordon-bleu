@@ -13,7 +13,6 @@ const Search = props => {
     props.getAddress(search);
   }, [search]);
 
-  console.log(search);
   return (
     <div>
       {search && <Redirect to="/restaurants" />}
