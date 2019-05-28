@@ -7,7 +7,7 @@ import "./navbar.scss";
 const Navbar = props => {
   return (
     <div className="navbar-div">
-      <div className="nav-outer">
+      <div className="nav-left">
         <div className="nav-logo-div">
           <h1 className="nav-address">
             {props.address && `ASAP to ${props.address.substr(0, 32)}`}
