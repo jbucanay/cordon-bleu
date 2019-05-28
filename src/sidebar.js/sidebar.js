@@ -1,24 +1,24 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import home from '/Users/bhawk/devmtn/cordon-bleu/src/images/home.png'
-import orders from '/Users/bhawk/devmtn/cordon-bleu/src/images/orders.png'
-import deliveries from '/Users/bhawk/devmtn/cordon-bleu/src/images/deliveries.png'
-import myaccount from '/Users/bhawk/devmtn/cordon-bleu/src/images/my-account.png'
-import help from '/Users/bhawk/devmtn/cordon-bleu/src/images/help.png'
-import signout from '/Users/bhawk/devmtn/cordon-bleu/src/images/signout.png'
+import home from '../../src/images/home.png'
+import orders from '../../src/images/orders.png'
+import deliveries from '../../src/images/deliveries.png'
+import myaccount from '../../src/images/my-account.png'
+import help from '../../src/images/help.png'
+import signout from '../../src/images/signout.png'
 
 
 export default props => {
     return (
-        <Menu disableAutoFocus noOverlay width={500}>{/* this should work for mobile to just cover the whole thing */}
+        <Menu disableAutoFocus width={500}>{/* this should work for mobile to just cover the whole thing */}
 
-            <a className="menu-item" href="/"><img className="menu-image" src={home} />Home</a>
-            <a className="menu-item" href="/orders"><img className="menu-image" src={orders} />Orders</a>
-            <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={deliveries} />Get Free Deliveries</a>
-            <a className="menu-item" href="/my-account"><img className="menu-image" src={myaccount} />My Account</a>
-            <a className="menu-item" href="/door-dash-credits"><img className="menu-image" src={deliveries} />DoorDash Credits</a>
-            <a className="menu-item" href="/help"><img className="menu-image" src={help} />Help</a>
-            <a className="menu-item" href="/signout"><img className="menu-image" src={signout} />Sign Out</a>
+            <a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a>
+            <a className="menu-item" href="/orders"><img className="menu-image" src={orders} alt="" />Orders</a>
+            <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={deliveries} alt="" />Get Free Deliveries</a>
+            <a className="menu-item" href="/my-account"><img className="menu-image" src={myaccount} alt="" />My Account</a>
+            <a className="menu-item" href="/door-dash-credits"><img className="menu-image" src={deliveries} alt="" />DoorDash Credits</a>
+            <a className="menu-item" href="/help"><img className="menu-image" src={help} alt="" />Help</a>
+            <a className="menu-item" href="/signout"><img className="menu-image" src={signout} alt="" />Sign Out</a>
             <p className="seperator-line"></p>
             <a className="menu-item-lower" href="/about-us">About Us</a>
             <a className="menu-item-lower" href="/careers">Careers</a>

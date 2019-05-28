@@ -5,7 +5,6 @@
   margin-bottom: 20px;
   color: black;
   transition: color 0.2s;
-  
 }
 
 .menu-image {
@@ -29,7 +28,6 @@
 filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) contrast(118%);
 }
 
-
 .menu-item-button:hover {
     color: white;
     filter: none;
@@ -41,7 +39,7 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
   width: 20px;
   height: 20px;
   left: 36px;
-  top: 15px;
+  top: 20px;
 }
 
 .bm-burger-bars {
@@ -62,14 +60,15 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
+.bm-menu-wrap { //remove this if you want the menu bar to overlap the navbar
+  background: white;
+  top: 58px;
+}
 
-// .bm-item-list {
-//   color: #b8b7ad;
-// }
+.bm-overlay {
+  background: transparent !important; //have to use important to override react-burger-menu styling
+}
 
-// .bm-overlay {
-//   background: rgba(0, 0, 0, 0.3);
-// }
 
 .menu-item-button {
     background: red;
@@ -86,7 +85,7 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
     border-bottom: 1px solid lightgray;
 }
 
-// *:focus { //this hides the blue outline around stuff on tab push
-//     outline: 0;
-//     outline: none;
-//     }
+*:focus { //this hides the blue outline around stuff on tab push
+    outline: 0;
+    outline: none;
+    }
