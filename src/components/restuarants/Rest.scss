@@ -16,3 +16,15 @@ article {
   margin: auto;
   margin-top: 2rem;
 }
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  border: gray;
+  li {
+    border: gray solid 1px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
