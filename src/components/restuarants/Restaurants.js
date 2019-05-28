@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import "./Rest.scss";
 
 function Restuarants() {
-  const [type, settype] = useState([
+  const [type, setType] = useState([
     "American",
     "Mexican",
     "Breakfast",
@@ -20,18 +21,25 @@ function Restuarants() {
     "Seafood",
     "Japanese"
   ]);
-
+  console.log(type.map(item => item));
   return (
-    <div>
-      <h1>Categories</h1>
-      <h2>Filtered</h2>
-      <h3>Promotional</h3>
-      <h4>Featured</h4>
-      <h4>firstorder</h4>
-      <h4>favorites</h4>
-      <h4>new</h4>
-      <h5>all</h5>
-    </div>
+    <article>
+      <section className="restcont">
+        {type.map((item, index) => {
+          return (
+            <ul key={index}>
+              <li>{item}</li>
+            </ul>
+          );
+        })}
+      </section>
+      <section>
+        <h1>filter</h1>
+      </section>
+      <section>
+        <h1>Featured</h1>
+      </section>
+    </article>
   );
 }
 
