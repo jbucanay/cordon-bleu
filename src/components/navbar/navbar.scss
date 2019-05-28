@@ -1,4 +1,3 @@
-
 .navbar-div {
   border-bottom: 1px solid gray;
   background-color: white;
@@ -29,7 +28,7 @@
   align-items: center;
 }
 .nav-logo-div {
-  width: 100%;
+  width: 30%;
   // border: 1px solid red;
   justify-content: center;
   display: flex;
@@ -58,11 +57,11 @@
 }
 
 .shopping-cart-image {
-background: red;
-border-radius: 4px;
-width: 90px;
-height: 80%;
-justify-content: center;
+  background: red;
+  border-radius: 4px;
+  width: 90px;
+  height: 80%;
+  justify-content: center;
 }
 .nav-signup-button {
   font-family: "Montserrat", sans-serif;
@@ -74,4 +73,10 @@ justify-content: center;
   height: 5vh;
   border-radius: 20px;
   font-size: 14px;
+}
+
+.nav-address {
+  position: absolute;
+  left: 8%;
+  top: 0%;
 }

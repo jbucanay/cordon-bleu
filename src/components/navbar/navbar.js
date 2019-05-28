@@ -8,7 +8,9 @@ const Navbar = props => {
     <div className="navbar-div">
       <div className="nav-outer">
         <div className="nav-logo-div">
-          <h1>{props.address && `ASAP to ${props.address.substr(0, 22)}`}</h1>
+          <h1 className="nav-address">
+            {props.address && `ASAP to ${props.address.substr(0, 32)}`}
+          </h1>
           <img
             className="nav-logo-image"
             src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png"
