@@ -1,7 +1,6 @@
 
 .navbar-div {
   border-bottom: 1px solid gray;
-
   background-color: white;
   height: 6%;
   font-family: "Montserrat", sans-serif;
@@ -57,26 +56,10 @@
   font-size: 14px;
 }
 
-.Hamburger-Image {
-  height: 50px;
-  width: 50px;
-  }
-
-.side-menu-closed {
-  display: none;
-  }
-
-.side-menu-open {
-  background: black;
-  animation: openMenu 1s;
-
-  }
-
-  @keyframes openMenu {
-    from {
-    transform: translateX(0vw);
-    }
-    to {
-    transform: translateX(20vw);
-    }
-    }
+.shopping-cart-image {
+background: red;
+border-radius: 4px;
+width: 90px;
+height: 80%;
+justify-content: center;
+}
