@@ -20,7 +20,7 @@
   height: 100%;
 }
 .nav-sign-up {
-  // border: 1px solid aqua;
+  // border: 1px solid orange;
   color: blue;
   width: 15%;
   display: flex;
@@ -30,6 +30,7 @@
 }
 .nav-logo-div {
   width: 100%;
+  // border: 1px solid red;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -62,4 +63,15 @@ border-radius: 4px;
 width: 90px;
 height: 80%;
 justify-content: center;
+}
+.nav-signup-button {
+  font-family: "Montserrat", sans-serif;
+
+  background-color: blue;
+  font-weight: 700;
+  color: white;
+  width: 6vw;
+  height: 5vh;
+  border-radius: 20px;
+  font-size: 14px;
 }

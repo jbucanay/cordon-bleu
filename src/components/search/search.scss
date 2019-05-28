@@ -1,3 +1,36 @@
-.input-group {
-  width: 50% !important;
+.google-places-autocomplete__input {
+  width: calc(50% - 20px);
+  margin-left: 7%;
+  width: 25vw;
+  height: 3vh;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+}
+
+.google-places-autocomplete__suggestions-container {
+  width: calc(25% - 20px);
+  width: 20vw;
+  margin-left: 10%;
+}
+
+.places-search-bar {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivering-good-vibes {
+  font-size: 55px;
+  margin-left: 7%;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
