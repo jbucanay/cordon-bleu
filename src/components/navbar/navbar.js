@@ -5,8 +5,6 @@ import "./navbar.scss";
 import shoppingcart from '/Users/bhawk/devmtn/cordon-bleu/src/images/shopping-cart-7.png'
 
 const Navbar = props => {
-  console.log(props.address);
-
   return (
     <div className="navbar-div">
       <div className="nav-right">

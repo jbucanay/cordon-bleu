@@ -13,7 +13,6 @@ const Search = props => {
     props.getAddress(search);
   }, [search]);
 
-  console.log(search);
   return (
     <div className="places-search-bar">
       <h1 className="delivering-good-vibes">Delivering good vibes</h1>
