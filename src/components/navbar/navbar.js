@@ -2,12 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
-import shoppingcart from '/Users/bhawk/devmtn/cordon-bleu/src/images/shopping-cart-7.png'
 
 const Navbar = props => {
   return (
     <div className="navbar-div">
-      <div className="nav-right">
+      <div className="nav-outer">
         <div className="nav-logo-div">
           <h1>{props.address && `ASAP to ${props.address.substr(0, 22)}`}</h1>
           <img
