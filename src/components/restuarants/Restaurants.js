@@ -38,7 +38,7 @@ function Restuarants() {
       <section>
         <ul className="filter">
           <li>
-            Over 4.5 <i class="fas fa-star" />
+            Over 4.5 <i class="fas fa-star" /> &#65372; &gt;
           </li>
           <li>Pickup</li>
           <li>Vegetarian</li>
