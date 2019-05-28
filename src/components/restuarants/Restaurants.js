@@ -19,6 +19,7 @@ import Seafood from "./food_icons/Seafood";
 import Japanese from "./food_icons/Japanese";
 
 function Restuarants() {
+  const [icon, setIcon] = useState([<i class="fas fa-hamburger" />]);
   const [type, setType] = useState([
     "American",
     "Mexican",
@@ -38,7 +39,8 @@ function Restuarants() {
     "Seafood",
     "Japanese"
   ]);
-  console.log(type.map(item => item));
+
+  console.log(icon);
   return (
     <article>
       <section className="restcont">
@@ -51,7 +53,15 @@ function Restuarants() {
         })}
       </section>
       <section>
-        <h1>filter</h1>
+        <ul className="filter">
+          <li>
+            Over 4.5 <i class="fas fa-star" /> &#65372; &gt;
+          </li>
+          <li>Pickup</li>
+          <li>Vegetarian</li>
+          <li>Dashpass</li>
+          <li>&#36;,&#36;&#36; &#65372; &gt;</li>
+        </ul>
       </section>
       <section>
         <h1>Featured</h1>
