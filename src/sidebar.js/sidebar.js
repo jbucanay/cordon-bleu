@@ -10,7 +10,8 @@ import signout from '/Users/bhawk/devmtn/cordon-bleu/src/images/signout.png'
 
 export default props => {
     return (
-        <Menu>
+        <Menu disableAutoFocus noOverlay width={500}>{/* this should work for mobile to just cover the whole thing */}
+
             <a className="menu-item" href="/"><img className="menu-image" src={home} />Home</a>
             <a className="menu-item" href="/orders"><img className="menu-image" src={orders} />Orders</a>
             <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={deliveries} />Get Free Deliveries</a>

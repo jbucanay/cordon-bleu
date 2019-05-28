@@ -63,10 +63,6 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
   font-size: 1.15em;
 }
 
-// .bm-morph-shape {
-//   fill: #373a47;
-// }
-
 // .bm-item-list {
 //   color: #b8b7ad;
 // }
@@ -89,3 +85,8 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
 .seperator-line{
     border-bottom: 1px solid lightgray;
 }
+
+// *:focus { //this hides the blue outline around stuff on tab push
+//     outline: 0;
+//     outline: none;
+//     }
