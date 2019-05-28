@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Rest.scss";
+import promo from "../../images/promo.png";
 
 function Restuarants() {
   const [icon, setIcon] = useState([<i class="fas fa-hamburger" />]);
@@ -23,7 +24,6 @@ function Restuarants() {
     "Japanese"
   ]);
 
-  console.log(icon);
   return (
     <article>
       <section className="restcont">
@@ -46,8 +46,11 @@ function Restuarants() {
           <li>&#36;,&#36;&#36; &#65372; &gt;</li>
         </ul>
       </section>
-      <section>
-        <h1>Featured</h1>
+      <section className="promo">
+        <h2>&#36;0 delivery for 30 days!</h2>
+        <p>&#36;0 delivery for orders over &#36;10 for 30days</p>
+        <p>Learn More &#10230;</p>
+        <img src={promo} alt="" />
       </section>
     </article>
   );
