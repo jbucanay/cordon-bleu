@@ -25,13 +25,13 @@
 
 .bm-item:hover,
 .bm-item-lower:hover{
-filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) contrast(118%);
+  filter: invert(51%) sepia(61%) saturate(1862%) hue-rotate(163deg) brightness(101%) contrast(103%);
 }
 
 .menu-item-button:hover {
     color: white;
     filter: none;
-    background: #DA250E;
+    background: #06a6e6;
 }
 
 .bm-burger-button {
@@ -71,7 +71,7 @@ filter: invert(9%) sepia(87%) saturate(7491%) hue-rotate(6deg) brightness(110%) 
 
 
 .menu-item-button {
-    background: red;
+    background: #00b6ff;
     color: white;
     font-weight: 700;
     font-size: .8em;
