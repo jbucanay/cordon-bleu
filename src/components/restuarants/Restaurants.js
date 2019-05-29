@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import promo from "../../images/promo.png";
+import promo from "../../images/promo.jpg";
 import "./Rest.scss";
 
 import American from "./food_icons/American.jpg";
@@ -129,10 +129,49 @@ function Restuarants() {
         </ul>
       </section>
       <section className="promo">
-        <h2>&#36;0 delivery for 30 days!</h2>
-        <p>&#36;0 delivery for orders over &#36;10 for 30days</p>
-        <p>Learn More &#10230;</p>
+        <div>
+          <h2>&#36;0 delivery for 30 days!</h2>
+          <p className="ten">
+            &#36;0 delivery for orders over &#36;10 for 30days
+          </p>
+          <p className="learn">Learn More &#10230;</p>
+        </div>
         <img src={promo} alt="" />
+      </section>
+      <section className="featured">
+        <div>
+          <h1>Featured National Partners</h1>
+          <button>See All &#10230;</button>
+        </div>
+        <div className="top">
+          <figure className="chipotle">
+            <img />
+            <figcaption>Chipotle</figcaption>
+            <figcaption>Free delivery.22mins</figcaption>
+          </figure>
+          <figure className="chipotle">
+            <img />
+            <figcaption>Chipotle</figcaption>
+            <figcaption>Free delivery.22mins</figcaption>
+          </figure>
+        </div>
+        <div className="bottom">
+          <figure className="chipotle">
+            <img />
+            <figcaption>Chipotle</figcaption>
+            <figcaption>Free delivery.22mins</figcaption>
+          </figure>
+          <figure className="chipotle">
+            <img />
+            <figcaption>Chipotle</figcaption>
+            <figcaption>Free delivery.22mins</figcaption>
+          </figure>
+          <figure className="chipotle">
+            <img />
+            <figcaption>Chipotle</figcaption>
+            <figcaption>Free delivery.22mins</figcaption>
+          </figure>
+        </div>
       </section>
     </article>
   );
