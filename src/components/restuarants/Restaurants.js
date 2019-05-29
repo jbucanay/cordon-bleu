@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import promo from "../../images/promo.jpg";
 import "./Rest.scss";
-
+/// icon
 import American from "./food_icons/American.jpg";
 import Mexican from "./food_icons/Mexican.png";
 import Breakfast from "./food_icons/Breakfast.png";
@@ -19,6 +19,12 @@ import Dessert from "./food_icons/Dessert.png";
 import Vietnamese from "./food_icons/Vietnamese.png";
 import Seafood from "./food_icons/Seafood.jpg";
 import Japanese from "./food_icons/Japanese.png";
+/// icon
+
+/// promoted restuarants
+import Chipotle from "./foodpromo/Chipotle.jpg";
+import Wendy from "./foodpromo/Wendy.png";
+/// promo restuarants
 
 function Restuarants() {
   const [type] = useState([
@@ -146,12 +152,12 @@ function Restuarants() {
         <div className="promoted">
           <div className="top">
             <figure>
-              <img />
+              <img src={Chipotle} width="200" alt="chipotle" />
               <figcaption>Chipotle</figcaption>
               <figcaption>Free delivery.22mins</figcaption>
             </figure>
             <figure>
-              <img />
+              <img src={Wendy} width="250" alt="wendy" />
               <figcaption>Wendy's</figcaption>
               <figcaption>Free delivery.22mins</figcaption>
             </figure>

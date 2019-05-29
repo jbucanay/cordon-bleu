@@ -50,8 +50,10 @@ article {
   display: flex;
   .top {
     display: flex;
+    align-items: baseline;
   }
   .bottom {
     display: flex;
+    align-items: baseline;
   }
 }
