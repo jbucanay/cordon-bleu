@@ -21,25 +21,6 @@ import Seafood from "./food_icons/Seafood.jpg";
 import Japanese from "./food_icons/Japanese.png";
 
 function Restuarants() {
-  const [icon] = useState([
-    American,
-    Mexican,
-    Breakfast,
-    Chinese,
-    Burgers,
-    Italian,
-    Sushi,
-    Asian,
-    Thai,
-    Indian,
-    Barbecue,
-    Sandwiches,
-    Fast_Food,
-    Dessert,
-    Vietnamese,
-    Seafood,
-    Japanese
-  ]);
   const [type] = useState([
     "American",
     "Mexican",
@@ -65,16 +46,76 @@ function Restuarants() {
   return (
     <article>
       <section className="restcont">
-        {type.map((item, index) =>
-          icon.map(val => {
-            return (
-              <ul key={index}>
-                <img src={val === item} width="50" alt="" />
-                <li>{item}</li>
-              </ul>
-            );
-          })
-        )}
+        <ul>
+          <li>
+            <img src={American} alt="" width="47" />
+            <p>American</p>
+          </li>
+          <li>
+            <img src={Mexican} alt="" width="47" />
+            <p>Mexican</p>
+          </li>
+          <li>
+            <img src={Breakfast} alt="" width="47" />
+            <p>Breakfast</p>
+          </li>
+          <li>
+            <img src={Chinese} alt="" width="47" />
+            <p>Chinese</p>
+          </li>
+          <li>
+            <img src={Burgers} alt="" width="47" />
+            <p>Burgers</p>
+          </li>
+          <li>
+            <img src={Italian} alt="" width="47" />
+            <p>Italian</p>
+          </li>
+          <li>
+            <img src={Sushi} alt="" width="47" />
+            <p>Sushi</p>
+          </li>
+          <li>
+            <img src={Asian} alt="" width="47" />
+            <p>Asian</p>
+          </li>
+          <li>
+            <img src={Thai} alt="" width="47" />
+            <p>Thai</p>
+          </li>
+          <li>
+            <img src={Indian} alt="" width="47" />
+            <p>Indian</p>
+          </li>
+          <li>
+            <img src={Barbecue} alt="" width="47" />
+            <p>Barbecue</p>
+          </li>
+          <li>
+            <img src={Sandwiches} alt="" width="47" />
+            <p>Sandwiches</p>
+          </li>
+          <li>
+            <img src={Fast_Food} alt="" width="47" />
+            <p>Fastfood</p>
+          </li>
+          <li>
+            <img src={Dessert} alt="" width="47" />
+            <p>Desserts</p>
+          </li>
+          <li>
+            <img src={Vietnamese} alt="" width="47" />
+            <p>Vietnamese</p>
+          </li>
+          <li>
+            <img src={Seafood} alt="" width="47" />
+            <p>Seafood</p>
+          </li>
+          <li>
+            <img src={Japanese} alt="" width="47" />
+            <p>Japanese</p>
+          </li>
+        </ul>
       </section>
       <section>
         <ul className="filter">
