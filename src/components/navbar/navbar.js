@@ -28,7 +28,7 @@ const Navbar = props => {
         </div>
         {/* ) : ( */}
 
-        <div className="shopping-cart-outer">
+        {/* <div className="shopping-cart-outer">
           <a href="/">
             <img
               className="shopping-cart-inner"
@@ -36,7 +36,7 @@ const Navbar = props => {
               alt="shopping cart"
             />
           </a>
-        </div>
+        </div> */}
         {/* )} */}
       </div>
     </div>

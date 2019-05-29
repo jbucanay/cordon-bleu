@@ -10,7 +10,8 @@ function App() {
     <HashRouter>
       <div className="App">
         <header className="App-header" />
-        <SideBar />
+
+        <SideBar className='sidebar' />
         <Navbar />
         {routes}
       </div>

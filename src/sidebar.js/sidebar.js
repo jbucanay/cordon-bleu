@@ -11,24 +11,34 @@ import credits from '../../src/images/credits.png'
 
 export default props => {
   return (
-    <Menu disableAutoFocus width={375}>{/* this should work for mobile to just cover the whole thing */}
+    <div>
+      <div className='menu-1' >
+        <Menu className='menu-item' disableAutoFocus width={375}>{/* this should work for mobile to just cover the whole thing */}
 
-      <a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a>
-      <a className="menu-item" href="/orders"><img className="menu-image" src={orders} alt="" />Orders</a>
-      <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={delivery} alt="" />Get Free Deliveries</a>
-      <a className="menu-item" href="/my-account"><img className="menu-image" src={myaccount} alt="" />My Account</a>
-      <a className="menu-item" href="/door-dash-credits"><img className="menu-image" src={credits} alt="" />DoorDash Credits</a>
-      <a className="menu-item" href="/help"><img className="menu-image" src={help} alt="" />Help</a>
-      <a className="menu-item" href="/signout"><img className="menu-image" src={signout} alt="" />Sign Out</a>
-      <p className="seperator-line"></p>
-      <a className="menu-item-lower" href="/about-us">About Us</a>
-      <a className="menu-item-lower" href="/careers">Careers</a>
-      <a className="menu-item-lower" href="/blog">Blog</a>
-      <a className="menu-item-lower" href="/accessibility">Accessibility</a>
-      <a className="menu-item-lower" href="/be-a-dasher">Be a Dasher</a>
-      <a className="menu-item-lower" href="/be-a-partner-restaurant">Be a Partner Restaurant</a>
-      <a className="menu-item-lower" href="/dashers-for-deliveries">Dashers for Deliveries</a>
-      <button className="menu-item-button" href="/get-credits">Get $20 in Credits</button>
-    </Menu>
+          <a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a>
+          <a className="menu-item" href="/orders"><img className="menu-image" src={orders} alt="" />Orders</a>
+          <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={delivery} alt="" />Get Free Deliveries</a>
+          <a className="menu-item" href="/my-account"><img className="menu-image" src={myaccount} alt="" />My Account</a>
+          <a className="menu-item" href="/door-dash-credits"><img className="menu-image" src={credits} alt="" />DoorDash Credits</a>
+          <a className="menu-item" href="/help"><img className="menu-image" src={help} alt="" />Help</a>
+          <a className="menu-item" href="/signout"><img className="menu-image" src={signout} alt="" />Sign Out</a>
+          <p className="seperator-line"></p>
+          <a className="menu-item-lower" href="/about-us">About Us</a>
+          <a className="menu-item-lower" href="/careers">Careers</a>
+          <a className="menu-item-lower" href="/blog">Blog</a>
+          <a className="menu-item-lower" href="/accessibility">Accessibility</a>
+          <a className="menu-item-lower" href="/be-a-dasher">Be a Dasher</a>
+          <a className="menu-item-lower" href="/be-a-partner-restaurant">Be a Partner Restaurant</a>
+          <a className="menu-item-lower" href="/dashers-for-deliveries">Dashers for Deliveries</a>
+          <button className="menu-item-button" href="/get-credits">Get $20 in Credits</button>
+        </Menu>
+      </div>
+      <div className='menu-2' >
+        <Menu className='menu-item' disableAutoFocus width={375} right>{/* this should work for mobile to just cover the whole thing */}
+          <p>THIS IS THE CART</p>
+
+        </Menu>
+      </div>
+    </div>
   );
 };
