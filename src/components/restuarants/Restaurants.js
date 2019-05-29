@@ -24,6 +24,9 @@ import Japanese from "./food_icons/Japanese.png";
 /// promoted restuarants
 import Chipotle from "./foodpromo/Chipotle.jpg";
 import Wendy from "./foodpromo/Wendy.png";
+import Corner from "./foodpromo/Corner.jpeg";
+import Chicfila from "./foodpromo/Chicfila.jpg";
+
 /// promo restuarants
 
 function Restuarants() {
@@ -46,8 +49,6 @@ function Restuarants() {
     "Seafood",
     "Japanese"
   ]);
-
-  console.log(American);
 
   return (
     <article>
@@ -154,29 +155,29 @@ function Restuarants() {
             <figure>
               <img src={Chipotle} width="200" alt="chipotle" />
               <figcaption>Chipotle</figcaption>
-              <figcaption>Free delivery.22mins</figcaption>
+              <figcaption>Free delivery .22mins</figcaption>
             </figure>
             <figure>
               <img src={Wendy} width="250" alt="wendy" />
               <figcaption>Wendy's</figcaption>
-              <figcaption>Free delivery.22mins</figcaption>
+              <figcaption>Free delivery .22mins</figcaption>
             </figure>
           </div>
           <div className="bottom">
             <figure>
-              <img />
+              <img src={Chicfila} width="200" alt="chicfila" />
               <figcaption>Chick-fil-A&#174;</figcaption>
-              <figcaption>Free delivery.22mins</figcaption>
+              <figcaption>Free delivery .22mins</figcaption>
             </figure>
             <figure>
-              <img />
+              <img src={Corner} alt="cornerbakery" width="200" />
               <figcaption>Corner Bakey</figcaption>
-              <figcaption>Free delivery.22mins</figcaption>
+              <figcaption>Free delivery .22mins</figcaption>
             </figure>
             <figure>
               <img />
               <figcaption>Papa John's Pizza</figcaption>
-              <figcaption>Free delivery.22mins</figcaption>
+              <figcaption>Free delivery .22mins</figcaption>
             </figure>
           </div>
         </div>
