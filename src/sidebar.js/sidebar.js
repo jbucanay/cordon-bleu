@@ -13,31 +13,31 @@ export default props => {
       {/* this should work for mobile to just cover the whole thing */}
 
       <a className="menu-item" href="/">
-        <img className="menu-image" src={home} />
+        <img className="menu-image" src={home} alt="" />
         Home
       </a>
       <a className="menu-item" href="/orders">
-        <img className="menu-image" src={orders} />
+        <img className="menu-image" src={orders} alt="" />
         Orders
       </a>
       <a className="menu-item" href="/get-free-deliveries">
-        <img className="menu-image" src={deliveries} />
+        <img className="menu-image" src={deliveries} alt="" />
         Get Free Deliveries
       </a>
       <a className="menu-item" href="/my-account">
-        <img className="menu-image" src={myaccount} />
+        <img className="menu-image" src={myaccount} alt="" />
         My Account
       </a>
       <a className="menu-item" href="/door-dash-credits">
-        <img className="menu-image" src={deliveries} />
+        <img className="menu-image" src={deliveries} alt="" />
         DoorDash Credits
       </a>
       <a className="menu-item" href="/help">
-        <img className="menu-image" src={help} />
+        <img className="menu-image" src={help} alt="" />
         Help
       </a>
       <a className="menu-item" href="/signout">
-        <img className="menu-image" src={signout} />
+        <img className="menu-image" src={signout} alt="" />
         Sign Out
       </a>
       <p className="seperator-line" />

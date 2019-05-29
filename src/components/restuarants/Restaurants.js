@@ -21,8 +21,26 @@ import Seafood from "./food_icons/Seafood.jpg";
 import Japanese from "./food_icons/Japanese.png";
 
 function Restuarants() {
-  const [icon, setIcon] = useState([American]);
-  const [type, setType] = useState([
+  const [icon] = useState([
+    American,
+    Mexican,
+    Breakfast,
+    Chinese,
+    Burgers,
+    Italian,
+    Sushi,
+    Asian,
+    Thai,
+    Indian,
+    Barbecue,
+    Sandwiches,
+    Fast_Food,
+    Dessert,
+    Vietnamese,
+    Seafood,
+    Japanese
+  ]);
+  const [type] = useState([
     "American",
     "Mexican",
     "Breakfast",
@@ -47,13 +65,16 @@ function Restuarants() {
   return (
     <article>
       <section className="restcont">
-        {type.map((item, index) => {
-          return (
-            <ul key={index}>
-              <li>{item}</li>
-            </ul>
-          );
-        })}
+        {type.map((item, index) =>
+          icon.map(val => {
+            return (
+              <ul key={index}>
+                <img src={val === item} width="50" alt="" />
+                <li>{item}</li>
+              </ul>
+            );
+          })
+        )}
       </section>
       <section>
         <ul className="filter">
