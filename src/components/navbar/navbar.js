@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import shoppingcart from '../../../src/images/shopping-cart-3.png'
+
 
 const Navbar = props => {
   return (
@@ -17,12 +19,19 @@ const Navbar = props => {
             alt=""
           />
         </div>
+        {/* {this.state.clicked ? ( */}
         <div className="nav-sign-up">
-          <Link to="/login" className="nav-sign-in-words">
-            <h2>Sign In</h2>
-          </Link>
-          <button className="nav-signup-button">Sign Up</button>
+          <Link to="/login" className="nav-sign-in-words"><h2>Sign In</h2></Link>
+          {/* <Link to="/signup"><button onClick={() => this.handleClick()} className="nav-signup-button">Sign Up</button></Link> */}
+          <Link to="/signup"><button className="nav-signup-button">Sign Up</button></Link>
+
         </div>
+        {/* ) : ( */}
+
+        <div className="shopping-cart-outer" >
+          <a href="/"><img className="shopping-cart-inner" src={shoppingcart} alt="shopping cart" /></a>
+        </div>
+        {/* )} */}
       </div>
     </div>
   );
