@@ -82,12 +82,15 @@
   background: #00b6ff;
   border-radius: 4px;
   width: 80px;
-  margin:auto;
-  padding:5px;
+  margin: auto;
+  padding: 5px;
 }
-.shopping-cart-inner{
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(177deg) brightness(107%) contrast(101%);
+
+.shopping-cart-inner {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(177deg)
+    brightness(107%) contrast(101%);
 }
+
 .nav-address {
   position: absolute;
   left: 8%;
