@@ -143,34 +143,36 @@ function Restuarants() {
           <h1>Featured National Partners</h1>
           <button>See All &#10230;</button>
         </div>
-        <div className="top">
-          <figure className="chipotle">
-            <img />
-            <figcaption>Chipotle</figcaption>
-            <figcaption>Free delivery.22mins</figcaption>
-          </figure>
-          <figure className="chipotle">
-            <img />
-            <figcaption>Chipotle</figcaption>
-            <figcaption>Free delivery.22mins</figcaption>
-          </figure>
-        </div>
-        <div className="bottom">
-          <figure className="chipotle">
-            <img />
-            <figcaption>Chipotle</figcaption>
-            <figcaption>Free delivery.22mins</figcaption>
-          </figure>
-          <figure className="chipotle">
-            <img />
-            <figcaption>Chipotle</figcaption>
-            <figcaption>Free delivery.22mins</figcaption>
-          </figure>
-          <figure className="chipotle">
-            <img />
-            <figcaption>Chipotle</figcaption>
-            <figcaption>Free delivery.22mins</figcaption>
-          </figure>
+        <div className="promoted">
+          <div className="top">
+            <figure>
+              <img />
+              <figcaption>Chipotle</figcaption>
+              <figcaption>Free delivery.22mins</figcaption>
+            </figure>
+            <figure>
+              <img />
+              <figcaption>Wendy's</figcaption>
+              <figcaption>Free delivery.22mins</figcaption>
+            </figure>
+          </div>
+          <div className="bottom">
+            <figure>
+              <img />
+              <figcaption>Chick-fil-A&#174;</figcaption>
+              <figcaption>Free delivery.22mins</figcaption>
+            </figure>
+            <figure>
+              <img />
+              <figcaption>Corner Bakey</figcaption>
+              <figcaption>Free delivery.22mins</figcaption>
+            </figure>
+            <figure>
+              <img />
+              <figcaption>Papa John's Pizza</figcaption>
+              <figcaption>Free delivery.22mins</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </article>

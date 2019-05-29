@@ -48,4 +48,10 @@ article {
 
 .featured {
   display: flex;
+  .top {
+    display: flex;
+  }
+  .bottom {
+    display: flex;
+  }
 }
