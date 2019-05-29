@@ -4,35 +4,20 @@ import { Link } from "react-router-dom";
 import "./navbar.scss";
 import shoppingcart from '../../../src/images/shopping-cart-3.png'
 
-const Navbar = props => {
-  console.log(props.address);
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     clicked: 'false'
-  //   }
-  // }
-  // handleClick = () => {
-  //   if (this.state.clicked === 'true') {
-  //     this.setState({
-  //       clicked: 'false'
-  //     })
-  //   } else {
-  //     this.setState({
-  //       clicked: 'true'
-  //     })
-  //   }
 
-  // displayCart = () => {
-  //   this.setState({ clicked: true });
-  // }
+const Navbar = props => {
   return (
     <div className="navbar-div">
       <div className="nav-outer">
-
         <div className="nav-logo-div">
-          <h1>{props.address && `ASAP to ${props.address.substr(0, 22)}`}</h1>
-          <img className="nav-logo-image" src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png" alt="logo" />
+          <h1 className="nav-address">
+            {props.address && `ASAP to ${props.address.substr(0, 32)}`}
+          </h1>
+          <img
+            className="nav-logo-image"
+            src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png"
+            alt=""
+          />
         </div>
         {/* {this.state.clicked ? ( */}
         <div className="nav-sign-up">

@@ -1,4 +1,3 @@
-
 .navbar-div {
   border-bottom: 1px solid gray;
   background-color: white;
@@ -34,6 +33,13 @@
   justify-content: space-around;
   align-items: center;
 }
+.nav-logo-div {
+  width: 30%;
+  // border: 1px solid red;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 .nav-logo-image {
   width: 11vw;
 }
@@ -51,6 +57,13 @@
   font-size: 14px;
 }
 
+.shopping-cart-image {
+  background: red;
+  border-radius: 4px;
+  width: 90px;
+  height: 80%;
+  justify-content: center;
+}
 .nav-signup-button {
   font-family: "Montserrat", sans-serif;
   background-color: blue;
@@ -74,4 +87,9 @@
 }
 .shopping-cart-inner{
   filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(177deg) brightness(107%) contrast(101%);
+}
+.nav-address {
+  position: absolute;
+  left: 8%;
+  top: 0%;
 }

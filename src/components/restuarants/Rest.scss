@@ -1,0 +1,58 @@
+.restcont {
+  display: flex;
+  overflow-x: scroll;
+
+  justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-left: 17%;
+    margin-right: 8%;
+  }
+  li {
+    list-style: none;
+    margin: 1%;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+article {
+  outline: green;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  border: gray;
+  li {
+    border: gray solid 1px;
+    padding: 10px;
+    border-radius: 50%;
+    list-style: none;
+  }
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(125, 125, 240);
+}
+
+.featured {
+  display: flex;
+  .top {
+    display: flex;
+    align-items: baseline;
+  }
+  .bottom {
+    display: flex;
+    align-items: baseline;
+  }
+}
