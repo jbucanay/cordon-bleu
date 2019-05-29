@@ -148,7 +148,7 @@ function Restuarants() {
       <section className="featured">
         <div>
           <h1>Featured National Partners</h1>
-          <button>See All &#10230;</button>
+          <button className="see-all-button">See All &#10230;</button>
         </div>
         <div className="promoted">
           <div className="top">
