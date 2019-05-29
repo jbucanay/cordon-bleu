@@ -6,6 +6,7 @@ import shoppingcart from '../../../src/images/shopping-cart-3.png'
 
 
 const Navbar = props => {
+
   return (
     <div className="navbar-div">
       <div className="nav-outer">
