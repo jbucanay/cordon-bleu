@@ -2,31 +2,29 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
-import shoppingcart from '/Users/bhawk/devmtn/cordon-bleu/src/images/shopping-cart-3.png'
+import shoppingcart from '../../../src/images/shopping-cart-3.png'
 
 const Navbar = props => {
   console.log(props.address);
   // constructor() {
   //   super();
   //   this.state = {
-  //     isSignedIn: 'false'
+  //     clicked: 'false'
   //   }
   // }
   // handleClick = () => {
-  //   if (this.state.isSignedIn === 'true') {
+  //   if (this.state.clicked === 'true') {
   //     this.setState({
-  //       isSignedIn: 'false'
+  //       clicked: 'false'
   //     })
   //   } else {
   //     this.setState({
-  //       isSignedIn: 'true'
+  //       clicked: 'true'
   //     })
   //   }
 
-
-
   // displayCart = () => {
-  //   this.setState({ isSignedIn: true });
+  //   this.setState({ clicked: true });
   // }
   return (
     <div className="navbar-div">
@@ -36,10 +34,12 @@ const Navbar = props => {
           <h1>{props.address && `ASAP to ${props.address.substr(0, 22)}`}</h1>
           <img className="nav-logo-image" src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png" alt="logo" />
         </div>
-        {/* {this.state.isSignedIn ? ( */}
+        {/* {this.state.clicked ? ( */}
         <div className="nav-sign-up">
           <Link to="/login" className="nav-sign-in-words"><h2>Sign In</h2></Link>
-          <button onClick={() => this.handleClick()} className="nav-signup-button">Sign Up</button>
+          {/* <Link to="/signup"><button onClick={() => this.handleClick()} className="nav-signup-button">Sign Up</button></Link> */}
+          <Link to="/signup"><button className="nav-signup-button">Sign Up</button></Link>
+
         </div>
         {/* ) : ( */}
 
