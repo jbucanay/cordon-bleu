@@ -3,7 +3,8 @@ import "../src/sidebar.js/sidebar.scss";
 import { HashRouter } from "react-router-dom";
 import routes from "./routes";
 import Navbar from './components/navbar/navbar';
-import SideBar from '../src/sidebar.js/sidebar.js';
+import SideBar from '/Users/bhawk/devmtn/cordon-bleu/src/sidebars/sidebar';
+import Cart from '/Users/bhawk/devmtn/cordon-bleu/src/sidebars/cart.js';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <div className="App">
         <header className="App-header" />
 
-        <SideBar className='sidebar' />
+        <SideBar />
+        <Cart />
         <Navbar />
         {routes}
       </div>
