@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import logo from "./logo.png";
 
 const Navbar = props => {
   return (
@@ -11,11 +12,7 @@ const Navbar = props => {
           <h1 className="nav-address">
             {props.address && `ASAP to ${props.address.substr(0, 32)}`}
           </h1>
-          <img
-            className="nav-logo-image"
-            src="https://www.napapalisades.com/wp-content/uploads/2018/10/doordash-logo.png"
-            alt=""
-          />
+          <img className="nav-logo-image" src={logo} alt="logo" />
         </div>
         <div className="nav-sign-up">
           <Link to="/login" className="nav-sign-in-words">
