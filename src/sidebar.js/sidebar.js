@@ -10,7 +10,7 @@ import signout from '../../src/images/signout.png'
 
 export default props => {
     return (
-        <Menu disableAutoFocus width={500}>{/* this should work for mobile to just cover the whole thing */}
+        <Menu disableAutoFocus width={375}>{/* this should work for mobile to just cover the whole thing */}
 
             <a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a>
             <a className="menu-item" href="/orders"><img className="menu-image" src={orders} alt="" />Orders</a>
