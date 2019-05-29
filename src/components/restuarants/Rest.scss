@@ -28,21 +28,40 @@ article {
 
 .filter {
   display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   border: gray;
   li {
     border: gray solid 1px;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 30px;
+    height: 2vh;
+    width: 8vw;
     list-style: none;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-bottom: 1.8%;
   }
 }
 
+// .filter-section {
+//   border: 1px solid red;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 .promo {
   display: flex;
+  height: 20vh;
+  width: 100%;
+  padding: 14px;
+  font-family: "Montserrat", sans-serif;
   justify-content: space-between;
-  background: rgb(125, 125, 240);
+  background: #a5e5ff;
 }
 
 .featured {
@@ -55,4 +74,15 @@ article {
     display: flex;
     align-items: baseline;
   }
+}
+
+.see-all-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: red;
+  border-radius: 45px;
+  width: 10vw;
+  height: 6vh;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
