@@ -26,7 +26,7 @@ import Chipotle from "./foodpromo/Chipotle.jpg";
 import Wendy from "./foodpromo/Wendy.png";
 import Corner from "./foodpromo/Corner.jpeg";
 import Chicfila from "./foodpromo/Chicfila.jpg";
-
+import Papa from "./foodpromo/Papa.jpg";
 /// promo restuarants
 
 function Restuarants() {
@@ -175,7 +175,7 @@ function Restuarants() {
               <figcaption>Free delivery .22mins</figcaption>
             </figure>
             <figure>
-              <img />
+              <img src={Papa} alt="papajohn" width="200" />
               <figcaption>Papa John's Pizza</figcaption>
               <figcaption>Free delivery .22mins</figcaption>
             </figure>
