@@ -3,6 +3,9 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const massive = require("massive");
+
+const { getNear } = require("./nearCont");
+
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
 app.use((req, res, next) => {
@@ -29,6 +32,8 @@ massive(CONNECTION_STRING)
     console.log("db connected");
   })
   .catch(err => console.log(err));
+
+app.post("/api/near", getNear);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);

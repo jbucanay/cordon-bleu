@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import promo from "../../images/promo.jpg";
 import "./Rest.scss";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 /// icon
@@ -34,35 +33,12 @@ import Papa from "./foodpromo/Papa.jpg";
 /// promo restuarants
 
 function Restuarants(props) {
-  const [type] = useState([
-    "American",
-    "Mexican",
-    "Breakfast",
-    "Chinese",
-    "Burgers",
-    "Italian",
-    "Sushi",
-    "Asian",
-    "Thai",
-    "Indian",
-    "Barbecue",
-    "Sandwiches",
-    "Fast Food",
-    "Deserts",
-    "Vietnamese",
-    "Seafood",
-    "Japanese"
-  ]);
-
   useEffect(() => {
     axios
-      .get(
-        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${
-          props.lat
-        },${
-          props.lng
-        }&radius=1500&type=restaurant&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
-      )
+      .post("/api/near", {
+        lati: props.lat,
+        longi: props.lng
+      })
       .then(res => {
         console.log(res);
       });
