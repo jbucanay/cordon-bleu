@@ -1,6 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-
+import Cart from '../components/cart/cart'
 
 
 export default props => {
@@ -8,8 +8,7 @@ export default props => {
         <div>
             <div className='menu-2' >
                 <Menu className='menu-item' disableAutoFocus width={375} right>{/* this should work for mobile to just cover the whole thing */}
-                    <p>THIS IS THE CART</p>
-
+                    <Cart />
                 </Menu>
             </div>
         </div>

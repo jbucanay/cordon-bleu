@@ -63,7 +63,7 @@
 }
 .bm-menu-wrap { //remove this if you want the menu bar to overlap the navbar
   background: white;
-  top: 55px;
+  top: 3.55em;
 }
 
 .bm-overlay {
@@ -100,16 +100,11 @@ position: fixed;
 }
     
 .menu-2 .bm-burger-button {
-  // background-image: url(../../src/images/shopping-cart-4.png);
-  border-radius: 10px;
-  background-repeat: none;
-  background-size: cover;
-  // position: fixed;
-  width: 80px;
-  height: 40px;
-  left: 94%;
-  top: 10px;
-  // z-index: 3;
+  width: 88px;
+  height: 38px;
+  position: absolute;
+  left: 93%;
+  top: 9px;
 }
 
 .menu-1 .bm-burger-bars {

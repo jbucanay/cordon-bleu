@@ -4,7 +4,7 @@ import { HashRouter } from "react-router-dom";
 import routes from "./routes";
 import Navbar from './components/navbar/navbar';
 import SideBar from '/Users/bhawk/devmtn/cordon-bleu/src/sidebars/sidebar';
-import Cart from '/Users/bhawk/devmtn/cordon-bleu/src/sidebars/cart.js';
+import Cart from './sidebars/cartbar.js';
 
 function App() {
   return (
