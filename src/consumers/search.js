@@ -1,9 +1,10 @@
 import { default as a } from "../actions";
 
+import axios from "axios";
+
 const initialAddress = {
   address: "",
-  lat: "",
-  lng: ""
+  eatery: []
 };
 
 export function getAddress(search) {
@@ -13,10 +14,10 @@ export function getAddress(search) {
   };
 }
 
-export function getLaLo(obj) {
+export function getFood(obj) {
   return {
-    type: a.LATLONG,
-    payload: obj
+    type: a.GETEATERY,
+    payload: axios.post("/api/test", { obj })
   };
 }
 
@@ -33,6 +34,11 @@ export default function reducer(state = initialAddress, action) {
         ...state,
         lat: payload.lat,
         lng: payload.lng
+      };
+    case `${a.GETEATERY}_FULFILLED`:
+      return {
+        ...state,
+        eatery: payload.data
       };
     default:
       return state;
