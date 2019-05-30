@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { Redirect } from "react-router-dom";
+import { getLaLo } from "../../consumers/search";
 
 import "./search.scss";
 import { getAddress } from "../../consumers/search";
@@ -11,6 +13,9 @@ const Search = props => {
 
   useEffect(() => {
     props.getAddress(search);
+    geocodeByAddress(search)
+      .then(res => getLatLng(res[0]))
+      .then(({ lat, lng }) => props.getLaLo({ lat, lng }));
   }, [search]);
 
   return (
@@ -31,5 +36,5 @@ const mapStateToProps = reduxState => reduxState;
 
 export default connect(
   mapStateToProps,
-  { getAddress }
+  { getAddress, getLaLo }
 )(Search);
