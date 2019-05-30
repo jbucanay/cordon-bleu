@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import promo from "../../images/promo.jpg";
 import "./Rest.scss";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+import axios from "axios";
+
 /// icon
 import American from "./food_icons/American.jpg";
 import Mexican from "./food_icons/Mexican.png";
@@ -29,7 +33,7 @@ import Chicfila from "./foodpromo/Chicfila.jpg";
 import Papa from "./foodpromo/Papa.jpg";
 /// promo restuarants
 
-function Restuarants() {
+function Restuarants(props) {
   const [type] = useState([
     "American",
     "Mexican",
@@ -49,6 +53,20 @@ function Restuarants() {
     "Seafood",
     "Japanese"
   ]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${
+          props.lat
+        },${
+          props.lng
+        }&radius=1500&type=restaurant&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
+      )
+      .then(res => {
+        console.log(res);
+      });
+  }, []);
 
   return (
     <article>
@@ -186,4 +204,11 @@ function Restuarants() {
   );
 }
 
-export default Restuarants;
+const mapStateToProps = reduxState => {
+  return {
+    lat: reduxState.search.lat,
+    lng: reduxState.search.lng
+  };
+};
+
+export default connect(mapStateToProps)(Restuarants);
