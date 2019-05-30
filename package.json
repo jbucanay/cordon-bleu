@@ -42,7 +42,6 @@
       "last 1 safari version"
     ]
   },
-  "main": "./server/index.js",
-  "repository": "https://github.com/cordon-bleu/cordon-bleu.git",
-  "license": "MIT"
+  "main": "server/index.js",
+  "proxy": "http://localhost:9090"
 }

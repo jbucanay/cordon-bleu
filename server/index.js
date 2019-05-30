@@ -3,17 +3,27 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const massive = require("massive");
+const axios = require("axios");
 
-const { getNear } = require("./nearCont");
+// const { getNear } = require("./nearCont");
 
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
 app.use((req, res, next) => {
-  console.log("request");
   next();
 });
 
 app.use(express.json());
+
+app.post("/api/test", async (req, res) => {
+  const { lat, lng } = req.body.obj;
+
+  let response = await axios.get(
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=1500&type=restaurant&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
+  );
+
+  res.json(response.data.results);
+});
 
 app.use(
   session({
@@ -32,8 +42,6 @@ massive(CONNECTION_STRING)
     console.log("db connected");
   })
   .catch(err => console.log(err));
-
-app.post("/api/near", getNear);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);

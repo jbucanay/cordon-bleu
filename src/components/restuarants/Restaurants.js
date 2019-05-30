@@ -30,20 +30,8 @@ import Wendy from "./foodpromo/Wendy.png";
 import Corner from "./foodpromo/Corner.jpeg";
 import Chicfila from "./foodpromo/Chicfila.jpg";
 import Papa from "./foodpromo/Papa.jpg";
-/// promo restuarants
 
 function Restuarants(props) {
-  useEffect(() => {
-    axios
-      .post("/api/near", {
-        lati: props.lat,
-        longi: props.lng
-      })
-      .then(res => {
-        console.log(res);
-      });
-  }, []);
-
   return (
     <article>
       <section className="restcont">
@@ -176,14 +164,124 @@ function Restuarants(props) {
           </div>
         </div>
       </section>
+      <section className="alleatery">
+        <h3>All Restuarants</h3>
+        <ul>
+          <li>
+            <img src={American} alt="" width="47" />
+            <p>American</p>
+          </li>
+          <li>
+            <img src={Mexican} alt="" width="47" />
+            <p>Mexican</p>
+          </li>
+          <li>
+            <img src={Breakfast} alt="" width="47" />
+            <p>Breakfast</p>
+          </li>
+          <li>
+            <img src={Chinese} alt="" width="47" />
+            <p>Chinese</p>
+          </li>
+          <li>
+            <img src={Burgers} alt="" width="47" />
+            <p>Burgers</p>
+          </li>
+          <li>
+            <img src={Italian} alt="" width="47" />
+            <p>Italian</p>
+          </li>
+          <li>
+            <img src={Sushi} alt="" width="47" />
+            <p>Sushi</p>
+          </li>
+          <li>
+            <img src={Asian} alt="" width="47" />
+            <p>Asian</p>
+          </li>
+          <li>
+            <img src={Thai} alt="" width="47" />
+            <p>Thai</p>
+          </li>
+          <li>
+            <img src={Indian} alt="" width="47" />
+            <p>Indian</p>
+          </li>
+          <li>
+            <img src={Barbecue} alt="" width="47" />
+            <p>Barbecue</p>
+          </li>
+          <li>
+            <img src={Sandwiches} alt="" width="47" />
+            <p>Sandwiches</p>
+          </li>
+          <li>
+            <img src={Fast_Food} alt="" width="47" />
+            <p>Fastfood</p>
+          </li>
+          <li>
+            <img src={Dessert} alt="" width="47" />
+            <p>Desserts</p>
+          </li>
+          <li>
+            <img src={Vietnamese} alt="" width="47" />
+            <p>Vietnamese</p>
+          </li>
+          <li>
+            <img src={Seafood} alt="" width="47" />
+            <p>Seafood</p>
+          </li>
+          <li>
+            <img src={Japanese} alt="" width="47" />
+            <p>Japanese</p>
+          </li>
+        </ul>
+        <div className="filter-section">
+          <ul className="filter">
+            <li>
+              Over 4.5 <i className="fas fa-star" /> &#65372; &gt;
+            </li>
+            <li>Pickup</li>
+            <li>Vegetarian</li>
+            <li>Dashpass</li>
+            <li>&#36;,&#36;&#36; &#65372; &gt;</li>
+          </ul>
+        </div>
+        <div className="alleatery">
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img src={item.icon} />
+                  <figcaption>{item.name}</figcaption>
+                  <figcaption>
+                    {item.price > 2 ? <p>&#36;&#36;</p> : <p>&#36;</p>}
+                  </figcaption>
+                  <figcaption>
+                    {item.types.map((val, index) => {
+                      return (
+                        <ul key={index}>
+                          <li>{val}</li>
+                        </ul>
+                      );
+                    })}
+                  </figcaption>
+                  <figcaption>
+                    {item.rating} <i className="fas fa-star" />
+                    {item.user_ratings_total} ratings
+                  </figcaption>
+                </figure>
+              );
+            })}
+        </div>
+      </section>
     </article>
   );
 }
 
 const mapStateToProps = reduxState => {
   return {
-    lat: reduxState.search.lat,
-    lng: reduxState.search.lng
+    eatery: reduxState.search.eatery
   };
 };
 
