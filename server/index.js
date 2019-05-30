@@ -39,16 +39,20 @@ app.post("/api/test", async (req, res) => {
       }
     }
 
-    let restaurantAndDistance = {
-      driving: timeDist,
-      gpsTime: miles,
-      restaurantName: response.data.results.map(item => item.name),
-      price: response.data.results.map(item => item.price_level),
-      type: response.data.results.map(item => item.types),
-      rating: response.data.results.map(item => item.rating),
-      totalRatings: response.data.results.map(item => item.user_ratings_total),
-      openStatus: response.data.results.map(item => item.opening_hours)
-    };
+    let restaurantAndDistance = [
+      {
+        driving: timeDist,
+        gpsTime: miles,
+        restaurantName: response.data.results.map(item => item.name),
+        price: response.data.results.map(item => item.price_level),
+        type: response.data.results.map(item => item.types),
+        rating: response.data.results.map(item => item.rating),
+        totalRatings: response.data.results.map(
+          item => item.user_ratings_total
+        ),
+        openStatus: response.data.results.map(item => item.opening_hours)
+      }
+    ];
 
     if (timeDist.length === 20 && miles.length === 20) {
       res.json(restaurantAndDistance);
