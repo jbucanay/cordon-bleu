@@ -248,31 +248,7 @@ function Restuarants(props) {
           </ul>
         </div>
         <div className="alleatery">
-          {props.eatery &&
-            props.eatery.map((item, index) => {
-              return (
-                <figure key={index}>
-                  <img src={item.icon} />
-                  <figcaption>{item.name}</figcaption>
-                  <figcaption>
-                    {item.price_level >= 2 ? <p>&#36;&#36;</p> : <p>&#36;</p>}
-                  </figcaption>
-                  <figcaption>
-                    {item.types.map((val, index) => {
-                      return (
-                        <ul key={index}>
-                          <li>{val}</li>
-                        </ul>
-                      );
-                    })}
-                  </figcaption>
-                  <figcaption>
-                    {item.rating} <i className="fas fa-star" />
-                    {item.user_ratings_total} ratings
-                  </figcaption>
-                </figure>
-              );
-            })}
+          {props.eatery && console.log(props.eatery)}
         </div>
       </section>
     </article>
