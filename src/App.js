@@ -11,10 +11,10 @@ function App() {
     <HashRouter>
       <div className="App">
         <header className="App-header" />
-
-        <SideBar />
-        <Cart />
         <Navbar />
+
+        <Cart />
+        <SideBar />
         {routes}
       </div>
     </HashRouter>

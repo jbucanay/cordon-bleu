@@ -23,7 +23,7 @@
   align-items: center;
 }
 .nav-sign-up {
-  // border: 1px solid orange;
+  border: 1px solid orange;
   color: #00b6ff;
   // width: 15%;
   display: flex;
@@ -33,9 +33,9 @@
 }
 .nav-logo-div {
   width: 30%;
-  // border: 1px solid red;
+  border: 1px solid red;
+  display: flex;  
   justify-content: center;
-  display: flex;
   align-items: center;
 }
 .nav-logo-image {
@@ -81,7 +81,7 @@
   background: #00b6ff;
   border-radius: 4px;
   width: 80px;
-  margin: auto;
+  padding-right: 100px;
   padding: 5px;
 }
 

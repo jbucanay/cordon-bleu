@@ -44,6 +44,7 @@
 
 .bm-burger-bars {
   background: #373a47;
+  background: transparent;
 }
 
 .bm-cross-button {
@@ -99,9 +100,24 @@ position: fixed;
 }
     
 .menu-2 .bm-burger-button {
-// position: fixed;
-// width: 100px;
-// height: 100px;
-left: 97%;
-// top: 30px;
+  // background-image: url(../../src/images/shopping-cart-4.png);
+  border-radius: 10px;
+  background-repeat: none;
+  background-size: cover;
+  // position: fixed;
+  width: 80px;
+  height: 40px;
+  left: 94%;
+  top: 10px;
+  // z-index: 3;
+}
+
+.menu-1 .bm-burger-bars {
+  background: #373a47;
+}
+
+.menu-2 .bm-burger-bars {
+  // background: transparent;
+  background: #373a47;
+
 }
