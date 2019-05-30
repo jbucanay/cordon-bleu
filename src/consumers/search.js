@@ -29,13 +29,8 @@ export default function reducer(state = initialAddress, action) {
         ...state,
         address: payload
       };
-    case a.LATLONG:
-      return {
-        ...state,
-        lat: payload.lat,
-        lng: payload.lng
-      };
     case `${a.GETEATERY}_FULFILLED`:
+      console.log(payload);
       return {
         ...state,
         eatery: payload.data

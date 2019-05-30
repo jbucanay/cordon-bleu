@@ -255,7 +255,7 @@ function Restuarants(props) {
                   <img src={item.icon} />
                   <figcaption>{item.name}</figcaption>
                   <figcaption>
-                    {item.price > 2 ? <p>&#36;&#36;</p> : <p>&#36;</p>}
+                    {item.price_level >= 2 ? <p>&#36;&#36;</p> : <p>&#36;</p>}
                   </figcaption>
                   <figcaption>
                     {item.types.map((val, index) => {
