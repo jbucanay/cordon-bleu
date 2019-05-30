@@ -1,6 +1,7 @@
 const actions = {
   SEARCH: "SEARCH",
-  LATLONG: "LATLONG"
+  LATLONG: "LATLONG",
+  GETEATERY: "GETEATERY"
 };
 
 export default actions;

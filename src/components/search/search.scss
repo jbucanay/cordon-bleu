@@ -34,3 +34,19 @@
   font-family: "Montserrat", sans-serif;
   color: white;
 }
+
+.alleatery {
+  display: flex;
+  flex-flow: wrap;
+  overflow: scroll;
+  height: 100%;
+  ul {
+    display: flex;
+    flex-flow: wrap;
+    width: 50%;
+
+    li {
+      list-style: none;
+    }
+  }
+}
