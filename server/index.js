@@ -21,7 +21,8 @@ app.post("/api/test", async (req, res) => {
   let response = await axios.get(
     `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=1500&type=restaurant&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
   );
-
+  console.log(response.data.results);
+  console.log("hey gibbs");
   res.json(response.data.results);
 });
 
