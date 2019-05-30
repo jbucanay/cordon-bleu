@@ -164,6 +164,94 @@ function Restuarants(props) {
           </div>
         </div>
       </section>
+      <section className="pickup">
+        <header>
+          <h1>New! Try Pickup</h1>
+          <p>No lines, no fees</p>
+          <button className="see-all-button">See All &#10230;</button>
+        </header>
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Papa} alt="" width="200" />
+                <figcaption>{item.restaurantName[0]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[0]}
+                  <figcaption>{item.gpsTime[0]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Chicfila} alt="" width="200" />
+                <figcaption>{item.restaurantName[1]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[1]}
+                  <figcaption>{item.gpsTime[1]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Papa} alt="" width="200" />
+                <figcaption>{item.restaurantName[2]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[2]}
+                  <figcaption>{item.gpsTime[2]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Papa} alt="" width="200" />
+                <figcaption>{item.restaurantName[3]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[3]}
+                  <figcaption>{item.gpsTime[3]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Papa} alt="" width="200" />
+                <figcaption>{item.restaurantName[4]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[4]}
+                  <figcaption>{item.gpsTime[4]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img src={Papa} alt="" width="200" />
+                <figcaption>{item.restaurantName[5]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[5]}
+                  <figcaption>{item.gpsTime[5]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+      </section>
+
       <section className="alleatery">
         <h3>All Restuarants</h3>
         <ul>
