@@ -1,6 +1,5 @@
 const actions = {
   SEARCH: "SEARCH",
-  LATLONG: "LATLONG",
   GETEATERY: "GETEATERY"
 };
 
