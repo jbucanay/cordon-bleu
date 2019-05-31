@@ -230,7 +230,6 @@ function Restuarants(props) {
           width="200"
         />
       </section>
-      {props.eatery && console.log(props.eatery)}
       <section className="featured">
         <div>
           <h1>Featured National Partners</h1>
@@ -303,7 +302,9 @@ function Restuarants(props) {
             return (
               <figure key={index}>
                 <img
-                  src={`https://source.unsplash.com/${randoDay[0]}/?food`}
+                  src={`https://source.unsplash.com/${
+                    randoDay[0]
+                  }/?food,${rando[30] || other[20]}`}
                   alt=""
                   width="200"
                 />
