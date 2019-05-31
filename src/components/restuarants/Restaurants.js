@@ -225,7 +225,7 @@ function Restuarants(props) {
           <p className="learn">Learn More &#10230;</p>
         </div>
         <img
-          src={`https://source.unsplash.com/${randoDay[0]}/?food`}
+          src={`https://source.unsplash.com/featured/?food,salad`}
           alt=""
           width="200"
         />
@@ -240,7 +240,9 @@ function Restuarants(props) {
           <div className="top">
             <figure>
               <img
-                src={`https://source.unsplash.com/${randoDay[0]}/?food,burrito`}
+                src={`https://source.unsplash.com/${
+                  randoDay[1]
+                }/?food,tortilla`}
                 width="200"
                 alt="chipotle"
               />
@@ -249,7 +251,7 @@ function Restuarants(props) {
             </figure>
             <figure>
               <img
-                src={`https://source.unsplash.com/${randoDay[0]}/?food,fries`}
+                src={`https://source.unsplash.com/featured/?food,cheese`}
                 width="250"
                 alt="wendy"
               />
@@ -260,9 +262,7 @@ function Restuarants(props) {
           <div className="bottom">
             <figure>
               <img
-                src={`https://source.unsplash.com/${
-                  randoDay[0]
-                }/?food,fastfood`}
+                src={`https://source.unsplash.com/featured/?food,hamburger`}
                 width="200"
                 alt="chicfila"
               />
@@ -311,26 +311,6 @@ function Restuarants(props) {
                 <figcaption>
                   Pickup in {item.driving[0]}
                   <figcaption>{item.gpsTime[0]}</figcaption>
-                </figcaption>
-              </figure>
-            );
-          })}
-
-        {props.eatery &&
-          props.eatery.map((item, index) => {
-            return (
-              <figure key={index}>
-                <img
-                  src={`https://source.unsplash.com/${randoDay[2]}/?food
-                
-                  `}
-                  alt=""
-                  width="200"
-                />
-                <figcaption>{item.restaurantName[1]}</figcaption>
-                <figcaption>
-                  Pickup in {item.driving[1]}
-                  <figcaption>{item.gpsTime[1]}</figcaption>
                 </figcaption>
               </figure>
             );
@@ -503,16 +483,567 @@ function Restuarants(props) {
               return (
                 <figure key={index}>
                   <img
-                    src={`https://source.unsplash.com/${randoDay[2]}/?food,${
-                      rando[9]
+                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                      other[12]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[1]}</figcaption>
+                  <figcaption>
+                    {item.price[1] && item.price[1] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[1].slice(0, 2).map(val => {
+                        return <li> {val} </li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[1]}</figcaption>
+                  <figcaption>
+                    {item.rating[1]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[1] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[1]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      rando[10]
                     }`}
                     alt=""
                     width="200"
                   />
                   <figcaption>{item.restaurantName[6]}</figcaption>
                   <figcaption>
-                    Pickup in {item.driving[6]}
-                    <figcaption>{item.gpsTime[6]}</figcaption>
+                    {item.price[6] && item.price[6] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[6].slice(0, 3).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[6]}</figcaption>
+                  <figcaption>
+                    {item.rating[6]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[6] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[6]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                      rando[11]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[7]}</figcaption>
+                  <figcaption>
+                    {item.price[7] && item.price[7] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[7].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[7]}</figcaption>
+                  <figcaption>
+                    {item.rating[7]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[7] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[7]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                      other[12]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[8]}</figcaption>
+                  <figcaption>
+                    {item.price[8] && item.price[8] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[8].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[8]}</figcaption>
+                  <figcaption>
+                    {item.rating[8]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[8] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[8]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      rando[13]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[9]}</figcaption>
+                  <figcaption>
+                    {item.price[9] && item.price[9] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[9].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[9]}</figcaption>
+                  <figcaption>
+                    {item.rating[9]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[9] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[9]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                      rando[13]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[10]}</figcaption>
+                  <figcaption>
+                    {item.price[10] && item.price[10] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[10].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[10]}</figcaption>
+                  <figcaption>
+                    {item.rating[10]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[10] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[10]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      rando[14]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[11]}</figcaption>
+                  <figcaption>
+                    {item.price[11] && item.price[11] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[11].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[11]}</figcaption>
+                  <figcaption>
+                    {item.rating[11]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[11] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[11]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      other[15]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[12]}</figcaption>
+                  <figcaption>
+                    {item.price[12] && item.price[12] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[12].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[12]}</figcaption>
+                  <figcaption>
+                    {item.rating[12]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[12] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[12]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      rando[16]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[13]}</figcaption>
+                  <figcaption>
+                    {item.price[13] && item.price[13] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[13].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[13]}</figcaption>
+                  <figcaption>
+                    {item.rating[13]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[13] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[13]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                      other[17]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[14]}</figcaption>
+                  <figcaption>
+                    {item.price[14] && item.price[14] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[14].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[14]}</figcaption>
+                  <figcaption>
+                    {item.rating[14]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[14] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[14]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      other[20]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[15]}</figcaption>
+                  <figcaption>
+                    {item.price[15] && item.price[15] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[15].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[15]}</figcaption>
+                  <figcaption>
+                    {item.rating[15]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[15] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[15]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                      rando[21]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[16]}</figcaption>
+                  <figcaption>
+                    {item.price[16] && item.price[16] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[16].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[16]}</figcaption>
+                  <figcaption>
+                    {item.rating[16]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[16] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[16]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                      rando[22]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[17]}</figcaption>
+                  <figcaption>
+                    {item.price[17] && item.price[17] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[17].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[17]}</figcaption>
+                  <figcaption>
+                    {item.rating[17]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[17] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[17]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${
+                      other[25]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[18]}</figcaption>
+                  <figcaption>
+                    {item.price[18] && item.price[18] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[18].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[18]}</figcaption>
+                  <figcaption>
+                    {item.rating[18]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[18] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[18]} ratings</p>
+                      )}
+                    </figcaption>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          {props.eatery &&
+            props.eatery.map((item, index) => {
+              return (
+                <figure key={index}>
+                  <img
+                    src={`https://source.unsplash.com/featured/?food,${rando[26] ||
+                      other[26]}`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[19]}</figcaption>
+                  <figcaption>
+                    {item.price[19] && item.price[19] >= 2 ? (
+                      <p>&#36;&#36;</p>
+                    ) : (
+                      <p>&#36;</p>
+                    )}
+                    <ul>
+                      {item.type[19].slice(0, 2).map(val => {
+                        return <li>{val}</li>;
+                      })}
+                    </ul>
+                  </figcaption>
+                  <figcaption>{item.driving[19]}</figcaption>
+                  <figcaption>
+                    {item.rating[19]} <i className="fas fa-star" />
+                    <figcaption>
+                      {item.totalRatings[19] >= 1500 ? (
+                        <p>1500+ ratings</p>
+                      ) : (
+                        <p>{item.totalRatings[19]} ratings</p>
+                      )}
+                    </figcaption>
                   </figcaption>
                 </figure>
               );
