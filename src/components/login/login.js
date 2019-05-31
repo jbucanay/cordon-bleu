@@ -38,7 +38,7 @@ class Login extends Component {
         <div className="login-card">
           <h1>Sign In</h1>
           <h2 className='login-h2'>New to DoorDash? <Link to="/signup" ><button className="login-button">Sign up</button></Link></h2>
-          {this.state.isSignedIn ? (
+          {this.state.isSignedIn ? ( //what shows after you sign in
             <span>
               <div>Signed In!</div>
               <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
@@ -46,6 +46,7 @@ class Login extends Component {
 
               <img alt="profile" src={firebase.auth().currentUser.photoURL} />
             </span>
+            // <Link to ="/home"
           ) : (
               <StyledFirebaseAuth
                 uiConfig={this.uiConfig}

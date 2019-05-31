@@ -44,6 +44,7 @@
 
 .bm-burger-bars {
   background: #373a47;
+  background: transparent;
 }
 
 .bm-cross-button {
@@ -62,7 +63,7 @@
 }
 .bm-menu-wrap { //remove this if you want the menu bar to overlap the navbar
   background: white;
-  top: 58px;
+  top: 3.55em;
 }
 
 .bm-overlay {
@@ -88,4 +89,34 @@
 *:focus { //this hides the blue outline around stuff on tab push
     outline: 0;
     outline: none;
-    }
+}
+
+.menu-1 .bm-burger-button {
+position: fixed;
+// width: 36px;
+// height: 30px;
+// left: 36px;
+// top: 36px;
+}
+    
+.menu-2 .bm-burger-button {
+  width: 88px;
+  height: 38px;
+  position: absolute;
+  left: 93%;
+  top: 9px;
+}
+
+.menu-1 .bm-burger-bars {
+  background: #373a47;
+}
+
+.menu-2 .bm-burger-bars {
+  // background: transparent;
+  background: #373a47;
+
+}
+
+.shopping-cart {
+  border-radius: 8px;
+}
