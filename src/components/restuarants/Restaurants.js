@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import promo from "../../images/promo.jpg";
 import "./Rest.scss";
 import { connect } from "react-redux";
-import axios from "axios";
 
 /// icon
 import American from "./food_icons/American.jpg";
@@ -24,14 +23,114 @@ import Seafood from "./food_icons/Seafood.jpg";
 import Japanese from "./food_icons/Japanese.png";
 /// icon
 
-/// promoted restuarants
-import Chipotle from "./foodpromo/Chipotle.jpg";
-import Wendy from "./foodpromo/Wendy.png";
-import Corner from "./foodpromo/Corner.jpeg";
-import Chicfila from "./foodpromo/Chicfila.jpg";
-import Papa from "./foodpromo/Papa.jpg";
-
 function Restuarants(props) {
+  Array.prototype.shuffle = function() {
+    var i = this.length,
+      j,
+      temp;
+    if (i == 0) return this;
+    while (--i) {
+      j = Math.floor(Math.random() * (i + 1));
+      temp = this[i];
+      this[i] = this[j];
+      this[j] = temp;
+    }
+    return this;
+  };
+
+  let moreFood = [
+    "coffee",
+    "cookie",
+    "corn",
+    "cupcake",
+    "crab",
+    "curry",
+    "cereal",
+    "dates",
+    "dips",
+    "duck",
+    "dumpling",
+    "donuts",
+    "eggs",
+    "enchilada",
+    "eggroll",
+    "English",
+    "fajita",
+    "fish ",
+    "franks",
+    "French",
+    "French",
+    "Garlic",
+    "ginger",
+    "goose",
+    "granola",
+    "grapes",
+    "green",
+    "ham",
+    "honey",
+    "hummus",
+    "Italian",
+    "jambalaya",
+    "jelly",
+    "jerky",
+    "kale",
+    "kabobs",
+    "ketchup",
+    "lobster",
+    "Lamb",
+    "Lasagna",
+    "Meatball",
+    "Moose",
+    "Milk",
+    "Milkshake",
+    "Noodle",
+    "Pizza",
+    "Pepper",
+    "Spaghetti",
+    "Toast",
+    "Waffle",
+    "Wine",
+    "Walnut",
+    "Yogurt"
+  ];
+
+  let foodType = [
+    "asparagus",
+    "apples",
+    "avacado",
+    "almond",
+    "arugala",
+    "artichoke",
+    "asian",
+    "Apple",
+    "Avocado",
+    "bacon",
+    "bagels",
+    "baked",
+    "bbq",
+    "barley",
+    "beer",
+    "blueberries",
+    "bread",
+    "Cabbage",
+    "cake",
+    "carrot",
+    "carne",
+    "celery",
+    "cheese",
+    "chicken",
+    "catfish",
+    "chips",
+    "chocolate",
+    "chowder",
+    "clams"
+  ];
+
+  let day = ["featured", "daily", "weekly"];
+  let randoDay = day.shuffle();
+  let rando = foodType.shuffle();
+  let other = moreFood.shuffle();
+
   return (
     <article>
       <section className="restcont">
@@ -125,8 +224,13 @@ function Restuarants(props) {
           </p>
           <p className="learn">Learn More &#10230;</p>
         </div>
-        <img src={promo} alt="" />
+        <img
+          src={`https://source.unsplash.com/${randoDay[0]}/?food`}
+          alt=""
+          width="200"
+        />
       </section>
+      {props.eatery && console.log(props.eatery)}
       <section className="featured">
         <div>
           <h1>Featured National Partners</h1>
@@ -135,35 +239,181 @@ function Restuarants(props) {
         <div className="promoted">
           <div className="top">
             <figure>
-              <img src={Chipotle} width="200" alt="chipotle" />
+              <img
+                src={`https://source.unsplash.com/${randoDay[0]}/?food,burrito`}
+                width="200"
+                alt="chipotle"
+              />
               <figcaption>Chipotle</figcaption>
-              <figcaption>Free delivery .22mins</figcaption>
+              <figcaption>Free delivery </figcaption>
             </figure>
             <figure>
-              <img src={Wendy} width="250" alt="wendy" />
+              <img
+                src={`https://source.unsplash.com/${randoDay[0]}/?food,fries`}
+                width="250"
+                alt="wendy"
+              />
               <figcaption>Wendy's</figcaption>
-              <figcaption>Free delivery .22mins</figcaption>
+              <figcaption>Free delivery </figcaption>
             </figure>
           </div>
           <div className="bottom">
             <figure>
-              <img src={Chicfila} width="200" alt="chicfila" />
+              <img
+                src={`https://source.unsplash.com/${
+                  randoDay[0]
+                }/?food,fastfood`}
+                width="200"
+                alt="chicfila"
+              />
               <figcaption>Chick-fil-A&#174;</figcaption>
-              <figcaption>Free delivery .22mins</figcaption>
+              <figcaption>Free delivery </figcaption>
             </figure>
             <figure>
-              <img src={Corner} alt="cornerbakery" width="200" />
+              <img
+                src={`https://source.unsplash.com/${
+                  randoDay[0]
+                }/?food,sandwich`}
+                alt="cornerbakery"
+                width="200"
+              />
               <figcaption>Corner Bakey</figcaption>
-              <figcaption>Free delivery .22mins</figcaption>
+              <figcaption>Free delivery </figcaption>
             </figure>
             <figure>
-              <img src={Papa} alt="papajohn" width="200" />
+              <img
+                src={`https://source.unsplash.com/${randoDay[0]}/?food,pizza`}
+                alt="papajohn"
+                width="200"
+              />
               <figcaption>Papa John's Pizza</figcaption>
-              <figcaption>Free delivery .22mins</figcaption>
+              <figcaption>Free delivery </figcaption>
             </figure>
           </div>
         </div>
       </section>
+      <section className="pickup">
+        <header>
+          <h1>New! Try Pickup</h1>
+          <p>No lines, no fees</p>
+          <button className="see-all-button">See All &#10230;</button>
+        </header>
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[0]}/?food`}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[0]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[0]}
+                  <figcaption>{item.gpsTime[0]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[2]}/?food
+                
+                  `}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[1]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[1]}
+                  <figcaption>{item.gpsTime[1]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                    rando[1]
+                  }`}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[2]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[2]}
+                  <figcaption>{item.gpsTime[2]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                    other[10]
+                  }`}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[3]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[3]}
+                  <figcaption>{item.gpsTime[3]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[0]}/?food,${
+                    other[2]
+                  }`}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[4]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[4]}
+                  <figcaption>{item.gpsTime[4]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+        {props.eatery &&
+          props.eatery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <img
+                  src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                    rando[2]
+                  }`}
+                  alt=""
+                  width="200"
+                />
+                <figcaption>{item.restaurantName[5]}</figcaption>
+                <figcaption>
+                  Pickup in {item.driving[5]}
+                  <figcaption>{item.gpsTime[5]}</figcaption>
+                </figcaption>
+              </figure>
+            );
+          })}
+      </section>
+
       <section className="alleatery">
         <h3>All Restuarants</h3>
         <ul>
@@ -252,23 +502,17 @@ function Restuarants(props) {
             props.eatery.map((item, index) => {
               return (
                 <figure key={index}>
-                  <img src={item.icon} />
-                  <figcaption>{item.name}</figcaption>
+                  <img
+                    src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                      rando[9]
+                    }`}
+                    alt=""
+                    width="200"
+                  />
+                  <figcaption>{item.restaurantName[6]}</figcaption>
                   <figcaption>
-                    {item.price_level >= 2 ? <p>&#36;&#36;</p> : <p>&#36;</p>}
-                  </figcaption>
-                  <figcaption>
-                    {item.types.map((val, index) => {
-                      return (
-                        <ul key={index}>
-                          <li>{val}</li>
-                        </ul>
-                      );
-                    })}
-                  </figcaption>
-                  <figcaption>
-                    {item.rating} <i className="fas fa-star" />
-                    {item.user_ratings_total} ratings
+                    Pickup in {item.driving[6]}
+                    <figcaption>{item.gpsTime[6]}</figcaption>
                   </figcaption>
                 </figure>
               );

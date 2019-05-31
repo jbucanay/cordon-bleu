@@ -30,7 +30,6 @@ export default function reducer(state = initialAddress, action) {
         address: payload
       };
     case `${a.GETEATERY}_FULFILLED`:
-      console.log(payload);
       return {
         ...state,
         eatery: payload.data
