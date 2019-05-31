@@ -1,5 +1,5 @@
 import React from "react";
-import promo from "../../images/promo.jpg";
+// import promo from "../../images/promo.jpg";
 import "./Rest.scss";
 import { connect } from "react-redux";
 
@@ -24,11 +24,11 @@ import Japanese from "./food_icons/Japanese.png";
 /// icon
 
 function Restuarants(props) {
-  Array.prototype.shuffle = function() {
+  Array.prototype.shuffle = function () {
     var i = this.length,
       j,
       temp;
-    if (i == 0) return this;
+    if (i === 0) return this;
     while (--i) {
       j = Math.floor(Math.random() * (i + 1));
       temp = this[i];
@@ -262,7 +262,7 @@ function Restuarants(props) {
               <img
                 src={`https://source.unsplash.com/${
                   randoDay[0]
-                }/?food,fastfood`}
+                  }/?food,fastfood`}
                 width="200"
                 alt="chicfila"
               />
@@ -273,7 +273,7 @@ function Restuarants(props) {
               <img
                 src={`https://source.unsplash.com/${
                   randoDay[0]
-                }/?food,sandwich`}
+                  }/?food,sandwich`}
                 alt="cornerbakery"
                 width="200"
               />
@@ -342,7 +342,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     rando[1]
-                  }`}
+                    }`}
                   alt=""
                   width="200"
                 />
@@ -362,7 +362,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     other[10]
-                  }`}
+                    }`}
                   alt=""
                   width="200"
                 />
@@ -381,7 +381,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     other[2]
-                  }`}
+                    }`}
                   alt=""
                   width="200"
                 />
@@ -400,7 +400,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                     rando[2]
-                  }`}
+                    }`}
                   alt=""
                   width="200"
                 />
@@ -505,7 +505,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                       rando[9]
-                    }`}
+                      }`}
                     alt=""
                     width="200"
                   />

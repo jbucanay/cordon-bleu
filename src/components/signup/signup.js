@@ -33,21 +33,26 @@ class Signup extends Component {
             <div className="login">
                 <div className="login-card">
 
-                    <h1>Sign Up</h1>
-                    <h2 className='login-h2'>Already a member? <Link to="/login"><button className="login-button">Sign in</button></Link></h2>
+
                     {this.state.isSignedIn ? (
                         <span>
-                            <div>Signed In!</div>
                             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
                             <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
 
-                            <img alt="profile" src={firebase.auth().currentUser.photoURL} />
-                        </span>
+                            <img className="profile-pic" alt="profile" src={firebase.auth().currentUser.photoURL} />
+                            <Link to="/restaurants">
+                                <br />
+                                <button className="restaurants-button">View Restaurants</button>
+                            </Link>                        </span>
                     ) : (
-                            <StyledFirebaseAuth
-                                uiConfig={this.uiConfig}
-                                firebaseAuth={firebase.auth()}
-                            />
+                            <div>
+                                <h1>Sign Up</h1>
+                                <h2 className='login-h2'>Already a member? <Link to="/login"><button className="login-button">Sign in</button></Link></h2>
+                                <StyledFirebaseAuth
+                                    uiConfig={this.uiConfig}
+                                    firebaseAuth={firebase.auth()}
+                                />
+                            </div>
                         )}
                 </div>
             </div>

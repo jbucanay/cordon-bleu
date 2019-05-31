@@ -11,7 +11,7 @@ import { getAddress } from "../../consumers/search";
 const Search = props => {
   const [search, setSearch] = useState("");
 
-  useEffect(() => {
+  useEffect((props) => {
     props.getAddress(search);
     geocodeByAddress(search)
       .then(res => getLatLng(res[0]))
