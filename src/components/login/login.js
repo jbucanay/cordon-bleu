@@ -36,22 +36,28 @@ class Login extends Component {
     return (
       <div className="login">
         <div className="login-card">
-          <h1>Sign In</h1>
-          <h2 className='login-h2'>New to DoorDash? <Link to="/signup" ><button className="login-button">Sign up</button></Link></h2>
+
           {this.state.isSignedIn ? ( //what shows after you sign in
             <span>
-              <div>Signed In!</div>
-              <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+              <button onClick={() => firebase.auth().signOut()}>Sign out</button>
               <h1>Welcome, {firebase.auth().currentUser.displayName}</h1>
 
-              <img alt="profile" src={firebase.auth().currentUser.photoURL} />
+              <img className="profile-pic" alt="profile" src={firebase.auth().currentUser.photoURL} />
+              <Link to="/restaurants">
+                <br />
+                <button className="restaurants-button">View Restaurants</button>
+              </Link>
+
             </span>
-            // <Link to ="/home"
           ) : (
-              <StyledFirebaseAuth
-                uiConfig={this.uiConfig}
-                firebaseAuth={firebase.auth()}
-              />
+              <div>
+                <h1>Sign In</h1>
+                <h2 className='login-h2'>New to DoorDash? <Link to="/signup" ><button className="login-button">Sign up</button></Link></h2>
+                <StyledFirebaseAuth
+                  uiConfig={this.uiConfig}
+                  firebaseAuth={firebase.auth()}
+                />
+              </div>
             )}
         </div>
       </div>
