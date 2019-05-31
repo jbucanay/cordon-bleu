@@ -4,6 +4,7 @@ import { loggedOutHome } from "./components/loggedOutHome/loggedOutHome";
 import Login from "./components/login/login";
 import SignUp from "./components/signup/signup";
 import Restaurants from "./components/restuarants/Restaurants";
+import Chickfila from "./components/chickfila/chickfila";
 
 
 export default (
@@ -11,6 +12,7 @@ export default (
     <Route path="/login" component={Login} />
     <Route path="/signup" component={SignUp} />
     <Route path="/restaurants" component={Restaurants} />
+    <Route path="/chickfila" component={Chickfila} />
     <Route exact path="/" component={loggedOutHome} />
   </Switch>
 );

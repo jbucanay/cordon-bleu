@@ -25,8 +25,8 @@ class Cart extends Component {
         let userCart;
         if (this.state.cart[0]) {
             userCart = this.state.cart[0].map(cart => {
-                return <div className="Checkout-Page">
-                    <div className="Checkout-Card">
+                return <div>
+                    <div>
                         <img src={cart.image} alt="products" />
                         <h3>{cart.name}</h3>
                         <h4>${cart.price}</h4>
@@ -36,11 +36,11 @@ class Cart extends Component {
         }
 
         return (
-            <div className="Cart_List">
+            <div>
                 <h1>Cart</h1>
                 <h2>Total: $ {this.state.total}</h2>
                 <br />
-                <div className="Cart_List_2">
+                <div>
                     {userCart}
                 </div>
 
