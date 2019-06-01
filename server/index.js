@@ -5,8 +5,6 @@ const app = express();
 const massive = require("massive");
 const axios = require("axios");
 
-// const { getNear } = require("./nearCont");
-
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
 app.use((req, res, next) => {
@@ -58,6 +56,19 @@ app.post("/api/test", async (req, res) => {
       res.json(restaurantAndDistance);
     }
   });
+
+  let zomato = await axios
+    .get(
+      `https://developers.zomato.com/api/v2.1/geocode?lat=32.7773361&lon=-96.79547630000002`,
+      {
+        headers: {
+          ["user-id"]: "d9cf9089bfceca22d3051386d4de599f"
+        }
+      }
+    )
+    .catch(err => console.log(err));
+
+  console.log(zomato);
 });
 
 app.use(

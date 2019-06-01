@@ -484,9 +484,9 @@ function Restuarants(props) {
               return (
                 <figure key={index}>
                   <img
-                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
-                      other[12]
-                    }`}
+                    src={`https://source.unsplash.com/${
+                      randoDay[0]
+                    }/?food,${other[12] || rando[2]}`}
                     alt=""
                     width="200"
                   />
