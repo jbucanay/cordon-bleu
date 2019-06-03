@@ -85,6 +85,8 @@ app.use(checkForSession);
 
 
 app.get('/api/menu', productsController.getItems);
+
+app.get('/api/cart', productsController.getCart);
 app.post("/api/cart/:id", productsController.addToCart)
 
 app.get('/api/getSession', authController.getSession)
