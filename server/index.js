@@ -89,6 +89,8 @@ app.post("/api/cart/:id", productsController.addToCart)
 
 app.get('/api/getSession', authController.getSession)
 
+app.post('/api/session', authController.addToSession)
+
 
 
 app.listen(SERVER_PORT, () => {

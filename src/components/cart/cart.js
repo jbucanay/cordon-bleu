@@ -27,8 +27,8 @@ class Cart extends Component {
             userCart = this.state.cart[0].map(cart => {
                 return <div>
                     <div>
-                        <img src={cart.image} alt="products" />
                         <h3>{cart.name}</h3>
+                        <h5>{cart.description}</h5>
                         <h4>${cart.price}</h4>
                     </div>
                 </div>
