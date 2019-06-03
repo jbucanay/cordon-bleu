@@ -5,6 +5,8 @@ const app = express();
 const massive = require("massive");
 const axios = require("axios");
 const productsController = require('./controllers/productsController')
+const authController = require('./controllers/authController')
+const checkForSession = require('./middlewares/checkForSession')
 
 // const { getNear } = require("./nearCont");
 
@@ -79,9 +81,13 @@ massive(CONNECTION_STRING)
   })
   .catch(err => console.log(err));
 
+app.use(checkForSession);
+
+
 app.get('/api/menu', productsController.getItems);
 app.post("/api/cart/:id", productsController.addToCart)
 
+app.get('/api/getSession', authController.getSession)
 
 
 

@@ -1,0 +1,13 @@
+.food-item {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    border: 1px solid red;
+}
+
+.food-item-outer{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding-top: 200px;
+}
