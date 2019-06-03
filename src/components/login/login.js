@@ -3,6 +3,7 @@ import './login.scss'
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 firebase.initializeApp({
@@ -29,6 +30,7 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user });
       console.log("user", user);
+      axios.post('/api/session', { firebaseEmail: user.email })
     });
   };
 

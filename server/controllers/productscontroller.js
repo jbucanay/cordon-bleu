@@ -21,6 +21,9 @@ module.exports = {
                 console.log(err)
             });
     },
+    getCart: (req, res) => {
+        res.status(200).json(req.session.user)
+    },
     getItems: async (req, res) => {
         const dbInstance = req.app.get('db')
 
