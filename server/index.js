@@ -4,6 +4,7 @@ const session = require("express-session");
 const app = express();
 const massive = require("massive");
 const axios = require("axios");
+const productsController = require('./controllers/productsController')
 
 // const { getNear } = require("./nearCont");
 
@@ -28,7 +29,7 @@ app.post("/api/test", async (req, res) => {
   response.data.results.map(async item => {
     const time = await axios.get(
       `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${lat},${lng}&destinations=place_id:${
-        item.place_id
+      item.place_id
       }&departure_time=now&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
     );
 
@@ -77,6 +78,12 @@ massive(CONNECTION_STRING)
     console.log("db connected");
   })
   .catch(err => console.log(err));
+
+app.get('/api/menu', productsController.getItems);
+app.post("/api/cart/:id", productsController.addToCart)
+
+
+
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);

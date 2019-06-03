@@ -15,6 +15,8 @@ export default class chickfila extends Component {
     componentDidMount() {
         axios.get('/api/menu').then(response => {
             this.setState({ items: response.data })
+            console.log(response.data)
+
         })
         axios.get('/api/getSession').then(response => {
             console.log(response)
@@ -43,10 +45,19 @@ export default class chickfila extends Component {
                 <button className="addToCart" onClick={() => this.handleClick(menu.id)}> Add To Cart </button>
             </div>
         })
+        console.log(itemList)
         return (
             <div>
                 <div>
+
+                    <h1>TESTING</h1>
+                    <h1>TESTING</h1>
+                    <h1>TESTING</h1>
+                    <h1>TESTING</h1>
+                    <h1>TESTING2</h1>
                     {itemList}
+
+
                 </div>
             </div >
         );
