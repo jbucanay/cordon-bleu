@@ -20,6 +20,12 @@ module.exports = {
                 res.status(500).send({ errorMessage: "Error5" });
                 console.log(err)
             });
+    },
+    getItems: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_items()
+        res.status(200).json(menu)
     }
 
 }
