@@ -24,7 +24,7 @@ import Japanese from "./food_icons/Japanese.png";
 /// icon
 
 function Restuarants(props) {
-  Array.prototype.shuffle = function () {
+  Array.prototype.shuffle = function() {
     var i = this.length,
       j,
       temp;
@@ -241,7 +241,7 @@ function Restuarants(props) {
               <img
                 src={`https://source.unsplash.com/${
                   randoDay[1]
-                  }/?food,tortilla`}
+                }/?food,tortilla`}
                 width="200"
                 alt="chipotle"
               />
@@ -272,7 +272,7 @@ function Restuarants(props) {
               <img
                 src={`https://source.unsplash.com/${
                   randoDay[0]
-                  }/?food,sandwich`}
+                }/?food,sandwich`}
                 alt="cornerbakery"
                 width="200"
               />
@@ -304,7 +304,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${
                     randoDay[0]
-                    }/?food,${rando[30] || other[20]}`}
+                  }/?food,${rando[30] || other[20]}`}
                   alt=""
                   width="200"
                 />
@@ -323,7 +323,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     rando[1]
-                    }`}
+                  }`}
                   alt=""
                   width="200"
                 />
@@ -343,7 +343,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     other[10]
-                    }`}
+                  }`}
                   alt=""
                   width="200"
                 />
@@ -362,7 +362,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                     other[2]
-                    }`}
+                  }`}
                   alt=""
                   width="200"
                 />
@@ -381,7 +381,7 @@ function Restuarants(props) {
                 <img
                   src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                     rando[2]
-                    }`}
+                  }`}
                   alt=""
                   width="200"
                 />
@@ -484,15 +484,9 @@ function Restuarants(props) {
               return (
                 <figure key={index}>
                   <img
-<<<<<<< HEAD
                     src={`https://source.unsplash.com/${
                       randoDay[0]
                     }/?food,${other[12] || rando[2]}`}
-=======
-                    src={`https://source.unsplash.com/${randoDay[0]}/?food,${
-                      other[12]
-                      }`}
->>>>>>> master
                     alt=""
                     width="200"
                   />
@@ -501,8 +495,8 @@ function Restuarants(props) {
                     {item.price[1] && item.price[1] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[1].slice(0, 2).map(val => {
                         return <li> {val} </li>;
@@ -516,8 +510,8 @@ function Restuarants(props) {
                       {item.totalRatings[1] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[1]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[1]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -530,7 +524,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       rando[10]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -539,8 +533,8 @@ function Restuarants(props) {
                     {item.price[6] && item.price[6] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[6].slice(0, 3).map(val => {
                         return <li>{val}</li>;
@@ -554,8 +548,8 @@ function Restuarants(props) {
                       {item.totalRatings[6] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[6]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[6]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -568,7 +562,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                       rando[11]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -577,8 +571,8 @@ function Restuarants(props) {
                     {item.price[7] && item.price[7] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[7].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -592,8 +586,8 @@ function Restuarants(props) {
                       {item.totalRatings[7] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[7]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[7]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -606,7 +600,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                       other[12]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -615,8 +609,8 @@ function Restuarants(props) {
                     {item.price[8] && item.price[8] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[8].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -630,8 +624,8 @@ function Restuarants(props) {
                       {item.totalRatings[8] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[8]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[8]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -644,7 +638,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       rando[13]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -653,8 +647,8 @@ function Restuarants(props) {
                     {item.price[9] && item.price[9] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[9].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -668,8 +662,8 @@ function Restuarants(props) {
                       {item.totalRatings[9] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[9]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[9]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -682,7 +676,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                       rando[13]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -691,8 +685,8 @@ function Restuarants(props) {
                     {item.price[10] && item.price[10] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[10].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -706,8 +700,8 @@ function Restuarants(props) {
                       {item.totalRatings[10] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[10]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[10]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -720,7 +714,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       rando[14]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -729,8 +723,8 @@ function Restuarants(props) {
                     {item.price[11] && item.price[11] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[11].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -744,8 +738,8 @@ function Restuarants(props) {
                       {item.totalRatings[11] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[11]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[11]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -758,7 +752,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       other[15]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -767,8 +761,8 @@ function Restuarants(props) {
                     {item.price[12] && item.price[12] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[12].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -782,8 +776,8 @@ function Restuarants(props) {
                       {item.totalRatings[12] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[12]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[12]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -796,7 +790,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       rando[16]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -805,8 +799,8 @@ function Restuarants(props) {
                     {item.price[13] && item.price[13] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[13].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -820,8 +814,8 @@ function Restuarants(props) {
                       {item.totalRatings[13] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[13]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[13]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -834,7 +828,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[2]}/?food,${
                       other[17]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -843,8 +837,8 @@ function Restuarants(props) {
                     {item.price[14] && item.price[14] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[14].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -858,8 +852,8 @@ function Restuarants(props) {
                       {item.totalRatings[14] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[14]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[14]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -873,7 +867,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       other[20]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -882,8 +876,8 @@ function Restuarants(props) {
                     {item.price[15] && item.price[15] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[15].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -897,8 +891,8 @@ function Restuarants(props) {
                       {item.totalRatings[15] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[15]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[15]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -911,7 +905,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                       rando[21]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -920,8 +914,8 @@ function Restuarants(props) {
                     {item.price[16] && item.price[16] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[16].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -935,8 +929,8 @@ function Restuarants(props) {
                       {item.totalRatings[16] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[16]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[16]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -949,7 +943,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/${randoDay[0]}/?food,${
                       rando[22]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -958,8 +952,8 @@ function Restuarants(props) {
                     {item.price[17] && item.price[17] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[17].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -973,8 +967,8 @@ function Restuarants(props) {
                       {item.totalRatings[17] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[17]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[17]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -987,7 +981,7 @@ function Restuarants(props) {
                   <img
                     src={`https://source.unsplash.com/featured/?food,${
                       other[25]
-                      }`}
+                    }`}
                     alt=""
                     width="200"
                   />
@@ -996,8 +990,8 @@ function Restuarants(props) {
                     {item.price[18] && item.price[18] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[18].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -1011,8 +1005,8 @@ function Restuarants(props) {
                       {item.totalRatings[18] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[18]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[18]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
@@ -1033,8 +1027,8 @@ function Restuarants(props) {
                     {item.price[19] && item.price[19] >= 2 ? (
                       <p>&#36;&#36;</p>
                     ) : (
-                        <p>&#36;</p>
-                      )}
+                      <p>&#36;</p>
+                    )}
                     <ul>
                       {item.type[19].slice(0, 2).map(val => {
                         return <li>{val}</li>;
@@ -1048,8 +1042,8 @@ function Restuarants(props) {
                       {item.totalRatings[19] >= 1500 ? (
                         <p>1500+ ratings</p>
                       ) : (
-                          <p>{item.totalRatings[19]} ratings</p>
-                        )}
+                        <p>{item.totalRatings[19]} ratings</p>
+                      )}
                     </figcaption>
                   </figcaption>
                 </figure>
