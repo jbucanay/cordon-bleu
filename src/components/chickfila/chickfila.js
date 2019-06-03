@@ -38,7 +38,7 @@ export default class chickfila extends Component {
     render() {
         let itemList = this.state.items.map(menu => {
             return <div className="food-item" key={menu.id}>
-                <img src={menu.image} alt="menu" />
+                {/* <img src={menu.image} alt="menu" /> */}
                 <h3>{menu.name}</h3>
                 <h5>{menu.description}</h5>
                 <h4> $ {menu.price}</h4>
