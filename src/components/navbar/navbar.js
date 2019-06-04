@@ -10,7 +10,12 @@ const Navbar = props => {
       <div className="nav-outer">
         <div className="nav-logo-div">
           <h1 className="nav-address">
-            {props.address && `ASAP to ${props.address.substr(0, 32)}`}
+            {props.address && (
+              <div>
+                <small>ASAP</small> <small>to</small>{" "}
+                <small>{props.address.substr(0, 32)}</small>
+              </div>
+            )}
           </h1>
           <img className="nav-logo-image" src={logo} alt="logo" />
         </div>
