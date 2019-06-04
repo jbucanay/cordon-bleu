@@ -7,5 +7,9 @@ module.exports = {
         req.session.user.email = req.body.firebaseEmail
         console.log("ADDTOSESSION: ", req.session)
         res.sendStatus(200);
+    },
+    signout: (req, res) => {
+        req.session.destroy();
+        res.status(200).send(req.session);
     }
 }
