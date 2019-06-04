@@ -29,7 +29,7 @@ app.post("/api/test", async (req, res) => {
   response.data.results.map(async item => {
     const time = await axios.get(
       `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${lat},${lng}&destinations=place_id:${
-        item.place_id
+      item.place_id
       }&departure_time=now&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
     );
 
@@ -96,8 +96,19 @@ app.use(checkForSession);
 
 app.get("/api/menu", productsController.getItems);
 
-app.get("/api/cart", productsController.getCart);
-app.post("/api/cart/:id", productsController.addToCart);
+// app.get('/api/menu', productsController.getItems);
+app.get('/api/menu/chickfila', productsController.getChickfila);
+app.get('/api/menu/burgerking', productsController.getBurgerking);
+app.get('/api/menu/jackinthebox', productsController.getJackinthebox);
+app.get('/api/menu/papajohns', productsController.getPapajohns);
+app.get('/api/menu/wendys', productsController.getWendys);
+
+app.get('/api/cart', productsController.getCart);
+app.post("/api/cart/:id", productsController.addToCart)
+
+app.get('/api/getSession', authController.getSession)
+
+app.post('/api/session', authController.addToSession)
 
 app.get("/api/getSession", authController.getSession);
 

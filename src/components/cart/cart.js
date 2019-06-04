@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './cart.scss';
+import Stripe from '../stripe/stripe'
+
 
 
 class Cart extends Component {
@@ -25,24 +27,29 @@ class Cart extends Component {
         let userCart;
         if (this.state.cart[0]) {
             userCart = this.state.cart[0].map(cart => {
-                console.log(userCart)
                 return <div>
-                    <div>
+                    <div className="cart-item">
                         <h3>{cart.name}</h3>
                         <h5>{cart.description}</h5>
-                        <h4>${cart.price}</h4>
+                        <h4>${cart.price}.00</h4>
+                        <h3 className="remove-item-button">Remove</h3>
                     </div>
                 </div>
             })
         }
 
+        console.log("userCart", userCart)
         return (
-            <div>
-                <h1>Cart</h1>
-                <h2>Total: $ {this.state.total}</h2>
+            <div className="cart">
+                <div className="cart-item-outer">
+                    <h1>Your Order</h1>
+                    <button className="checkout-button"><div>Checkout</div> <div>$ {this.state.total}.00</div></button>
+                    <Stripe amount={this.state.total} />
+
+                </div>
                 <br />
                 <div>
-                    test
+
                     {userCart}
                 </div>
 

@@ -8,7 +8,7 @@ export default props => {
     return (
         <div>
             <div className='menu-2' >
-                <Menu className='menu-item' disableAutoFocus width={375} right customBurgerIcon={<img className="shopping-cart" src={shoppingcart} alt="shopping cart" />} >{/* this should work for mobile to just cover the whole thing */}
+                <Menu className='menu-item' disableAutoFocus width={375} right customBurgerIcon={<img className="shopping-cart" src={shoppingcart} alt="shopping cart" />} >
                     <Cart />
                 </Menu>
             </div>
