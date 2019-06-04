@@ -5,7 +5,6 @@ import "./navbar.scss";
 import logo from "./logo.png";
 
 const Navbar = props => {
-
   return (
     <div className="navbar-div">
       <div className="nav-outer">
@@ -25,10 +24,6 @@ const Navbar = props => {
             <button className="nav-signup-button">Sign Up</button>
           </Link>
         </div>
-        {/* ) : ( */}
-
-
-        {/* )} */}
       </div>
     </div>
   );

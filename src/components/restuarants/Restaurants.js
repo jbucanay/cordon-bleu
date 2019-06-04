@@ -58,7 +58,6 @@ function Restuarants(props) {
     "eggs",
     "enchilada",
     "eggroll",
-    "English",
     "fajita",
     "fish ",
     "franks",
@@ -74,7 +73,6 @@ function Restuarants(props) {
     "honey",
     "hummus",
     "cheese",
-    "jambalaya",
     "jelly",
     "jerky",
     "kale",
@@ -84,7 +82,6 @@ function Restuarants(props) {
     "Lamb",
     "Lasagna",
     "Meatball",
-    "Moose",
     "Milk",
     "Milkshake",
     "Noodle",
@@ -306,9 +303,9 @@ function Restuarants(props) {
                 return (
                   <figure key={index}>
                     <img
-                      src={`https://source.unsplash.com/${randoDay[0]}/?food,${
-                        rando[1]
-                      }`}
+                      src={`https://source.unsplash.com/${
+                        randoDay[0]
+                      }/?food,${rando[1] || other[23]}`}
                       alt=""
                       width="315"
                       height="150"
