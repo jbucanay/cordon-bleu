@@ -165,7 +165,7 @@ function Restuarants(props) {
         </div>
       </section>
       <section className="alleatery">
-        <h3>All Restuarants</h3>
+        <h3>All Restaurants</h3>
         <ul>
           <li>
             <img src={American} alt="" width="47" />
@@ -236,6 +236,17 @@ function Restuarants(props) {
             <p>Japanese</p>
           </li>
         </ul>
+        <div>
+          {/* DEREK START HERE */}
+          <div className="displaying-restaurants">
+            {props.eatery.map((val, index) => {
+              return <h1>MAPP</h1>;
+            })}
+            <h1>HEY</h1>
+            <h2>{props.eatery}</h2>
+          </div>
+          {/* <h2>{restaurantAndDistance.driving}</h2> */}
+        </div>
         <div className="filter-section">
           <ul className="filter">
             <li>
