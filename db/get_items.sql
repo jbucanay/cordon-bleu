@@ -1,1 +1,1 @@
-SELECT * FROM menu ORDER BY id ASC;
+SELECT * FROM menu ORDER BY id ASC
