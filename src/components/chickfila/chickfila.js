@@ -47,6 +47,7 @@ export default class chickfila extends Component {
         })
         return (
             <div>
+
                 <div className="food-item-outer">
 
                     {itemList}

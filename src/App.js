@@ -4,7 +4,7 @@ import { HashRouter } from "react-router-dom";
 import routes from "./routes";
 import Navbar from './components/navbar/navbar';
 import SideBar from '/Users/bhawk/devmtn/cordon-bleu/src/sidebars/sidebar';
-import Cart from './sidebars/cartbar.js';
+import Cartbar from './sidebars/cartbar.js';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <header className="App-header" />
         <Navbar />
-        <Cart />
+        <Cartbar />
         <SideBar />
         {routes}
       </div>
