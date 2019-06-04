@@ -12,6 +12,7 @@ import Corner from "./components/corner/Corner";
 
 export default (
   <Switch>
+    <Route exact path="/" component={loggedOutHome} />
     <Route path="/login" component={Login} />
     <Route path="/signup" component={SignUp} />
     <Route path="/restaurants" component={Restaurants} />
@@ -20,6 +21,5 @@ export default (
     <Route path="/wendy" component={Wendy} />
     <Route Path="/papajohn" component={Papa} />
     <Route path="/cornerbakey" component={Corner} />
-    <Route exact path="/" component={loggedOutHome} />
   </Switch>
 );
