@@ -1,5 +1,5 @@
 import React from "react";
-// import promo from "../../images/promo.jpg";
+import { Link } from "react-router-dom";
 import "./Rest.scss";
 import { connect } from "react-redux";
 
@@ -253,11 +253,13 @@ function Restuarants(props) {
             </figure>
           </div>
           <div className="bottom">
-            <figure>
-              <img src={chick} width="210" alt="chicfila" height="100" />
-              <figcaption>Chick-fil-A&#174;</figcaption>
-              <figcaption>Free delivery </figcaption>
-            </figure>
+            <Link to="/chickfila">
+              <figure>
+                <img src={chick} width="210" alt="chicfila" height="100" />
+                <figcaption>Chick-fil-A&#174;</figcaption>
+                <figcaption>Free delivery </figcaption>
+              </figure>
+            </Link>
             <figure>
               <img src={corner} alt="cornerbakery" width="210" height="100" />
               <figcaption>Corner Bakey</figcaption>

@@ -1,6 +1,11 @@
 img {
   object-fit: cover;
   border-radius: 0.2rem;
+  object-position: center;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 26px,
+      rgba(0, 0, 0, 0.08) 0px 2px 8px;
+  }
 }
 
 .restcont {
@@ -19,7 +24,9 @@ img {
     list-style: none;
     margin: 1%;
     &:hover {
-      color: red;
+      color: #00b6ff;
+      cursor: pointer;
+      transform: translate(1px, 2px);
     }
   }
 }
@@ -150,4 +157,9 @@ article {
       }
     }
   }
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
