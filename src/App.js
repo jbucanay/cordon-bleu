@@ -13,7 +13,9 @@ function App() {
       <div className="App">
         <header className="App-header" />
         <Navbar />
-        <Cart />
+        <div className="cart">
+          <Cart />
+        </div>
         <SideBar />
         {routes}
       </div>

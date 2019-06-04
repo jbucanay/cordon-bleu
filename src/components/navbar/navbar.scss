@@ -4,8 +4,10 @@
   height: 3.5em;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1;
+  margin-bottom: 0.5em;
 }
 
 .nav-outer {
@@ -34,7 +36,7 @@
 .nav-logo-div {
   width: 30%;
   // border: 1px solid red;
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
 }
