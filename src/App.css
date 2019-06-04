@@ -1,0 +1,6 @@
+.cart {
+  position: fixed;
+  right: 10em;
+  top: 0.01rem;
+  z-index: 4;
+}

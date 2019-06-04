@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import logo from "./logo.png";
-import shoppingcart from "../../../src/images/shopping-cart-3.png";
 
 const Navbar = props => {
   return (
@@ -25,18 +24,6 @@ const Navbar = props => {
             <button className="nav-signup-button">Sign Up</button>
           </Link>
         </div>
-        {/* ) : ( */}
-
-        <div className="shopping-cart-outer">
-          <a href="/">
-            <img
-              className="shopping-cart-inner"
-              src={shoppingcart}
-              alt="shopping cart"
-            />
-          </a>
-        </div>
-        {/* )} */}
       </div>
     </div>
   );

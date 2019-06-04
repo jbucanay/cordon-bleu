@@ -1,17 +1,22 @@
 import React from "react";
-import "../src/sidebar.js/sidebar.scss";
+import "../src/sidebars/sidebar.scss";
 import { HashRouter } from "react-router-dom";
 import routes from "./routes";
-import Navbar from './components/navbar/navbar';
-import SideBar from '../src/sidebar.js/sidebar.js';
+import Navbar from "./components/navbar/navbar";
+import Cart from "./sidebars/cartbar.js";
+import SideBar from "./sidebars/sidebar";
+import "./App.css";
 
 function App() {
   return (
     <HashRouter>
       <div className="App">
         <header className="App-header" />
-        <SideBar />
         <Navbar />
+        <div className="cart">
+          <Cart />
+        </div>
+        <SideBar />
         {routes}
       </div>
     </HashRouter>
