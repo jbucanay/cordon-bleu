@@ -84,7 +84,12 @@ massive(CONNECTION_STRING)
 app.use(checkForSession);
 
 
-app.get('/api/menu', productsController.getItems);
+// app.get('/api/menu', productsController.getItems);
+app.get('/api/menu/chickfila', productsController.getChickfila);
+app.get('/api/menu/burgerking', productsController.getBurgerking);
+app.get('/api/menu/jackinthebox', productsController.getJackinthebox);
+app.get('/api/menu/papajohns', productsController.getPapajohns);
+app.get('/api/menu/wendys', productsController.getWendys);
 
 app.get('/api/cart', productsController.getCart);
 app.post("/api/cart/:id", productsController.addToCart)

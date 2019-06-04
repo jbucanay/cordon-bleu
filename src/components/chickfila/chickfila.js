@@ -13,7 +13,7 @@ export default class chickfila extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/menu').then(response => {
+        axios.get('/api/menu/chickfila').then(response => {
             this.setState({ items: response.data })
             console.log(response.data)
 
@@ -47,8 +47,6 @@ export default class chickfila extends Component {
                     window.location.reload()
 
                 }
-
-
                 }> Add To Cart </button>
             </div>
         })

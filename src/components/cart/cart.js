@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './cart.scss';
+import Stripe from '../stripe/stripe'
+
 
 
 class Cart extends Component {
@@ -42,6 +44,8 @@ class Cart extends Component {
                 <div className="cart-item-outer">
                     <h1>Your Order</h1>
                     <button className="checkout-button"><div>Checkout</div> <div>$ {this.state.total}</div></button>
+                    <Stripe amount={this.state.total} />
+
                 </div>
                 <br />
                 <div>

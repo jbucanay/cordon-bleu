@@ -29,6 +29,37 @@ module.exports = {
 
         const menu = await dbInstance.get_items()
         res.status(200).json(menu)
-    }
+    },
+    getChickfila: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_chickfila()
+        res.status(200).json(menu)
+    },
+    getBurgerking: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_burgerking()
+        res.status(200).json(menu)
+    },
+    getJackinthebox: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_jackinthebox()
+        res.status(200).json(menu)
+    },
+    getPapajohns: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_Papajohns()
+        res.status(200).json(menu)
+    },
+    getWendys: async (req, res) => {
+        const dbInstance = req.app.get('db')
+
+        const menu = await dbInstance.get_wendys()
+        res.status(200).json(menu)
+    },
+
 
 }
