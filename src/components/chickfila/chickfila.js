@@ -41,7 +41,7 @@ export default class chickfila extends Component {
             return <div className="food-item" key={menu.id}>
                 <h3>{menu.name}</h3>
                 <h5>{menu.description}</h5>
-                <h4> $ {menu.price}</h4>
+                <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
                     window.location.reload()

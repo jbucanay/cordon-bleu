@@ -31,7 +31,7 @@ class Cart extends Component {
                     <div className="cart-item">
                         <h3>{cart.name}</h3>
                         <h5>{cart.description}</h5>
-                        <h4>${cart.price}</h4>
+                        <h4>${cart.price}.00</h4>
                         <h3 className="remove-item-button">Remove</h3>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ class Cart extends Component {
             <div className="cart">
                 <div className="cart-item-outer">
                     <h1>Your Order</h1>
-                    <button className="checkout-button"><div>Checkout</div> <div>$ {this.state.total}</div></button>
+                    <button className="checkout-button"><div>Checkout</div> <div>$ {this.state.total}.00</div></button>
                     <Stripe amount={this.state.total} />
 
                 </div>
