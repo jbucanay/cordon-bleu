@@ -26,7 +26,12 @@ export class Navbar extends Component {
         <div className="nav-outer">
           <div className="nav-logo-div">
             <h1 className="nav-address">
-              {this.props.address && `ASAP to ${this.props.address.substr(0, 32)}`}
+              {this.props.address && (
+                <div>
+                  <small>ASAP</small> <small>to</small>{" "}
+                  <small>{this.props.address.substr(0, 32)}</small>
+                </div>
+              )}
             </h1>
             <img className="nav-logo-image" src={logo} alt="logo" />
           </div>

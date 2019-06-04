@@ -1,38 +1,37 @@
-
 .menu-item {
   display: inline-block;
   text-decoration: none;
   margin-bottom: 20px;
   color: black;
   transition: color 0.2s;
-  
 }
 
 .menu-image {
-    width: 20px;
-    height: 20px;
-    padding-right: 15px;
+  width: 20px;
+  height: 20px;
+  padding-right: 15px;
 }
 
 .menu-item-lower {
-    display: inline-block;
-    text-decoration: none;
-    margin-bottom: 20px;
-    color: gray;
-    transition: color 0.2s;
-    font-weight: 150;
-    font-size: .9em;
-  }
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: gray;
+  transition: color 0.2s;
+  font-weight: 150;
+  font-size: 0.9em;
+}
 
 .bm-item:hover,
 .bm-item-lower:hover {
-  filter: invert(51%) sepia(61%) saturate(1862%) hue-rotate(163deg) brightness(101%) contrast(103%);
+  filter: invert(51%) sepia(61%) saturate(1862%) hue-rotate(163deg)
+    brightness(101%) contrast(103%);
 }
 
 .menu-item-button:hover {
-    color: white;
-    filter: none;
-    background: #06a6e6;
+  color: white;
+  filter: none;
+  background: #06a6e6;
 }
 
 .bm-burger-button {
@@ -62,16 +61,15 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   border-right: 1px solid gray;
-
 }
 .menu-2 .bm-menu {
   background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   border-left: 1px solid gray;
-
 }
-.bm-menu-wrap { //remove this if you want the menu bar to overlap the navbar
+.bm-menu-wrap {
+  //remove this if you want the menu bar to overlap the navbar
   background: white;
   top: 3.55em;
 }
@@ -80,35 +78,35 @@
   background: transparent !important; //have to use important to override react-burger-menu styling
 }
 
-
 .menu-item-button {
-    background: #00b6ff;
-    color: white;
-    font-weight: 700;
-    font-size: .8em;
-    border: none;
-    width: 90%;
-    height: 3em;
-    border-radius: 7px;
+  background: #00b6ff;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8em;
+  border: none;
+  width: 90%;
+  height: 3em;
+  border-radius: 7px;
 }
 
-.seperator-line{
-    border-bottom: 1px solid lightgray;
+.seperator-line {
+  border-bottom: 1px solid lightgray;
 }
 
-*:focus { //this hides the blue outline around stuff on tab push
-    outline: 0;
-    outline: none;
+*:focus {
+  //this hides the blue outline around stuff on tab push
+  outline: 0;
+  outline: none;
 }
 
 .menu-1 .bm-burger-button {
-position: fixed;
-// width: 36px;
-// height: 30px;
-// left: 36px;
-// top: 36px;
+  position: fixed;
+  // width: 36px;
+  // height: 30px;
+  // left: 36px;
+  // top: 36px;
 }
-    
+
 .menu-2 .bm-burger-button {
   width: 88px;
   height: 38px;
@@ -124,10 +122,20 @@ position: fixed;
 .menu-2 .bm-burger-bars {
   // background: transparent;
   background: #373a47;
-
 }
 
 .shopping-cart {
   border-radius: 8px;
 }
 
+.nav-address {
+  font-size: 2em;
+  small:first-child + small {
+    font-weight: 200;
+  }
+  small:first-child,
+  small:last-child {
+    color: #00b6ff;
+    font-weight: 900;
+  }
+}
