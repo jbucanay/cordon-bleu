@@ -42,7 +42,14 @@ export default class chickfila extends Component {
                 <h3>{menu.name}</h3>
                 <h5>{menu.description}</h5>
                 <h4> $ {menu.price}</h4>
-                <button className="addToCart" onClick={() => this.handleClick(menu.id)}> Add To Cart </button>
+                <button className="addToCart" onClick={() => {
+                    this.handleClick(menu.id)
+                    window.location.reload()
+
+                }
+
+
+                }> Add To Cart </button>
             </div>
         })
         return (
