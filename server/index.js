@@ -4,9 +4,9 @@ const session = require("express-session");
 const app = express();
 const massive = require("massive");
 const axios = require("axios");
-const productsController = require('./controllers/productsController')
-const authController = require('./controllers/authController')
-const checkForSession = require('./middlewares/checkForSession')
+const productsController = require("./controllers/productsController");
+const authController = require("./controllers/authController");
+const checkForSession = require("./middlewares/checkForSession");
 
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
@@ -29,7 +29,7 @@ app.post("/api/test", async (req, res) => {
   response.data.results.map(async item => {
     const time = await axios.get(
       `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${lat},${lng}&destinations=place_id:${
-      item.place_id
+        item.place_id
       }&departure_time=now&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
     );
 
@@ -60,18 +60,18 @@ app.post("/api/test", async (req, res) => {
     }
   });
 
-  let zomato = await axios
-    .get(
-      `https://developers.zomato.com/api/v2.1/geocode?lat=32.7773361&lon=-96.79547630000002`,
-      {
-        headers: {
-          ["user-id"]: "d9cf9089bfceca22d3051386d4de599f"
-        }
-      }
-    )
-    .catch(err => console.log(err));
+  // let zomato = await axios
+  //   .get(
+  //     `https://developers.zomato.com/api/v2.1/geocode?lat=32.7773361&lon=-96.79547630000002`,
+  //     {
+  //       headers: {
+  //         ["user-id"]: "d9cf9089bfceca22d3051386d4de599f"
+  //       }
+  //     }
+  //   )
+  //   .catch(err => console.log(err));
 
-  console.log(zomato);
+  // console.log(zomato);
 });
 
 app.use(
@@ -94,17 +94,14 @@ massive(CONNECTION_STRING)
 
 app.use(checkForSession);
 
+app.get("/api/menu", productsController.getItems);
 
-app.get('/api/menu', productsController.getItems);
+app.get("/api/cart", productsController.getCart);
+app.post("/api/cart/:id", productsController.addToCart);
 
-app.get('/api/cart', productsController.getCart);
-app.post("/api/cart/:id", productsController.addToCart)
+app.get("/api/getSession", authController.getSession);
 
-app.get('/api/getSession', authController.getSession)
-
-app.post('/api/session', authController.addToSession)
-
-
+app.post("/api/session", authController.addToSession);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);

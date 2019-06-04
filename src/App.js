@@ -5,6 +5,7 @@ import routes from "./routes";
 import Navbar from "./components/navbar/navbar";
 import Cart from "./sidebars/cartbar.js";
 import SideBar from "./sidebars/sidebar";
+import "./App.css";
 
 function App() {
   return (
