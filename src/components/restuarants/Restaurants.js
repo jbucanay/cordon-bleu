@@ -23,7 +23,7 @@ import Seafood from "./food_icons/Seafood.jpg";
 import Japanese from "./food_icons/Japanese.png";
 /// icon
 import wendy from "./food_icons/wendy.png";
-import chipotle from "./food_icons/chipotle.png";
+import jack from "./food_icons/jack.png";
 import chick from "./food_icons/chick.jpg";
 import papa from "./food_icons/papa.jpg";
 import corner from "./food_icons/corner.jpg";
@@ -239,15 +239,20 @@ function Restuarants(props) {
         <div className="promoted">
           <div className="top">
             <figure>
-              <img src={chipotle} width="315" alt="chipotle" height="150" />
-              <figcaption>Chipotle</figcaption>
-              <figcaption>Free delivery </figcaption>
+              <Link to="jackinthebox">
+                <img src={jack} width="315" alt="jackinthebox" height="150" />
+                <figcaption>Jack in the Box</figcaption>
+                <figcaption>Free delivery </figcaption>
+              </Link>
             </figure>
-            <figure>
-              <img src={wendy} width="315" alt="wendy" height="150" />
-              <figcaption>Wendy's</figcaption>
-              <figcaption>Free delivery </figcaption>
-            </figure>
+
+            <Link to="wendy">
+              <figure>
+                <img src={wendy} width="315" alt="wendy" height="150" />
+                <figcaption>Wendy's</figcaption>
+                <figcaption>Free delivery </figcaption>
+              </figure>
+            </Link>
           </div>
           <div className="bottom">
             <Link to="/chickfila">
@@ -258,14 +263,18 @@ function Restuarants(props) {
               </figure>
             </Link>
             <figure>
-              <img src={corner} alt="cornerbakery" width="210" height="100" />
-              <figcaption>Corner Bakey</figcaption>
-              <figcaption>Free delivery </figcaption>
+              <Link to="/cornerbakey">
+                <img src={corner} alt="cornerbakery" width="210" height="100" />
+                <figcaption>Corner Bakey</figcaption>
+                <figcaption>Free delivery </figcaption>
+              </Link>
             </figure>
             <figure>
-              <img src={papa} alt="papajohn" width="210" height="100" />
-              <figcaption>Papa John's Pizza</figcaption>
-              <figcaption>Free delivery </figcaption>
+              <Link to="/papajohn">
+                <img src={papa} alt="papajohn" width="210" height="100" />
+                <figcaption>Papa John's Pizza</figcaption>
+                <figcaption>Free delivery </figcaption>
+              </Link>
             </figure>
           </div>
         </div>
