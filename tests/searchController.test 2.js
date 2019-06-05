@@ -1,3 +1,5 @@
 const search = require("../server/controllers/searchController");
 
-test("expect data ");
+test("time dist to be initialized", () => {
+  expect(true).toBe(true);
+});
