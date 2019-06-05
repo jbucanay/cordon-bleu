@@ -17,7 +17,7 @@ export function getAddress(search) {
 export function getFood(obj) {
   return {
     type: a.GETEATERY,
-    payload: axios.post("/api/test", { obj })
+    payload: axios.post("/api/restaurant", { obj })
   };
 }
 
