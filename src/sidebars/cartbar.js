@@ -1,7 +1,7 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import Cart from '../components/cart/cart'
-import shoppingcart from "../images/shopping-cart-4.png";
+import shoppingcart from "../images/shopping-cart.png";
 
 
 export default props => {
