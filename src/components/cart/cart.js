@@ -40,7 +40,7 @@ class Cart extends Component {
 
         console.log("userCart", userCart)
         return (
-            <div className="cart">
+            <div>
                 <div className="cart-item-outer">
                     <h1>Your Order</h1>
                     <button className="checkout-button"><div>Checkout</div> <div>$ {this.state.total}.00</div></button>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './chickfila.scss';
 import axios from 'axios';
+import './menus.scss';
 
 
-export default class chickfila extends Component {
+
+export default class wendys extends Component {
     constructor() {
         super()
         this.state = {
@@ -13,7 +14,7 @@ export default class chickfila extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/menu/chickfila').then(response => {
+        axios.get('/api/menu/wendys').then(response => {
             this.setState({ items: response.data })
             console.log(response.data)
 
