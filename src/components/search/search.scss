@@ -9,6 +9,9 @@
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   flex-direction: column;
+  div {
+    outline: red solid 1px;
+  }
 }
 
 .google-places-autocomplete__suggestions-container {
@@ -50,3 +53,7 @@
     }
   }
 }
+
+// #google-places-autocomplete-suggestion--0 {
+//   outline: red solid 1px;
+// }
