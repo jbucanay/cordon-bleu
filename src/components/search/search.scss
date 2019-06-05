@@ -9,6 +9,9 @@
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   flex-direction: column;
+  div {
+    outline: red solid 1px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -57,3 +60,7 @@
     }
   }
 }
+
+// #google-places-autocomplete-suggestion--0 {
+//   outline: red solid 1px;
+// }

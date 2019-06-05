@@ -39,7 +39,7 @@ module.exports = {
       ];
 
       if (timeDist.length === 20 && miles.length === 20) {
-        res.json(restaurantAndDistance);
+        res.status(200).json(restaurantAndDistance);
       }
     });
   }
