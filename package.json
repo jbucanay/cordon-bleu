@@ -24,6 +24,7 @@
     "react-test-renderer": "^16.8.6",
     "redux": "^4.0.1",
     "redux-promise-middleware": "^6.1.0",
+    "supertest": "^4.0.2",
     "yarn": "^1.16.0"
   },
   "scripts": {
