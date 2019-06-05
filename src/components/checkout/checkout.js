@@ -6,7 +6,6 @@ export default function checkout() {
   return (
     <article>
       <Cart />
-      <Stripe />
     </article>
   );
 }
