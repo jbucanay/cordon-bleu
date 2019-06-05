@@ -9,7 +9,6 @@ img {
 }
 
 .restcont {
-  font-family: "Montserrat", sans-serif;
   display: flex;
   overflow-x: scroll;
   margin-top: 3rem;
@@ -37,7 +36,6 @@ img {
 }
 
 article {
-  font-family: "Montserrat", sans-serif;
   outline: green;
   width: 50%;
   margin: auto;
@@ -62,19 +60,6 @@ article {
     text-align: center;
     margin-bottom: 2%;
     padding-bottom: 1.8%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .filter-section {
-    display: flex;
-    justify-content: center;
-    margin-left: -30px;
-    font-size: 8px;
-  }
-  li {
-    margin-left: 10px;
-    font-size: 10px;
   }
 }
 
@@ -181,8 +166,4 @@ article {
 a {
   color: black;
   text-decoration: none;
-}
-
-article section:first-child {
-  outline: blue solid 1px;
 }
