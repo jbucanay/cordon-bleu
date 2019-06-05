@@ -1,31 +1,43 @@
 .login {
-  background: #FAFAFA;
+  background: #fafafa;
   height: 100vh;
   display: flex;
   align-items: center;
   min-height: calc(100vh - 48px);
-
 }
 
 .login-card {
-    text-align: center;
-    background: #FFFFFF;
-    margin: auto;
-    height: 40vh;
+  text-align: center;
+  background: #ffffff;
+  margin: auto;
+  height: 40vh;
 }
 
 .login-h2 {
-font-size: .8em;
-color: #808080;
-font-weight: 300;
+  font-size: 0.8em;
+  color: #808080;
+  font-weight: 300;
 }
 
-.login-button{
-    border: none;
-    color: #00b6ff;
+.login-button {
+  border: none;
+  color: #00b6ff;
 }
 
 .profile-pic {
   height: 300px;
   width: 300px;
 }
+
+// .firebaseui-idp-button
+//   .mdl-button
+//   .mdl-js-button
+//   .mdl-button--raised
+//   .firebaseui-idp-google
+//   .firebaseui-id-idp-button {
+//   outline: red solid 1px;
+// }
+
+// .firebaseui-idp-list li:nth-last-of-type(3) {
+//   outline: red solid 1px;
+// }
