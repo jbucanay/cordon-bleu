@@ -36,17 +36,16 @@ export class Navbar extends Component {
             <img className="nav-logo-image" src={logo} alt="logo" />
           </div>
           {this.state.session ? (
-            <div className="nav-sign-up">
-              <Link to="/login" className="nav-sign-in-words">
-                <h2>Sign In</h2>
-              </Link>
-
-            </div>
+            null
           ) : (
-
-              <Link to="/signup">
-                <button className="nav-signup-button">Sign Up</button>
-              </Link>
+              <div className="nav-sign-up">
+                <Link to="/login" className="nav-sign-in-words">
+                  <h2>Sign In</h2>
+                </Link>
+                <Link to="/signup">
+                  <button className="nav-signup-button">Sign Up</button>
+                </Link>
+              </div>
             )}
         </div>
       </div>

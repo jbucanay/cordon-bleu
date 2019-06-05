@@ -47,14 +47,15 @@ app.get("/api/menu/jackinthebox", productsController.getJackinthebox);
 app.get("/api/menu/papajohns", productsController.getPapajohns);
 app.get("/api/menu/wendys", productsController.getWendys);
 
-app.get("/api/cart", productsController.getCart);
-app.post("/api/cart/:id", productsController.addToCart);
+app.get('/api/cart', productsController.getCart);
+app.post('/api/cart/:id', productsController.addToCart)
 
 app.get("/api/getSession", authController.getSession);
 
-app.post("/api/session", authController.addToSession);
+app.delete('/api/signout', authController.signout)
 
-app.get("/api/getSession", authController.getSession);
+app.post('/api/session', authController.addToSession)
+
 
 app.post("/api/session", authController.addToSession);
 

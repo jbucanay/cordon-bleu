@@ -40,6 +40,7 @@ module.exports = {
         const dbInstance = req.app.get('db')
 
         const menu = await dbInstance.get_burgerking()
+        console.log(menu)
         res.status(200).json(menu)
     },
     getJackinthebox: async (req, res) => {
@@ -51,7 +52,7 @@ module.exports = {
     getPapajohns: async (req, res) => {
         const dbInstance = req.app.get('db')
 
-        const menu = await dbInstance.get_Papajohns()
+        const menu = await dbInstance.get_papajohns()
         res.status(200).json(menu)
     },
     getWendys: async (req, res) => {
