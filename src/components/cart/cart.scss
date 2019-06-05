@@ -1,0 +1,35 @@
+
+.cart-item {
+    border-bottom: 1px solid grey;
+
+}
+.cart-item-outer {
+    border-bottom: 1px solid grey;
+
+}
+.checkout-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: red;
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-bottom: 1px;
+
+}
+.remove-item-button {
+    color: red;
+    font-size: .8em;
+}
+
+.cart-h1 {
+    font-size: 3em;
+}

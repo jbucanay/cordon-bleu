@@ -1,33 +1,57 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import logo from "./logo.png";
+import axios from 'axios'
 
-const Navbar = props => {
-  return (
-    <div className="navbar-div">
-      <div className="nav-outer">
-        <div className="nav-logo-div">
-          <h1 className="nav-address">
-            {props.address && `ASAP to ${props.address.substr(0, 32)}`}
-          </h1>
-          <img className="nav-logo-image" src={logo} alt="logo" />
-        </div>
-        {/* {this.state.clicked ? ( */}
-        <div className="nav-sign-up">
-          <Link to="/login" className="nav-sign-in-words">
-            <h2>Sign In</h2>
-          </Link>
-          {/* <Link to="/signup"><button onClick={() => this.handleClick()} className="nav-signup-button">Sign Up</button></Link> */}
-          <Link to="/signup">
-            <button className="nav-signup-button">Sign Up</button>
-          </Link>
+export class Navbar extends Component {
+  constructor() {
+    super()
+    this.state = {
+      session: false,
+    }
+  }
+  componentDidMount() {
+    axios.get('/api/getSession').then(response => {
+      console.log(response.data.user)
+      if (response.data.user.email) {
+        this.setState({ session: true })
+      }
+    })
+  }
+  render() {
+    return (
+      <div className="navbar-div" >
+        <div className="nav-outer">
+          <div className="nav-logo-div">
+            <h1 className="nav-address">
+              {this.props.address && (
+                <div>
+                  <small>ASAP</small> <small>to</small>{" "}
+                  <small>{this.props.address.substr(0, 32)}</small>
+                </div>
+              )}
+            </h1>
+            <img className="nav-logo-image" src={logo} alt="logo" />
+          </div>
+          {this.state.session ? (
+            null
+          ) : (
+              <div className="nav-sign-up">
+                <Link to="/login" className="nav-sign-in-words">
+                  <h2>Sign In</h2>
+                </Link>
+                <Link to="/signup">
+                  <button className="nav-signup-button">Sign Up</button>
+                </Link>
+              </div>
+            )}
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
+}
 
 const mapStateToProps = reduxState => {
   return {

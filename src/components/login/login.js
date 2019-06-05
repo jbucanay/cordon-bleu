@@ -12,7 +12,10 @@ firebase.initializeApp({
 });
 
 class Login extends Component {
-  state = { isSignedIn: false };
+  state = {
+    session: false,
+    isSignedIn: false
+  }
   uiConfig = {
     signInFlow: "redirect",
     signInOptions: [
@@ -30,8 +33,11 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user });
       console.log("user", user);
-      axios.post('/api/session', { firebaseEmail: user.email })
+      if (user) {
+        axios.post('/api/session', { firebaseEmail: user.email })
+      }
     });
+
   };
 
   render() {

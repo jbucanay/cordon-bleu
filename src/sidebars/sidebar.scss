@@ -127,3 +127,15 @@
 .shopping-cart {
   border-radius: 8px;
 }
+
+.nav-address {
+  font-size: 2em;
+  small:first-child + small {
+    font-weight: 200;
+  }
+  small:first-child,
+  small:last-child {
+    color: #00b6ff;
+    font-weight: 900;
+  }
+}
