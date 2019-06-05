@@ -24,10 +24,10 @@ const stripe = (props) => {
     };
     return (
         <StripeCheckout
-            label="cordon bleu" //Component button text
-            name="second one" //Modal Header
-            description="third one"
-            panelLabel="button" //Submit button in modal
+            label="Checkout" //Component button text
+            name="Cordon Bleu" //Modal Header
+            description=""
+            panelLabel="Checkout" //Submit button in modal
             amount={props.amount * 100} //Amount in cents $9.99
             token={onToken}
             stripeKey={publishableKey}

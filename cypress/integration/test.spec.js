@@ -1,3 +1,5 @@
+//end to end tests bryan
+
 describe('First Test', () => {
     it('is working', () => {
         expect(true).to.equal(true);
@@ -27,5 +29,14 @@ describe('Second Test', () => {
         cy.visit('/signout#/');
     });
 });
-//end to end tests bryan
+
+//unit tests bryan
+
+describe('Examining the syntax of Jest tests', () => {
+
+    it('sums numbers', () => {
+        expect(1 + 2).toEqual(3);
+        expect(2 + 2).toEqual(4);
+    });
+});
 

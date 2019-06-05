@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
-import logo from "./logo.png";
+import logo from '../../images/logo.png';
 import axios from 'axios'
 
 export class Navbar extends Component {
