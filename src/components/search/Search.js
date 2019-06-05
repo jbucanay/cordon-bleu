@@ -25,6 +25,7 @@ const Search = props => {
       <h1 className="delivering-good-vibes">Delivering good vibes</h1>
       {search && <Redirect to="/restaurants" />}
       <GooglePlacesAutocomplete
+
         onSelect={({ description }) => {
           setSearch(description);
         }}

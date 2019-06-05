@@ -38,13 +38,10 @@ export class Navbar extends Component {
           {this.state.session ? (
             null
           ) : (
-              <div>
-                <div className="nav-sign-up">
-                  <Link to="/login" className="nav-sign-in-words">
-                    <h2>Sign In</h2>
-                  </Link>
-
-                </div>
+              <div className="nav-sign-up">
+                <Link to="/login" className="nav-sign-in-words">
+                  <h2>Sign In</h2>
+                </Link>
                 <Link to="/signup">
                   <button className="nav-signup-button">Sign Up</button>
                 </Link>
