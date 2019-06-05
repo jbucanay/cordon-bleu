@@ -19,7 +19,6 @@ export default (
     <Route path="/chickfila" component={Chickfila} />
     <Route path="/jackinthebox" component={Jackinthebox} />
     <Route path="/burgerking" component={Burgerking} />
-
     <Route path="/wendys" component={Wendys} />
     <Route path="/papajohns" component={Papajohns} />
   </Switch>
