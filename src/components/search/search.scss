@@ -11,6 +11,13 @@
   flex-direction: column;
 }
 
+@media only screen and (max-width: 800px) {
+  .google-places-autocomplete__input {
+    margin-left: -60px;
+    width: 60vw;
+  }
+}
+
 .google-places-autocomplete__suggestions-container {
   width: calc(25% - 20px);
   width: 20vw;
