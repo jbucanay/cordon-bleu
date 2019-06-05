@@ -3,7 +3,8 @@ const axios = require("axios");
 module.exports = {
   searchRestaurants: async (req, res) => {
     const { lat, lng } = req.body.obj;
-
+    let timeDist = [];
+    let miles = [];
     const response = await axios.get(
       `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=8000&type=restaurant&key=AIzaSyCV8IYAG1nDtoLnqYAwFHZsd-zpT9GKQyE`
     );

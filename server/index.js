@@ -16,9 +16,6 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-let timeDist = [];
-let miles = [];
-
 app.post("/api/restaurant", searchRestaurants);
 
 app.use(
