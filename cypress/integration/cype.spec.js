@@ -1,4 +1,7 @@
 describe("cordon-bleu should open in localhost", () => {
+  beforeEach(function() {
+    cy.log("testing commencing");
+  });
   it("visit the app and type", () => {
     cy.visit("/");
 
@@ -25,5 +28,17 @@ describe("cordon-bleu should open in localhost", () => {
         cy.get(".firebaseui-idp-list li:nth-last-of-type(3)").click();
       });
     });
+  });
+});
+
+// units
+
+describe("click home button", () => {
+  after(function() {
+    cy.log("testing complete");
+  });
+  it("should visit home page and click signup", () => {
+    cy.visit("/#/login");
+    cy.get(".nav-signup-button").click();
   });
 });
