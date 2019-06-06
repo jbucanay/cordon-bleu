@@ -1,0 +1,169 @@
+img {
+  object-fit: cover;
+  border-radius: 0.2rem;
+  object-position: center;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 26px,
+      rgba(0, 0, 0, 0.08) 0px 2px 8px;
+  }
+}
+
+.restcont {
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 3rem;
+
+  justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-left: 17%;
+    margin-right: 8%;
+  }
+  li {
+    list-style: none;
+    margin: 1%;
+    &:hover {
+      cursor: pointer;
+      object-fit: cover;
+      img {
+        transform: rotate(15deg);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+article {
+  outline: green;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.filter {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: space-between;
+  width: 100%;
+  border: gray;
+  li {
+    border: gray solid 1px;
+    padding: 10px;
+    border-radius: 30px;
+    height: 2vh;
+    width: 8vw;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-bottom: 1.8%;
+  }
+}
+
+.promo {
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  padding: 14px;
+  font-family: "Montserrat", sans-serif;
+  justify-content: space-between;
+  background: #a5e5ff;
+}
+
+.featured {
+  display: flex;
+
+  .top {
+    display: flex;
+    align-items: baseline;
+
+    justify-content: flex-start;
+    figure:last-child {
+      margin-left: -1rem;
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: baseline;
+    figure:not(:first-child) {
+      margin-left: -1.7rem;
+    }
+  }
+}
+
+.see-all-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #00b6ff;
+  border-radius: 45px;
+  width: 10vw;
+  height: 6vh;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pickup {
+  margin-top: 4em;
+  @extend .featured;
+}
+
+.allcont {
+  margin-top: 4em;
+  display: flex;
+  .listcont {
+    display: flex;
+    flex-flow: column wrap;
+    .firstul {
+      max-width: 50%;
+      align-items: baseline;
+      justify-content: space-around;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    li {
+      list-style: none;
+    }
+  }
+
+  .allrest {
+    .moneycont {
+      display: flex;
+      align-items: baseline;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          align-self: flex-start;
+          padding: 5px;
+        }
+      }
+      figcaption:last-child {
+        flex-grow: 2;
+        text-align: right;
+      }
+      li {
+        list-style: none;
+      }
+    }
+
+    .ratingcont {
+      display: flex;
+      align-items: baseline;
+      i.fas {
+        padding-left: 5px;
+      }
+      p {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

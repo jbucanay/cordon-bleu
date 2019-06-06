@@ -12,12 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.firebaseui-idp-button
-  .mdl-button
-  .mdl-js-button
-  .mdl-button--raised
-  .firebaseui-idp-google
-  .firebaseui-id-idp-button {
-  outline: red solid 1px;
-}

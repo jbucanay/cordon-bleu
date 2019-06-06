@@ -58,7 +58,7 @@ app.post("/api/session", authController.addToSession);
 
 app.post("/api/session", authController.addToSession);
 app.get("/", (req, res) => {
-  res.status(200).send("Hello World!");
+  res.status(200).send("Hello jest");
 });
 
 app.listen(SERVER_PORT, () => {
