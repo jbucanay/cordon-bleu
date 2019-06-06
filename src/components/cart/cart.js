@@ -26,7 +26,6 @@ class Cart extends Component {
   }
 
   render() {
-    console.log("PROPS: ", this.props);
 
     let userCart;
     if (this.props.cart[0]) {
@@ -44,8 +43,6 @@ class Cart extends Component {
       });
     }
 
-
-    console.log("userCart", userCart);
     return (
       <div>
         <div className="cart-item-outer">

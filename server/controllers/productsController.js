@@ -2,8 +2,6 @@ module.exports = {
 
     addToCart: (req, res) => {
         const dbInstance = req.app.get('db');
-        console.log("USER SESSION ******: ", req.session.user)
-
         dbInstance.add_to_cart(req.params.id)
             .then((response) => {
                 console.log(response)

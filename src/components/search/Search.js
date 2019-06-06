@@ -4,6 +4,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { Redirect } from "react-router-dom";
 import { getFood } from "../../consumers/search";
+import axios from "axios";
 
 import "./search.scss";
 import { getAddress } from "../../consumers/search";
@@ -18,6 +19,7 @@ const Search = props => {
       .then(({ lat, lng }) => {
         props.getFood({ lat, lng });
       });
+    axios.post("/api/session", { address: search });
   }, [search]);
 
   return (
@@ -25,7 +27,6 @@ const Search = props => {
       <h1 className="delivering-good-vibes">Delivering good vibes</h1>
       {search && <Redirect to="/restaurants" />}
       <GooglePlacesAutocomplete
-
         onSelect={({ description }) => {
           setSearch(description);
         }}
