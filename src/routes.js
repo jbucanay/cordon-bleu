@@ -9,6 +9,7 @@ import Jackinthebox from "./components/menus/jackinthebox";
 import Wendys from "./components/menus/wendys";
 import Papajohns from "./components/menus/papajohns";
 import Burgerking from "./components/menus/burgerking";
+import Contact from "./components/contact/contact";
 
 export default (
   <Switch>
@@ -21,5 +22,6 @@ export default (
     <Route path="/burgerking" component={Burgerking} />
     <Route path="/wendys" component={Wendys} />
     <Route path="/papajohns" component={Papajohns} />
+    <Route path="/contact" component={Contact} />
   </Switch>
 );

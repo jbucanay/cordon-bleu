@@ -100,6 +100,39 @@ article {
       margin-left: -1rem;
     }
   }
+
+  // media START
+  @media only screen and (max-width: 800px) {
+    .top {
+      // display: none;
+      flex-direction: column;
+    }
+    .promo {
+      display: none;
+    }
+    .thirty-days {
+      display: none;
+    }
+    .pickup {
+      display: none;
+    }
+    .nationals {
+      display: none;
+    }
+    .restcont {
+      background: red;
+    }
+    article {
+      // font-family: "Montserrat", sans-serif;
+      // outline: green;
+      // width: 100%;
+      // margin-top: 2rem;
+      all: unset;
+    }
+  }
+
+  // media END
+
   .bottom {
     display: flex;
     align-items: baseline;
