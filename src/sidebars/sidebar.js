@@ -22,7 +22,7 @@ export default class Sidebar extends Component {
     return (
       <div className='menu-1' >
         <Menu className='menu-item' disableAutoFocus width={375}>
-          <a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a>
+          <Link to="/restaurants"><a className="menu-item" href="/"><img className="menu-image" src={home} alt="" />Home</a></Link>
           <a className="menu-item" href="/orders"><img className="menu-image" src={orders} alt="" />Orders</a>
           <a className="menu-item" href="/get-free-deliveries"><img className="menu-image" src={delivery} alt="" />Get Free Deliveries</a>
           <Link to="/login"> <a className="menu-item" href="/my-account"><img className="menu-image" src={myaccount} alt="" />My Account</a></Link>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './menus.scss';
 import axios from 'axios';
+import checkmark from '../../images/checkmark.png'
 
 
 export default class chickfila extends Component {
@@ -40,7 +41,7 @@ export default class chickfila extends Component {
         let itemList = this.state.items.map((menu, index) => {
             return <div className="food-item" key={index}>
                 <h3>{menu.name}</h3>
-                <h5>{menu.description}</h5>
+                <h5 className="menu-description">{menu.description && menu.description.length > 80 ? menu.description.slice(0, 80) + "..." : menu.description}</h5>
                 <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
@@ -52,7 +53,31 @@ export default class chickfila extends Component {
         })
         return (
             <div>
+                <div className="menu-items-upper">
+                    <img className="menu-logo" src="http://www.chick-fil-a.com/-/media/Images/CFACOM/Default-Images/chick-fil-a-logo-vector.ashx" alt="logo" />
 
+                    <h2 className="delivery-tag"><img className="checkmark" src={checkmark} alt="checkmark" />FREE DELIVERY WITH DASHPASS</h2>
+                    <h1 className="restaurant-name">Chick-fil-A®</h1>
+                    <h3 className="gray-tag">Open Hours: 7:00AM - 10:00AM</h3>
+                    <div class="rating">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
+                        <h3 className="gray-tag">4.5 (641 Ratings)</h3>
+                    </div>
+                    <div className="info-part">
+                        <div className="seperate-part"> <div className="top">Free</div><div className="bottom">delivery</div></div>
+                        <div className="seperate-part"> <div className="top">17-27</div><div className="bottom">minutes</div></div>
+                        <div className="seperate-part"> <div className="top">1.1</div><div className="bottom">miles</div></div>
+                    </div>
+
+                </div>
+                <div className="item-bar">
+                    <span className="item-bar-word">Breakfast</span>
+                    <span className="item-bar-word">Entrees </span>
+                    <span className="item-bar-word">Salads</span>
+                    <span className="item-bar-word">Sides </span>
+                    <span className="item-bar-word">Beverages </span>
+                    <span className="item-bar-word">Treats </span>
+                </div>
                 <div className="food-item-outer">
 
                     {itemList}

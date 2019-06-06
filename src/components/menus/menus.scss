@@ -2,18 +2,88 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .food-item {
   display: flex;
   flex-direction: column;
   width: 35vw;
+  // height: 25vh;
   border: 1px solid gray;
   border-radius: 10px;
-  padding: 40px;
+  padding: 20px;
+  margin: 10px;
 }
+.menu-description {
+  font-weight: 400;
+  color: gray;
+}
+
 .addToCart {
   width: 100px;
 }
+.menu-items-upper{
+  padding-top: 100px;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+}
+.menu-logo{
+  width: 20%;
+}
+.delivery-tag{
+  color: #00838A;
+  font-size: 1em;
+  
+}
+.gray-tag{
+  color: gray;
+  font-weight: 350;
+  font-size: 1em;
+}
 
-// signup:button:first-child
+.rating{
+display: flex;
+align-items: center;
+}
+
+.top {
+  font-weight: 900;
+}
+.bottom{
+  font-weight: 300;
+  color: gray;
+}
+.info-part {
+  display: flex;
+}
+.seperate-part{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.item-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  font-weight: 500;
+  align-items: center;
+  height: 70px;
+}
+
+.item-bar-word:hover {
+  color: red;
+  margin-top: 24px;
+  padding-bottom: 21px;
+  border-bottom: red 4px solid;
+}
+
+
+
+
