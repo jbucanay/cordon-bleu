@@ -26,8 +26,8 @@ import wendy from "./food_icons/wendy.png";
 import jack from "./food_icons/jack.png";
 import chick from "./food_icons/chick.jpg";
 import papa from "./food_icons/papa.jpg";
-import burgerking from "./food_icons/Burgers.png";
-function Restaurants(props) {
+import corner from "./food_icons/corner.jpg";
+function Restuarants(props) {
   Array.prototype.shuffle = function() {
     var i = this.length,
       j,
@@ -133,7 +133,7 @@ function Restaurants(props) {
   let other = moreFood.shuffle();
 
   return (
-    <article className="all-of-restaurants-page">
+    <article>
       <section className="restcont">
         <ul>
           <li>
@@ -219,7 +219,7 @@ function Restaurants(props) {
       </div>
       <section className="promo">
         <div>
-          <h2 className="thirty-days">&#36;0 delivery for 30 days!</h2>
+          <h2>&#36;0 delivery for 30 days!</h2>
           <p className="ten">
             &#36;0 delivery for orders over &#36;10 for 30days
           </p>
@@ -233,7 +233,7 @@ function Restaurants(props) {
       </section>
       <section className="featured">
         <div>
-          <h1 className="nationals">Featured National Partners</h1>
+          <h1>Featured National Partners</h1>
           <button className="see-all-button">See All &#10230;</button>
         </div>
         <div className="promoted">
@@ -241,44 +241,39 @@ function Restaurants(props) {
             <figure>
               <Link to="jackinthebox">
                 <img src={jack} width="315" alt="jackinthebox" height="150" />
-                <figcaption className="fig">Jack in the Box</figcaption>
-                <figcaption className="cap">Free delivery </figcaption>
+                <figcaption>Jack in the Box</figcaption>
+                <figcaption>Free delivery </figcaption>
               </Link>
             </figure>
 
             <Link to="wendy">
               <figure>
                 <img src={wendy} width="315" alt="wendy" height="150" />
-                <figcaption className="fig">Wendy's</figcaption>
-                <figcaption className="cap">Free delivery </figcaption>
+                <figcaption>Wendy's</figcaption>
+                <figcaption>Free delivery </figcaption>
               </figure>
             </Link>
           </div>
           <div className="bottom">
             <Link to="/chickfila">
-              <figure className="chick">
-                <img src={chick} width="210" alt="chickfila" height="100" />
-                <figcaption className="fig">Chick-fil-A&#174;</figcaption>
-                <figcaption className="cap">Free delivery </figcaption>
+              <figure>
+                <img src={chick} width="210" alt="chicfila" height="100" />
+                <figcaption>Chick-fil-A&#174;</figcaption>
+                <figcaption>Free delivery </figcaption>
               </figure>
             </Link>
             <figure>
-              <Link to="/burgerking">
-                <img
-                  src={burgerking}
-                  alt="burgerking"
-                  width="210"
-                  height="100"
-                />
-                <figcaption className="fig">Burger King</figcaption>
-                <figcaption className="cap">Free delivery </figcaption>
+              <Link to="/cornerbakey">
+                <img src={corner} alt="cornerbakery" width="210" height="100" />
+                <figcaption>Corner Bakey</figcaption>
+                <figcaption>Free delivery </figcaption>
               </Link>
             </figure>
             <figure>
-              <Link to="/papajohns">
+              <Link to="/papajohn">
                 <img src={papa} alt="papajohn" width="210" height="100" />
-                <figcaption className="fig">Papa John's Pizza</figcaption>
-                <figcaption className="cap">Free delivery </figcaption>
+                <figcaption>Papa John's Pizza</figcaption>
+                <figcaption>Free delivery </figcaption>
               </Link>
             </figure>
           </div>
@@ -287,7 +282,7 @@ function Restaurants(props) {
       <section className="pickup">
         <header>
           <h1>New! Try Pickup</h1>
-          <p className="general">No lines, no fees</p>
+          <p>No lines, no fees</p>
           <button className="see-all-button">See All &#10230;</button>
         </header>
         <aside>
@@ -304,10 +299,8 @@ function Restaurants(props) {
                       width="315"
                       height="150"
                     />
-                    <figcaption className="fig">
-                      {item.restaurantName[0]}
-                    </figcaption>
-                    <figcaption className="cap">
+                    <figcaption>{item.restaurantName[0]}</figcaption>
+                    <figcaption>
                       Pickup in {item.driving[0]}
                       <figcaption>{item.gpsTime[0]}</figcaption>
                     </figcaption>
@@ -326,10 +319,8 @@ function Restaurants(props) {
                       width="315"
                       height="150"
                     />
-                    <figcaption className="fig">
-                      {item.restaurantName[2]}
-                    </figcaption>
-                    <figcaption className="cap">
+                    <figcaption>{item.restaurantName[2]}</figcaption>
+                    <figcaption>
                       Pickup in {item.driving[2]}
                       <figcaption>{item.gpsTime[2]}</figcaption>
                     </figcaption>
@@ -350,10 +341,8 @@ function Restaurants(props) {
                       width="210"
                       height="100"
                     />
-                    <figcaption className="fig">
-                      {item.restaurantName[3]}
-                    </figcaption>
-                    <figcaption className="cap">
+                    <figcaption>{item.restaurantName[3]}</figcaption>
+                    <figcaption>
                       Pickup in {item.driving[3]}
                       <figcaption>{item.gpsTime[3]}</figcaption>
                     </figcaption>
@@ -372,10 +361,8 @@ function Restaurants(props) {
                       width="210"
                       height="100"
                     />
-                    <figcaption className="fig">
-                      {item.restaurantName[4]}
-                    </figcaption>
-                    <figcaption className="cap">
+                    <figcaption>{item.restaurantName[4]}</figcaption>
+                    <figcaption>
                       Pickup in {item.driving[4]}
                       <figcaption>{item.gpsTime[4]}</figcaption>
                     </figcaption>
@@ -387,16 +374,15 @@ function Restaurants(props) {
                 return (
                   <figure key={index}>
                     <img
-                      src={`https://source.unsplash.com/featured/?food,${rando[20] ||
-                        other[25]}`}
+                      src={`https://source.unsplash.com/${randoDay[2]}/?food,${
+                        rando[2]
+                      }`}
                       alt=""
                       width="210"
                       height="100"
                     />
-                    <figcaption className="fig">
-                      {item.restaurantName[5]}
-                    </figcaption>
-                    <figcaption className="cap">
+                    <figcaption>{item.restaurantName[5]}</figcaption>
+                    <figcaption>
                       Pickup in {item.driving[5]}
                       <figcaption>{item.gpsTime[5]}</figcaption>
                     </figcaption>
@@ -480,6 +466,17 @@ function Restaurants(props) {
               <p>Japanese</p>
             </li>
           </ul>
+          {/* <div className="filter-section">
+            <ul className="filter">
+              <li>
+                Over 4.5 <i className="fas fa-star" /> &#65372; &gt;
+              </li>
+              <li>Pickup</li>
+              <li>Vegetarian</li>
+              <li>Dashpass</li>
+              <li>&#36;,&#36;&#36; &#65372; &gt;</li>
+            </ul>
+          </div> */}
         </div>
 
         <div className="allrest">
@@ -495,9 +492,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[1]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[1]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[1] && item.price[1] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -536,9 +531,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[6]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[6]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[6] && item.price[6] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -577,9 +570,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[7]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[7]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[7] && item.price[7] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -618,9 +609,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[8]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[8]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[8] && item.price[8] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -659,9 +648,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[9]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[9]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[9] && item.price[9] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -700,9 +687,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[10]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[10]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[10] && item.price[10] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -741,9 +726,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[11]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[11]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[11] && item.price[11] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -782,9 +765,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[12]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[12]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[12] && item.price[12] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -823,9 +804,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[13]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[13]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[13] && item.price[13] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -864,9 +843,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[14]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[14]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[14] && item.price[14] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -906,9 +883,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[15]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[15]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[15] && item.price[15] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -947,9 +922,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[16]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[16]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[16] && item.price[16] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -988,9 +961,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[17]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[17]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[17] && item.price[17] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -1029,9 +1000,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[18]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[18]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[18] && item.price[18] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -1069,9 +1038,7 @@ function Restaurants(props) {
                     width="450"
                     height="200"
                   />
-                  <figcaption className="fig">
-                    {item.restaurantName[19]}
-                  </figcaption>
+                  <figcaption>{item.restaurantName[19]}</figcaption>
                   <figcaption className="moneycont">
                     {item.price[19] && item.price[19] >= 2 ? (
                       <p>&#36;&#36;</p>
@@ -1110,4 +1077,4 @@ const mapStateToProps = reduxState => {
   };
 };
 
-export default connect(mapStateToProps)(Restaurants);
+export default connect(mapStateToProps)(Restuarants);

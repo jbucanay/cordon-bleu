@@ -59,6 +59,9 @@ app.delete("/api/signout", authController.signout);
 app.post("/api/session", authController.addToSession);
 
 app.post("/api/session", authController.addToSession);
+app.get("/", (req, res) => {
+  res.status(200).send("Hello jest");
+});
 
 // Nodemailer
 app.post("/api/contact", addContactForm);
@@ -66,3 +69,5 @@ app.post("/api/contact", addContactForm);
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);
 });
+
+module.exports = app;

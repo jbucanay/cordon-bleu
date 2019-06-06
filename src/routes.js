@@ -10,6 +10,7 @@ import Wendys from "./components/menus/wendys";
 import Papajohns from "./components/menus/papajohns";
 import Burgerking from "./components/menus/burgerking";
 import Contact from "./components/contact/contact";
+import Checkout from "./components/checkout/checkout";
 
 export default (
   <Switch>
@@ -23,5 +24,6 @@ export default (
     <Route path="/wendys" component={Wendys} />
     <Route path="/papajohns" component={Papajohns} />
     <Route path="/contact" component={Contact} />
+    <Route path="/checkout" component={Checkout} />
   </Switch>
 );

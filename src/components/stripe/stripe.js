@@ -10,7 +10,10 @@ const stripe = props => {
       amount: 999,
       token: token
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     axios
       .post("/stripe/payment", body)
       .then(response => {
@@ -22,6 +25,7 @@ const stripe = props => {
         alert("Payment Error");
       });
   };
+<<<<<<< HEAD
 
   // function derek() {
   //   console.log("NODEMAILER!");
@@ -34,6 +38,14 @@ const stripe = props => {
       name="second one" //Modal Header
       description="third one"
       panelLabel="button" //Submit button in modal
+=======
+  return (
+    <StripeCheckout
+      label="Checkout" //Component button text
+      name="Cordon Bleu" //Modal Header
+      description=""
+      panelLabel="Place Order" //Submit button in modal
+>>>>>>> master
       amount={props.amount * 100} //Amount in cents $9.99
       token={onToken}
       stripeKey={publishableKey}
