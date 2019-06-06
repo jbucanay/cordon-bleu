@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './menus.scss';
+import { connect } from 'react-redux';
+import { addToCart } from '../../ducks/cartReducer';
 
 
 
-
-export default class papajohns extends Component {
+class papajohns extends Component {
     constructor() {
         super()
         this.state = {
@@ -30,9 +31,7 @@ export default class papajohns extends Component {
 
     handleClick(id) {
         if (this.state.session) {
-            axios.post(`/api/cart/${id}`).then(response => {
-                console.log("hit")
-            })
+            this.props.addToCart(id)
         } else { //history comes from react router dom
             this.props.history.push("/Login")
         }
@@ -46,7 +45,6 @@ export default class papajohns extends Component {
                 <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
-                    window.location.reload()
 
                 }
                 }> Add To Cart </button>
@@ -58,7 +56,7 @@ export default class papajohns extends Component {
                     <img className="menu-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Papa_John%27s_Pizza_logo.svg/1280px-Papa_John%27s_Pizza_logo.svg.png" alt="logo" />
 
                     <h1 className="restaurant-name">Papa John's Pizza</h1>
-                    <h3 className="gray-tag">Open Hours: 9:30AM - 9:10AM</h3>
+                    <h3 className="gray-tag">Open Hours: 9:30AM - 9:10PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
                         <h3 className="gray-tag">4.6 (24 Ratings)</h3>
@@ -87,4 +85,7 @@ export default class papajohns extends Component {
         );
     }
 }
-
+function mapStateToProps(state) {
+    return state;
+}
+export default connect(mapStateToProps, { addToCart })(papajohns);

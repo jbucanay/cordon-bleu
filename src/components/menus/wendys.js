@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './menus.scss';
 import checkmark from '../../images/checkmark.png'
+import { connect } from 'react-redux';
+import { addToCart } from '../../ducks/cartReducer';
 
 
 
-
-export default class wendys extends Component {
+class wendys extends Component {
     constructor() {
         super()
         this.state = {
@@ -31,9 +32,8 @@ export default class wendys extends Component {
 
     handleClick(id) {
         if (this.state.session) {
-            axios.post(`/api/cart/${id}`).then(response => {
-                console.log("hit")
-            })
+            this.props.addToCart(id);
+
         } else { //history comes from react router dom
             this.props.history.push("/Login")
         }
@@ -47,8 +47,6 @@ export default class wendys extends Component {
                 <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
-                    window.location.reload()
-
                 }
                 }> Add To Cart </button>
             </div>
@@ -60,7 +58,7 @@ export default class wendys extends Component {
 
                     <h2 className="delivery-tag"><img className="checkmark" src={checkmark} alt="checkmark" />FREE DELIVERY WITH DASHPASS</h2>
                     <h1 className="restaurant-name">Wendy's</h1>
-                    <h3 className="gray-tag">Open Hours: 10:00AM - 10:30AM</h3>
+                    <h3 className="gray-tag">Open Hours: 10:00AM - 10:30PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
                         <h3 className="gray-tag">4.5 (769 Ratings)</h3>
@@ -90,3 +88,8 @@ export default class wendys extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    return state;
+}
+
+export default connect(mapStateToProps, { addToCart })(wendys);

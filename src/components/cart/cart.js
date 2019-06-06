@@ -3,6 +3,8 @@ import axios from "axios";
 import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
+import { getCart } from "../../ducks/cartReducer";
+import { connect } from 'react-redux';
 
 class Cart extends Component {
   constructor() {
@@ -13,18 +15,21 @@ class Cart extends Component {
     };
   }
   componentDidMount() {
-    axios.get("/api/cart").then(response => {
-      this.setState({
-        cart: [...this.state.cart, response.data.cart],
-        total: response.data.total
-      });
-    });
+    this.props.getCart();
+    // axios.get("/api/cart").then(response => {
+    //   console.log(response);
+    //   this.setState({
+    //     cart: [...this.state.cart, response.data.cart],
+    //     total: response.data.total
+    //   });
+    // });
   }
 
   render() {
+
     let userCart;
-    if (this.state.cart[0]) {
-      userCart = this.state.cart[0].map(cart => {
+    if (this.props.cart[0]) {
+      userCart = this.props.cart.map(cart => {
         return (
           <div>
             <div className="cart-item">
@@ -44,10 +49,10 @@ class Cart extends Component {
           <h1>Your Order</h1>
           <Link to="/checkout">
             <button className="checkout-button">
-              <div>Checkout</div> <div>$ {this.state.total}.00</div>
+              <div>Checkout</div> <div>$ {this.props.total}.00</div>
             </button>
           </Link>
-          <Stripe amount={this.state.total} />
+          <Stripe amount={this.props.total} />
         </div>
         <br />
         <div>{userCart}</div>
@@ -56,4 +61,11 @@ class Cart extends Component {
   }
 }
 
-export default Cart;
+function mapStateToProps(state) {
+  return {
+    cart: state.cartReducer.cart,
+    total: state.cartReducer.total
+  }
+}
+
+export default connect(mapStateToProps, { getCart })(Cart);
