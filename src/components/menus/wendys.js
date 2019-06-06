@@ -60,7 +60,7 @@ export default class wendys extends Component {
 
                     <h2 className="delivery-tag"><img className="checkmark" src={checkmark} alt="checkmark" />FREE DELIVERY WITH DASHPASS</h2>
                     <h1 className="restaurant-name">Wendy's</h1>
-                    <h3 className="gray-tag">Open Hours: 10:00AM - 10:30AM</h3>
+                    <h3 className="gray-tag">Open Hours: 10:00AM - 10:30PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
                         <h3 className="gray-tag">4.5 (769 Ratings)</h3>

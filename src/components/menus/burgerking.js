@@ -55,19 +55,19 @@ export default class burgerking extends Component {
         return (
             <div>
                 <div className="menu-items-upper">
-                    <img className="menu-logo" src="http://www.chick-fil-a.com/-/media/Images/CFACOM/Default-Images/chick-fil-a-logo-vector.ashx" alt="logo" />
+                    <img className="menu-logo" src="https://pbs.twimg.com/profile_images/1108847681584140288/rTiaJ8SX_400x400.png" alt="logo" />
 
                     <h2 className="delivery-tag"><img className="checkmark" src={checkmark} alt="checkmark" />FREE DELIVERY WITH DASHPASS</h2>
-                    <h1 className="restaurant-name">Chick-fil-A®</h1>
-                    <h3 className="gray-tag">Open Hours: 7:00AM - 10:00AM</h3>
+                    <h1 className="restaurant-name">Burger King</h1>
+                    <h3 className="gray-tag">Open Hours: 10:30AM - 11:30PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
-                        <h3 className="gray-tag">4.5 (641 Ratings)</h3>
+                        <h3 className="gray-tag">4.3 (516 Ratings)</h3>
                     </div>
                     <div className="info-part">
                         <div className="seperate-part"> <div className="top">Free</div><div className="bottom">delivery</div></div>
-                        <div className="seperate-part"> <div className="top">17-27</div><div className="bottom">minutes</div></div>
-                        <div className="seperate-part"> <div className="top">1.1</div><div className="bottom">miles</div></div>
+                        <div className="seperate-part"> <div className="top">26-36</div><div className="bottom">minutes</div></div>
+                        <div className="seperate-part"> <div className="top">2.4</div><div className="bottom">miles</div></div>
                     </div>
 
                 </div>

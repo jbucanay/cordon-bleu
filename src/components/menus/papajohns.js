@@ -58,7 +58,7 @@ export default class papajohns extends Component {
                     <img className="menu-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Papa_John%27s_Pizza_logo.svg/1280px-Papa_John%27s_Pizza_logo.svg.png" alt="logo" />
 
                     <h1 className="restaurant-name">Papa John's Pizza</h1>
-                    <h3 className="gray-tag">Open Hours: 9:30AM - 9:10AM</h3>
+                    <h3 className="gray-tag">Open Hours: 9:30AM - 9:10PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
                         <h3 className="gray-tag">4.6 (24 Ratings)</h3>

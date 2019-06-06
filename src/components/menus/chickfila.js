@@ -58,7 +58,7 @@ export default class chickfila extends Component {
 
                     <h2 className="delivery-tag"><img className="checkmark" src={checkmark} alt="checkmark" />FREE DELIVERY WITH DASHPASS</h2>
                     <h1 className="restaurant-name">Chick-fil-A®</h1>
-                    <h3 className="gray-tag">Open Hours: 7:00AM - 10:00AM</h3>
+                    <h3 className="gray-tag">Open Hours: 7:00AM - 10:00PM</h3>
                     <div class="rating">
                         <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>☆</span>
                         <h3 className="gray-tag">4.5 (641 Ratings)</h3>
