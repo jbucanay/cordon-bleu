@@ -10,7 +10,6 @@ module.exports = {
                 req.session.user.cart.push(
                     {
                         name: response[0].name,
-                        // description: response[0].description,
                         price: response[0].price
                     })
                 req.session.user.total += response[0].price

@@ -6,6 +6,7 @@ const initialState = {
 };
 
 // types
+const GET_CART = 'GET_CART';
 const ADD_TO_CART = 'ADD_TO_CART'
 
 // {
@@ -14,6 +15,15 @@ const ADD_TO_CART = 'ADD_TO_CART'
 // }
 
 //action creators
+
+export function getCart() {
+    return {
+        type: GET_CART,
+        payload: axios.get("/api/cart").then(res => res.data)
+    }
+}
+
+
 export function addToCart(id) {
     return {
         type: ADD_TO_CART,
@@ -35,8 +45,16 @@ export function addToCart(id) {
 // })
 
 export default function reducer(state = initialState, action) {
-    const { type, payload } = action;
+    const { type } = action;
+    console.log(action);
     switch (type) {
+        case `GET_CART_FULFILLED`:
+            console.log("GETCART: ", action.payload)
+            return {
+                ...state,
+                cart: action.payload.cart,
+                total: action.payload.total
+            }
         case `${ADD_TO_CART}_PENDING`:
             return {
                 ...state,
@@ -47,7 +65,9 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 isLoading: false,
-                cart: action.payload.cart
+                cart: action.payload.cart,
+                total: action.payload.total,
+                address: action.payload.address
             };
         default:
             return state;
