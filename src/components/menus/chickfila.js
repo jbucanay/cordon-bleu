@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './menus.scss';
 import axios from 'axios';
 import checkmark from '../../images/checkmark.png'
+import { connect } from 'react-redux';
+import { addToCart } from '../../ducks/cartReducer';
 
-
-export default class chickfila extends Component {
+class chickfila extends Component {
     constructor() {
         super()
         this.state = {
@@ -29,9 +30,11 @@ export default class chickfila extends Component {
 
     handleClick(id) {
         if (this.state.session) {
-            axios.post(`/api/cart/${id}`).then(response => {
-                console.log("hit")
-            })
+            // axios.post(`/api/cart/${id}`).then(response => {
+            //     console.log("hit")
+            // })
+            this.props.addToCart(id);
+
         } else { //history comes from react router dom
             this.props.history.push("/Login")
         }
@@ -45,7 +48,6 @@ export default class chickfila extends Component {
                 <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
-                    window.location.reload()
 
                 }
                 }> Add To Cart </button>
@@ -86,5 +88,11 @@ export default class chickfila extends Component {
             </div >
         );
     }
+
 }
 
+function mapStateToProps(state) {
+    return state;
+}
+
+export default connect(mapStateToProps, { addToCart })(chickfila);

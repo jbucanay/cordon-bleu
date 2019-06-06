@@ -245,7 +245,7 @@ function Restaurants(props) {
               </Link>
             </figure>
 
-            <Link to="wendy">
+            <Link to="wendys">
               <figure>
                 <img src={wendy} width="315" alt="wendy" height="150" />
                 <figcaption className="fig">Wendy's</figcaption>

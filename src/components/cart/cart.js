@@ -3,6 +3,7 @@ import axios from "axios";
 import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 class Cart extends Component {
   constructor() {
@@ -23,9 +24,11 @@ class Cart extends Component {
   }
 
   render() {
+    console.log("PROPS: ", this.props);
+
     let userCart;
-    if (this.state.cart[0]) {
-      userCart = this.state.cart[0].map(cart => {
+    if (this.props.cart[0]) {
+      userCart = this.props.cart.map(cart => {
         return (
           <div>
             <div className="cart-item">
@@ -38,6 +41,7 @@ class Cart extends Component {
         );
       });
     }
+
 
     console.log("userCart", userCart);
     return (
@@ -58,4 +62,10 @@ class Cart extends Component {
   }
 }
 
-export default Cart;
+function mapStateToProps(state) {
+  return {
+    cart: state.cartReducer.cart
+  }
+}
+
+export default connect(mapStateToProps)(Cart);

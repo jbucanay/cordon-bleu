@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './menus.scss';
 import checkmark from '../../images/checkmark.png'
+import { connect } from 'react-redux';
+import { addToCart } from '../../ducks/cartReducer';
 
 
 
 
-export default class jackinthebox extends Component {
+class jackinthebox extends Component {
     constructor() {
         super()
         this.state = {
@@ -31,9 +33,10 @@ export default class jackinthebox extends Component {
 
     handleClick(id) {
         if (this.state.session) {
-            axios.post(`/api/cart/${id}`).then(response => {
-                console.log("hit")
-            })
+            // axios.post(`/api/cart/${id}`).then(response => {
+            //     console.log("hit")
+            // })
+            this.props.addToCart(id);
         } else { //history comes from react router dom
             this.props.history.push("/Login")
         }
@@ -47,12 +50,13 @@ export default class jackinthebox extends Component {
                 <h4> $ {menu.price}.00</h4>
                 <button className="addToCart" onClick={() => {
                     this.handleClick(menu.id)
-                    window.location.reload()
+                    // window.location.reload()
 
                 }
                 }> Add To Cart </button>
             </div>
         })
+
         return (
             <div>
                 <div className="menu-items-upper">
@@ -89,3 +93,8 @@ export default class jackinthebox extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    return state;
+}
+
+export default connect(mapStateToProps, { addToCart })(jackinthebox);
