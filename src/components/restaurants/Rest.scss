@@ -37,10 +37,13 @@ img {
 }
 
 article {
-  outline: green;
   width: 50%;
   margin: auto;
   margin-top: 2rem;
+}
+
+article section:last-child {
+  background: #f7f7f7;
 }
 
 .filter {
