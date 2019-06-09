@@ -4,7 +4,7 @@ import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
 import { getCart } from "../../ducks/cartReducer";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 class Cart extends Component {
   constructor() {
@@ -16,17 +16,9 @@ class Cart extends Component {
   }
   componentDidMount() {
     this.props.getCart();
-    // axios.get("/api/cart").then(response => {
-    //   console.log(response);
-    //   this.setState({
-    //     cart: [...this.state.cart, response.data.cart],
-    //     total: response.data.total
-    //   });
-    // });
   }
 
   render() {
-
     let userCart;
     if (this.props.cart[0]) {
       userCart = this.props.cart.map(cart => {
@@ -65,7 +57,10 @@ function mapStateToProps(state) {
   return {
     cart: state.cartReducer.cart,
     total: state.cartReducer.total
-  }
+  };
 }
 
-export default connect(mapStateToProps, { getCart })(Cart);
+export default connect(
+  mapStateToProps,
+  { getCart }
+)(Cart);

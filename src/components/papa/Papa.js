@@ -14,10 +14,8 @@ export default class extends Component {
   componentDidMount() {
     axios.get("/api/menu").then(response => {
       this.setState({ items: response.data });
-      console.log(response.data);
     });
     axios.get("/api/getSession").then(response => {
-      console.log(response.data.user);
       if (response.data.user.email) {
         this.setState({ session: true });
       }
@@ -26,9 +24,7 @@ export default class extends Component {
 
   handleClick(id) {
     if (this.state.session) {
-      axios.post(`/api/cart/${id}`).then(response => {
-        console.log("hit");
-      });
+      axios.post(`/api/cart/${id}`).then(response => {});
     } else {
       //history comes from react router dom
       this.props.history.push("/Login");

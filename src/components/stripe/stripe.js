@@ -13,11 +13,9 @@ const stripe = props => {
     axios
       .post("/stripe/payment", body)
       .then(response => {
-        console.log(response);
         alert("Payment Success");
       })
       .catch(error => {
-        console.log("Payment Error: ", error);
         alert("Payment Error");
       });
   };
