@@ -3,7 +3,7 @@ import axios from "axios";
 import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
-import { getCart } from "../../ducks/cartReducer";
+import { getCart, deleteFromCart } from "../../ducks/cartReducer";
 import { connect } from 'react-redux';
 
 class Cart extends Component {
@@ -18,6 +18,10 @@ class Cart extends Component {
     this.props.getCart();
   }
 
+  handleClick() {
+    this.props.deleteFromCart()
+  }
+
   render() {
 
     let userCart;
@@ -29,7 +33,7 @@ class Cart extends Component {
               <h3>{cart.name}</h3>
               <h5>{cart.description}</h5>
               <h4>${cart.price}.00</h4>
-              <h3 className="remove-item-button">Remove</h3>
+              <button onClick={() => this.handleClick()} className="remove-item-button">Remove</button>
             </div>
           </div>
         );
@@ -63,4 +67,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getCart })(Cart);
+export default connect(mapStateToProps, { getCart, deleteFromCart })(Cart);
