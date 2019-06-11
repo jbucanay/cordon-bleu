@@ -31,6 +31,12 @@
 }
 .menu-logo{
   width: 20%;
+  &:hover {
+    box-shadow: none;
+    transform: none;
+        transition: none;
+
+  }
 }
 .delivery-tag{
   color: #00838A;
