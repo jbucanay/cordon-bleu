@@ -45,6 +45,12 @@
   // width: 11vw;
   object-fit: cover;
   height: 4vh;
+  &:hover {
+    box-shadow: none;
+    transform: none;
+        transition: none;
+
+  }
 }
 .nav-sign-in-words {
   color: #00b6ff;
@@ -102,4 +108,22 @@
   position: absolute;
   left: 8%;
   top: 0%;
+}
+
+.website-name{
+  color: #00b6ff;
+
+}
+@media (max-width: 1025px) { /* WHEN SCREEN SMALL */
+ 
+.website-name{
+  display: none;
+}
+.nav-address {
+ display: none;
+}
+.nav-sign-up {
+  display: none;
+}
+
 }
