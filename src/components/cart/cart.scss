@@ -1,9 +1,18 @@
-.cart-item {
-  border-bottom: 1px solid grey;
+.cart-outer {
+  // border: solid red 2px;
+  padding-bottom: 200px;
 }
+
+
 .cart-item-outer {
   border-bottom: 1px solid grey;
 }
+
+.cart-item {
+  border-bottom: 1px solid grey;
+  
+}
+
 .checkout-button {
   display: flex;
   justify-content: space-between;
@@ -28,6 +37,11 @@
 
 .cart-h1 {
   font-size: 3em;
+}
+
+.stripe-checkout-button {
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 button {

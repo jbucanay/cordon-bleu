@@ -16,13 +16,6 @@ class Cart extends Component {
   }
   componentDidMount() {
     this.props.getCart();
-    // axios.get("/api/cart").then(response => {
-    //   console.log(response);
-    //   this.setState({
-    //     cart: [...this.state.cart, response.data.cart],
-    //     total: response.data.total
-    //   });
-    // });
   }
 
   render() {
@@ -44,15 +37,17 @@ class Cart extends Component {
     }
 
     return (
-      <div>
+      <div className="cart-outer">
         <div className="cart-item-outer">
           <h1>Your Order</h1>
           <Link to="/checkout">
             <button className="checkout-button">
-              <div>Checkout</div> <div>$ {this.props.total}.00</div>
+              <div>Your Order</div> <div>$ {this.props.total}.00</div>
             </button>
           </Link>
-          <Stripe amount={this.props.total} />
+          <div className="stripe-checkout-button">
+            <Stripe amount={this.props.total} />
+          </div>
         </div>
         <br />
         <div>{userCart}</div>
