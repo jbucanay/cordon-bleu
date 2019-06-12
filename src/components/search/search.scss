@@ -53,3 +53,13 @@
     }
   }
 }
+
+@media screen and (max-width: 776px) {
+  .google-places-autocomplete__suggestions-container {
+    width: calc(199% - 1px);
+    margin-left: 10%;
+  }
+  .google-places-autocomplete__input {
+    width: calc(200% - 1px);
+  }
+}
