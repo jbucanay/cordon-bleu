@@ -49,6 +49,8 @@ app.get("/api/menu/wendys", productsController.getWendys);
 
 app.get("/api/cart", productsController.getCart);
 app.post("/api/cart/:id", productsController.addToCart);
+app.delete('/api/cart/:id', productsController.deleteFromCart);
+
 
 app.get("/api/getSession", authController.getSession);
 

@@ -8,6 +8,7 @@ const initialState = {
 // types
 const GET_CART = "GET_CART";
 const ADD_TO_CART = "ADD_TO_CART";
+const DELETE_FROM_CART = "DELETE_FROM_CART";
 
 //action creators
 
@@ -25,11 +26,19 @@ export function addToCart(id) {
   };
 }
 
+export function deleteFromCart(id) {
+  return {
+    type: DELETE_FROM_CART,
+    payload: axios.delete(`/api/cart/${id}`).then(res => res.data)
+  };
+}
+
 export default function reducer(state = initialState, action) {
   const { type } = action;
-
+  console.log(action);
   switch (type) {
     case `GET_CART_FULFILLED`:
+      console.log("GETCART: ", action.payload);
       return {
         ...state,
         cart: action.payload.cart,
@@ -41,6 +50,21 @@ export default function reducer(state = initialState, action) {
         isLoading: true
       };
     case `${ADD_TO_CART}_FULFILLED`:
+      console.log("ACTION: ", action.payload);
+      return {
+        ...state,
+        isLoading: false,
+        cart: action.payload.cart,
+        total: action.payload.total,
+        address: action.payload.address
+      };
+    case `${DELETE_FROM_CART}_PENDING`:
+      return {
+        ...state,
+        isLoading: true
+      };
+    case `${DELETE_FROM_CART}_FULFILLED`:
+      console.log("ACTION: ", action.payload);
       return {
         ...state,
         isLoading: false,

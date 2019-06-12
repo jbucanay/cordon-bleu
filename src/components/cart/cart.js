@@ -3,7 +3,7 @@ import axios from "axios";
 import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
-import { getCart } from "../../ducks/cartReducer";
+import { getCart, deleteFromCart } from "../../ducks/cartReducer";
 import { connect } from "react-redux";
 
 class Cart extends Component {
@@ -18,6 +18,10 @@ class Cart extends Component {
     this.props.getCart();
   }
 
+  handleClick() {
+    this.props.deleteFromCart();
+  }
+
   render() {
     let userCart;
     if (this.props.cart[0]) {
@@ -28,7 +32,12 @@ class Cart extends Component {
               <h3>{cart.name}</h3>
               <h5>{cart.description}</h5>
               <h4>${cart.price}.00</h4>
-              <h3 className="remove-item-button">Remove</h3>
+              <button
+                onClick={() => this.handleClick()}
+                className="remove-item-button"
+              >
+                Remove
+              </button>
             </div>
           </div>
         );
@@ -36,15 +45,17 @@ class Cart extends Component {
     }
 
     return (
-      <div>
+      <div className="cart-outer">
         <div className="cart-item-outer">
           <h1>Your Order</h1>
           <Link to="/checkout">
             <button className="checkout-button">
-              <div>Checkout</div> <div>$ {this.props.total}.00</div>
+              <div>Your Order</div> <div>$ {this.props.total}.00</div>
             </button>
           </Link>
-          <Stripe amount={this.props.total} />
+          <div className="stripe-checkout-button">
+            <Stripe amount={this.props.total} />
+          </div>
         </div>
         <br />
         <div>{userCart}</div>
@@ -62,5 +73,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { getCart }
+  { getCart, deleteFromCart }
 )(Cart);

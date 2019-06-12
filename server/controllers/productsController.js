@@ -1,9 +1,13 @@
 module.exports = {
+  getCart: (req, res) => {
+    res.status(200).json(req.session.user);
+  },
   addToCart: (req, res) => {
     const dbInstance = req.app.get("db");
     dbInstance
       .add_to_cart(req.params.id)
       .then(response => {
+        console.log(response);
         req.session.user.cart.push({
           name: response[0].name,
           price: response[0].price
@@ -12,12 +16,29 @@ module.exports = {
         res.status(200).json(req.session.user);
       })
       .catch(err => {
-        res.status(500).send({ errorMessage: "Error5" });
+        res.status(500).send({ errorMessage: "Error1" });
+        console.log(err);
       });
   },
-  getCart: (req, res) => {
-    res.status(200).json(req.session.user);
+  deleteFromCart: (req, res) => {
+    const dbInstance = req.app.get("db");
+    dbInstance
+      .delete_from_cart(req.params.id)
+      .then(response => {
+        console.log(response);
+        req.session.user.cart.push({
+          name: response[0].name,
+          price: response[0].price
+        });
+        req.session.user.total += response[0].price;
+        res.status(200).json(req.session.user);
+      })
+      .catch(err => {
+        res.status(500).send({ errorMessage: "Error2" });
+        console.log(err);
+      });
   },
+
   getItems: async (req, res) => {
     const dbInstance = req.app.get("db");
 
@@ -34,7 +55,7 @@ module.exports = {
     const dbInstance = req.app.get("db");
 
     const menu = await dbInstance.get_burgerking();
-
+    console.log(menu);
     res.status(200).json(menu);
   },
   getJackinthebox: async (req, res) => {
