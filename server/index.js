@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const app = express();
@@ -37,6 +38,7 @@ massive(CONNECTION_STRING)
   .catch(err => console.log(err));
 
 app.use(checkForSession);
+app.use(express.static(`${__dirname}/../build`));
 
 app.get("/api/menu", productsController.getItems);
 
@@ -49,8 +51,7 @@ app.get("/api/menu/wendys", productsController.getWendys);
 
 app.get("/api/cart", productsController.getCart);
 app.post("/api/cart/:id", productsController.addToCart);
-app.delete('/api/cart/:id', productsController.deleteFromCart);
-
+app.delete("/api/cart/:id", productsController.deleteFromCart);
 
 app.get("/api/getSession", authController.getSession);
 
@@ -66,6 +67,10 @@ app.get("/", (req, res) => {
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 module.exports = app;
