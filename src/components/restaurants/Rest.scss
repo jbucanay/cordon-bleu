@@ -78,6 +78,9 @@ article section:last-child {
   font-family: "Montserrat", sans-serif;
   justify-content: space-between;
   background: #a5e5ff;
+  img {
+    height: 200px;
+  }
 }
 
 .featured {
@@ -99,15 +102,6 @@ article section:last-child {
       margin-left: -1.7rem;
     }
   }
-}
-
-.see-all-button {
-  font-family: "Montserrat", sans-serif;
-  background-color: #00b6ff;
-  border-radius: 45px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .pickup {
@@ -239,6 +233,15 @@ a {
     border-radius: 3px;
     background: rgb(0, 149, 235);
   }
+}
+
+.see-all-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #00b6ff;
+  border-radius: 45px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 888px) {

@@ -1,7 +1,7 @@
 .navbar-div {
   border-bottom: 1px solid gray;
   background-color: white;
-  // height: 5em;
+  height: calc(10% - 30px);
   width: 100%;
   font-family: "Montserrat", sans-serif;
   position: fixed;
@@ -78,8 +78,7 @@
   font-weight: 700;
   color: white;
   cursor: pointer;
-  // width: 6vw;
-  // height: 5vh;
+
   border-radius: 20px;
   font-size: 14px;
 }
@@ -93,9 +92,7 @@
 .website-name {
   color: #00b6ff;
 }
-@media (max-width: 1025px) {
-  /* WHEN SCREEN SMALL */
-
+@media screen and (max-width: 1025px) {
   .website-name {
     display: none;
   }
