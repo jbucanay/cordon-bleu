@@ -35,10 +35,9 @@ export function deleteFromCart(id) {
 
 export default function reducer(state = initialState, action) {
   const { type } = action;
-  console.log(action);
+
   switch (type) {
     case `GET_CART_FULFILLED`:
-      console.log("GETCART: ", action.payload);
       return {
         ...state,
         cart: action.payload.cart,
@@ -50,7 +49,6 @@ export default function reducer(state = initialState, action) {
         isLoading: true
       };
     case `${ADD_TO_CART}_FULFILLED`:
-      console.log("ACTION: ", action.payload);
       return {
         ...state,
         isLoading: false,
@@ -64,7 +62,6 @@ export default function reducer(state = initialState, action) {
         isLoading: true
       };
     case `${DELETE_FROM_CART}_FULFILLED`:
-      console.log("ACTION: ", action.payload);
       return {
         ...state,
         isLoading: false,
