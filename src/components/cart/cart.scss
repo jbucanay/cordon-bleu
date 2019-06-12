@@ -1,9 +1,18 @@
-.cart-item {
-  border-bottom: 1px solid grey;
+.cart-outer {
+  // border: solid red 2px;
+  padding-bottom: 200px;
 }
+
+
 .cart-item-outer {
   border-bottom: 1px solid grey;
 }
+
+.cart-item {
+  border-bottom: 1px solid grey;
+  
+}
+
 .checkout-button {
   display: flex;
   justify-content: space-between;
@@ -23,16 +32,21 @@
 }
 .remove-item-button {
   color: #00b6ff;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  border: none;
+  font-weight: 500
 }
 
 .cart-h1 {
   font-size: 3em;
 }
 
-button {
-  &:hover {
+.stripe-checkout-button {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.checkout-button:hover {
     transform: translate(0.5px, 0.5px);
     cursor: pointer;
-  }
 }
