@@ -1,7 +1,7 @@
 .navbar-div {
   border-bottom: 1px solid gray;
   background-color: white;
-  height: 3.5em;
+  // height: 5em;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   position: fixed;
@@ -48,8 +48,7 @@
   &:hover {
     box-shadow: none;
     transform: none;
-        transition: none;
-
+    transition: none;
   }
 }
 .nav-sign-in-words {
@@ -85,45 +84,25 @@
   font-size: 14px;
 }
 
-// .shopping-cart-outer { moved custom image into props of <Menu />
-//   position: absolute;
-//   right: 2%;
-//   top: 15%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background: #00b6ff;
-//   border-radius: 4px;
-//   width: 80px;
-//   padding-right: 100px;
-//   padding: 5px;
-// }
-
-// .shopping-cart-inner {
-//   filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(177deg)
-//     brightness(107%) contrast(101%);
-// }
-
 .nav-address {
   position: absolute;
   left: 8%;
   top: 0%;
 }
 
-.website-name{
+.website-name {
   color: #00b6ff;
+}
+@media (max-width: 1025px) {
+  /* WHEN SCREEN SMALL */
 
-}
-@media (max-width: 1025px) { /* WHEN SCREEN SMALL */
- 
-.website-name{
-  display: none;
-}
-.nav-address {
- display: none;
-}
-.nav-sign-up {
-  display: none;
-}
-
+  .website-name {
+    display: none;
+  }
+  .nav-address {
+    display: none;
+  }
+  .nav-sign-up {
+    display: none;
+  }
 }

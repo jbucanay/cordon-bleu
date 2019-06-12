@@ -15,19 +15,14 @@ export class Navbar extends Component {
   }
   componentDidMount() {
     axios.get("/api/getSession").then(response => {
-      console.log("check session for browsing", response.data.user);
       this.setState({ address: response.data.user.address });
       if (response.data.user.email) {
         this.setState({ session: true });
         this.setState({ address: response.data.user.address });
-        console.log("check session with user", response.data.user);
       }
     });
   }
   render() {
-    if (this.state.address) {
-      console.log("address", this.state.address.address);
-    }
     return (
       <div className="navbar-div">
         <div className="nav-outer">

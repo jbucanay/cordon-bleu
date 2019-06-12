@@ -4,7 +4,7 @@ import "./cart.scss";
 import Stripe from "../stripe/stripe";
 import { Link } from "react-router-dom";
 import { getCart, deleteFromCart } from "../../ducks/cartReducer";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 class Cart extends Component {
   constructor() {
@@ -19,11 +19,10 @@ class Cart extends Component {
   }
 
   handleClick() {
-    this.props.deleteFromCart()
+    this.props.deleteFromCart();
   }
 
   render() {
-
     let userCart;
     if (this.props.cart[0]) {
       userCart = this.props.cart.map(cart => {
@@ -33,7 +32,12 @@ class Cart extends Component {
               <h3>{cart.name}</h3>
               <h5>{cart.description}</h5>
               <h4>${cart.price}.00</h4>
-              <button onClick={() => this.handleClick()} className="remove-item-button">Remove</button>
+              <button
+                onClick={() => this.handleClick()}
+                className="remove-item-button"
+              >
+                Remove
+              </button>
             </div>
           </div>
         );
@@ -64,7 +68,10 @@ function mapStateToProps(state) {
   return {
     cart: state.cartReducer.cart,
     total: state.cartReducer.total
-  }
+  };
 }
 
-export default connect(mapStateToProps, { getCart, deleteFromCart })(Cart);
+export default connect(
+  mapStateToProps,
+  { getCart, deleteFromCart }
+)(Cart);
