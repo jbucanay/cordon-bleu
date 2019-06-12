@@ -61,10 +61,6 @@ app.post("/api/session", authController.addToSession);
 
 app.post("/api/session", authController.addToSession);
 
-app.get("/", (req, res) => {
-  res.status(200).send("Hello jest");
-});
-
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);
 });
@@ -72,5 +68,3 @@ app.listen(SERVER_PORT, () => {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build/index.html"));
 });
-
-module.exports = app;
