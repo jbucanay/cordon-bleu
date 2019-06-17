@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default class Sidebar extends Component {
   handleSignout = () => {
-    axios.delete("/api/signout").then(response => {});
+    axios.delete("/api/signout").then(response => { });
   };
   render() {
     return (
@@ -82,6 +82,13 @@ export default class Sidebar extends Component {
           <button className="menu-item-button" href="/get-credits">
             Get $20 in Credits
           </button>
+          {/* these breaks below add space below the last button to allow the sidebar to scroll */}
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </Menu>
       </div>
     );
