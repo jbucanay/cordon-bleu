@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: "cordon-bleu-dev.firebaseapp.com"
+  apiKey: 'AIzaSyB4TkpFJr9hY4w7O5oEeLR26oq-1aqTrHE',
+  authDomain: "accept-df6e9.firebaseapp.com"
 });
 
 class Login extends Component {
@@ -63,7 +63,7 @@ class Login extends Component {
             <div>
               <h1>Sign In</h1>
               <h2 className="login-h2">
-                New to DoorDash?{" "}
+                New to CordonBleu?{" "}
                 <Link to="/signup">
                   <button className="login-button">Sign up</button>
                 </Link>

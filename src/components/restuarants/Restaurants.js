@@ -466,7 +466,7 @@ function Restuarants(props) {
               <p>Japanese</p>
             </li>
           </ul>
-          {/* <div className="filter-section">
+          <div className="filter-section">
             <ul className="filter">
               <li>
                 Over 4.5 <i className="fas fa-star" /> &#65372; &gt;
@@ -476,7 +476,7 @@ function Restuarants(props) {
               <li>Dashpass</li>
               <li>&#36;,&#36;&#36; &#65372; &gt;</li>
             </ul>
-          </div> */}
+          </div>
         </div>
 
         <div className="allrest">

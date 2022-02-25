@@ -9,7 +9,8 @@ const productsController = require("./controllers/productsController");
 const authController = require("./controllers/authController");
 const checkForSession = require("./middlewares/checkForSession");
 
-const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
+
+const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = 9090,;
 
 app.use((req, res, next) => {
   next();
